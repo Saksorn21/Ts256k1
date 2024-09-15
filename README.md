@@ -161,3 +161,8 @@ We encourage all users to follow best security practices when handling private k
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Acknowledgement
+
+This project uses portions of code from [`eciesjs`](https://github.com/ecies/js), which is licensed under the MIT License.
+
+Copyright (c) 2019-2024 Weiliang Li
