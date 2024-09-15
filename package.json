@@ -1,0 +1,71 @@
+{
+  "name": "Ts256k1",
+  "description": "Ts256k1 is a TypeScript library for working with the secp256k1 elliptic curve. It includes functionality for key generation, encryption, and decryption using secp256k1 and the xchacha20poly1305 algorithm",
+  "version": "1.0.0",
+  "keywords": [
+    "ts256k1",
+    "xchacha20poly1305",
+    "secp256k1",
+    "encrypt",
+    "decrypt",
+    "cryptography",
+    "encryption",
+    "security",
+    "ecdsa",
+    "key exchange",
+    "crypto"
+  ],
+  "license": "MIT",
+  "author": "BOAT saksorn (Thailand)",
+  "main": "dist/main.js",
+  "types": "dist/types/main.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/types/main.d.ts",
+        "default": "./dist/main.js"
+      },
+      "import": {
+        "types": "./dist/types/esm.d.mts",
+        "default": "./dist/esm.mjs"
+      }
+    },
+    "./utils": {
+      "require": {
+        "types": "./dist/types/utils/bytes.d.ts",
+        "default": "./dist/utils/bytes.js"
+      },
+      "import": {
+        "types": "./dist/types/utils/bytes.d.mts",
+        "default": "./dist/utils/bytes.mjs"
+      }
+    }
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE",
+    "ts256k1.config.json"
+  ],
+  "scripts": {
+    "dev": "bun run --watch tests/test.ts",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@noble/ciphers": "1.0.0",
+    "@noble/curves": "1.6.0",
+    "@noble/hashes": "1.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saksorn21/Ts256k1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Saksorn21/Ts256k1/issues"
+  },
+  "homepage": "https://github.com/Saksorn21/Ts256k1#readme"
+}

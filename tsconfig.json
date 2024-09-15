@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                // รองรับฟีเจอร์ของ ES6 ขึ้นไป
+    "module": "CommonJS",           // ตั้งค่าให้เป็น CommonJS (Node.js)
+    "outDir": "./dist/lib",             // โฟลเดอร์ที่เก็บไฟล์ที่คอมไพล์แล้ว
+    "esModuleInterop": true,        // รองรับการใช้โมดูลทั้ง CommonJS และ ES Modules
+    "declaration": true,            // สร้างไฟล์ .d.ts สำหรับ TypeScript users
+    "declarationDir": "./dist/types",
+    "declarationMap": true,
+    "strict": true,                 // เปิดใช้งานโหมด strict
+    "useDefineForClassFields": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
