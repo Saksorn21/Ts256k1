@@ -1,7 +1,7 @@
 
 import { PrivateKey } from './lib/PrivateKey'
-import { encrypt } from './lib/encrypt'
-import { decrypt } from './lib/decrypt'
+import { Service } from './lib/Service'
+import {K1} from './utils';
 
 /**
  * @class Ts256k1 - A class for generating and managing 256-bit secret keys, and for encrypting and decrypting messages.
@@ -29,7 +29,7 @@ export class Ts256k1 {
   public static getKeyPairs(secret?: Uint8Array): PrivateKey {
     return new PrivateKey(secret);
   }
-
+ private service: Service
   /**
    * Constructor for the Ts256k1 class.
    * 
@@ -39,7 +39,9 @@ export class Ts256k1 {
   constructor(
     private readonly secret: string | Uint8Array, 
     private readonly publicKey: string | Uint8Array
-  ) {}
+  ) {
+  this.service  = new Service(this.secret, this.publicKey)
+  }
 
   /**
    * Encrypt a message using the public key.
@@ -49,7 +51,7 @@ export class Ts256k1 {
    * @returns {Uint8Array} - The encrypted message.
    */
   public encrypt(msg: Uint8Array): Uint8Array {
-    return encrypt(this.publicKey, msg);
+    return this.service. encrypt(msg);
   }
 
   /**
@@ -60,11 +62,14 @@ export class Ts256k1 {
    * @returns {Uint8Array} - The decrypted message.
    */
   public decrypt(msg: Uint8Array): Uint8Array {
-    return decrypt(this.secret, msg);
+    return this.service.decrypt(msg);
   }
 /** 
   public equals(other: PrivateKey): boolean {
     return equalBytes(this.data, other.data);
   }
   */
+  public recoverPublicKey(msg: Uint8Array, signature: string | Uint8Array , recoveryId: number = 0) {
+   // return K1.recoverPublicKey(msg, signature, recoveryId)
+  }
 }

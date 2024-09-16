@@ -4,7 +4,7 @@ export {
   hexToBytes,
   bytesToUtf8, 
   utf8ToBytes, 
-  equalBytes 
+  equalBytes,
 } from "@noble/ciphers/utils"
 export { xchacha20poly1305 as xchacha20 } from "@noble/ciphers/chacha";
 export { randomBytes } from "@noble/ciphers/webcrypto";

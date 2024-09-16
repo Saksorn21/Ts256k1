@@ -1,6 +1,5 @@
 
 import { PrivateKey } from './PrivateKey'
-
 import {
   K1,
   bytesToHex, 
@@ -43,10 +42,10 @@ import { isHkdfKeyCompressed } from '../config'
 
     /**
      * @constructor
-     * @param {Uint8Array} data - The public key data in Uint8Array format.
+     * @param {Uint8Array} privateKey - The public key data in Uint8Array format.
      */
-    constructor(data: Uint8Array) {
-      this.data = this.convertPublicKeyFormat(data, true);
+    constructor(privateKey: Uint8Array) {
+      this.data = this.convertPublicKeyFormat(privateKey, true);
     }
 
   /**
@@ -93,7 +92,7 @@ import { isHkdfKeyCompressed } from '../config'
    * @returns {Uint8Array} - The converted public key.
    * @private
    */
-  private convertPublicKeyFormat(pk: Uint8Array, compressed: boolean) {
+  private convertPublicKeyFormat(pk: Uint8Array, compressed: boolean): Uint8Array {
     return K1.getSharedSecret(BigInt(1), pk, compressed);
   }
 }

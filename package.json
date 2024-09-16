@@ -42,7 +42,12 @@
     }
   },
   "files": [
-    "src/",
+    "lib/",
+    "types/",
+    "utils/",
+    "config/",
+    "main.js",
+    "esm.mjs",
     "README.md",
     "LICENSE",
     "ts256k1.config.json"

@@ -1,15 +1,16 @@
+
+import { PublicKey } from './PublicKey';
+import { isHkdfKeyCompressed, ConstsType } from '../config';
+
 import { 
   K1,
-  randomBytes,
-  getSharedPoint, 
   getSharedKey,
   decodeHex,
-  bytesToHex
+  bytesToHex,
+  randomBytes
 } from '../utils';
-import { PublicKey } from './PublicKey';
-import { isHkdfKeyCompressed } from '../config';
-import { SECRET_KEY_LENGTH } from "../config"
 
+const { getPublicKey, getSharedSecret, utils } = K1
 /**
  * @class PrivateKey - A class that represents a private key.
  */
@@ -98,7 +99,8 @@ export class PrivateKey {
    * @returns {Uint8Array} - The derived shared point.
    */
   public multiply(pk: PublicKey, compressed: boolean = false): Uint8Array {
-    return getSharedPoint(this.data, pk.compressed, compressed);
+    //TODO: .slice(1) - remove 0x
+    return getSharedSecret(this.data, pk.compressed, compressed).slice(1)
   }
 
   /**
@@ -109,7 +111,7 @@ export class PrivateKey {
    * @returns {boolean} - True if the secret key is valid, otherwise false.
    */
   private validateSecret(secret: Uint8Array): boolean {
-    return K1.utils.isValidPrivateKey(secret);
+    return utils.isValidPrivateKey(secret);
   }
 
   /**
@@ -121,10 +123,10 @@ export class PrivateKey {
   private getValidSecret(): Uint8Array {
     let secret: Uint8Array;
     do {
-      secret = randomBytes(SECRET_KEY_LENGTH);
+      secret = randomBytes(ConstsType.SECRET_KEY_LENGTH)
     } while (!this.validateSecret(secret));
 
-    return secret;
+    return secret
   }
 
   /**
@@ -135,6 +137,6 @@ export class PrivateKey {
    * @returns {Uint8Array} - The corresponding public key.
    */
   private getPublicKey(secret: Uint8Array): Uint8Array {
-    return K1.getPublicKey(secret);
+    return getPublicKey(secret)
   }
 }

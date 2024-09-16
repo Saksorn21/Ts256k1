@@ -1,4 +1,6 @@
 {
   "hkdfKeyCompressed": false, 
-  "ephemeralKeyCompressed": false 
+  "ephemeralKeyCompressed": false ,
+  "signThrowMessage": "Invalid signature",
+  "signatureOptsLowS": true
 }

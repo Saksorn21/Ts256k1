@@ -47,18 +47,18 @@ export const ucs2ToBytes = (ucs2: string): Buffer => {
 
 export const remove0x = (hex: string): string => { 
   isString('hex', hex)
-
-  return hex.startsWith("0x") || hex.startsWith("0X") ? hex.slice(2) : hex 
+  //slice(1) - remove 0x
+  return hex.startsWith("0x") || hex.startsWith("0X") ? hex.slice(1) : hex 
 }
 export const decodeHex = (hex: string): Uint8Array => hexToBytes(remove0x(hex)) 
 
-function isBytes(a: any): a is Uint8Array {
+function isBytes(a: unknown): a is Uint8Array {
 return (a instanceof Uint8Array || (a != null && typeof a === 'object' && a.constructor.name === 'Uint8Array'))
 }
-function abytes(item: Uint8Array) {
+function abytes(item: unknown): void {
 if (!isBytes(item)) throw new Error('Uint8Array expected')
 }
-function isString(title: Title, mgs: string) {
+function isString(title: Title, mgs: string): void {
    if (typeof mgs !== 'string') throw new Error( title + ' string expected, got ' + typeof mgs)
 }
 
