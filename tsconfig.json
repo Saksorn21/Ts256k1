@@ -10,6 +10,6 @@
     "strict": true,                 // เปิดใช้งานโหมด strict
     "useDefineForClassFields": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*","src/types/global.d.ts"],
   "exclude": ["node_modules"]
 }

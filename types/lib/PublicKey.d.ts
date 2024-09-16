@@ -49,6 +49,6 @@ export declare class PublicKey {
      * @returns {Uint8Array} - The converted public key.
      * @private
      */
-    private convertPublicKeyFormat;
+    private convertPublicKeyFormat(pk: Uint8Array , compressed: boolean): Uint8Array;
 }
 //# sourceMappingURL=PublicKey.d.ts.map
