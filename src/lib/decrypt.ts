@@ -46,14 +46,30 @@ function _decrypt(
   key: Uint8Array,
   cipherText: Uint8Array
 ): Uint8Array {
-  const nonceTagLength = ConstsType.XCHACHA20_NONCE_LENGTH + ConstsType.AEAD_TAG_LENGTH;
-  const nonce = cipherText.subarray(0, ConstsType.XCHACHA20_NONCE_LENGTH);
-  const tag = cipherText.subarray(ConstsType.XCHACHA20_NONCE_LENGTH, nonceTagLength);
-  const encrypted = cipherText.subarray(nonceTagLength);
+    const nonceTagLength = 
+      ConstsType.XCHACHA20_NONCE_LENGTH + 
+      ConstsType.AEAD_TAG_LENGTH;
+    const nonce = cipherText
+      .subarray(0, 
+        ConstsType.XCHACHA20_NONCE_LENGTH
+      );
+    const tag = cipherText
+      .subarray(
+        ConstsType.XCHACHA20_NONCE_LENGTH, 
+        nonceTagLength
+      );
+    const encrypted = cipherText.subarray(nonceTagLength);
 
-  const decipher = xchacha20(key, Uint8Array.from(nonce)); // to reset byteOffset
-  const ciphered = concatBytes(encrypted, tag);
-  return decipher.decrypt(ciphered);
+    const decipher = xchacha20(key, Uint8Array.from(nonce)); // to reset byteOffset
+    const ciphered = concatBytes(encrypted, tag);
+    const _b = new Uint8Array(
+      encrypted.length + 
+      ConstsType.AEAD_TAG_LENGTH
+    )
+      _b.set(ciphered, 0)
+    const _s = _b.subarray(0, encrypted.length)
+  
+  return decipher.decrypt(_b, _s);
 }
 
 /**

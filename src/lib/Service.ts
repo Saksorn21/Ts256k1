@@ -6,7 +6,11 @@ import {
   type VerifyMessage, 
   type DecodedSignMessage
 } from './decrypt'
-import { signThrowMessage } from '../config';
+import { 
+  signEnabled, 
+  signThrowOnInvalid,
+  signErrorMessage
+} from '../config';
 
 /**
  * @class Service
@@ -14,49 +18,67 @@ import { signThrowMessage } from '../config';
  */
 export class Service {
   /**
-   * @constructor
    * Initializes a new instance of the Service class.
-   * @param {string | Uint8Array} privateKeyA - The private key used to sign and decrypt the message.
-   * @param {string | Uint8Array} publicKeyA - The public key used to encrypt the message.
+   * 
+   * @constructor
+   * @param {string | Uint8Array} privateKeyA - The private key used for signing and decrypting messages.
+   * @param {string | Uint8Array} publicKeyA - The public key used for encrypting messages.
    */
-  constructor (
+  constructor(
     private readonly privateKeyA: Hex,
     private readonly publicKeyA: Hex
-  ) { }
+  ) {}
 
   /**
-   * Encrypts a message using the provided public key and signs the encrypted data using the private key.
+   * Encrypts a message using the provided public key, and signs the encrypted data using the private key
+   * if signature signing is enabled.
    * 
-   * @param {Uint8Array} message - The message to be encrypted.
-   * @returns {Buffer} - A Buffer containing the signed and encrypted message.
+   * @param {Uint8Array} message - The plaintext message to be encrypted.
+   * @returns {Buffer} - A Buffer containing the signed and encrypted message, or just the encrypted message 
+   *                     if signing is disabled.
    */
-  public encrypt (message: Uint8Array): Buffer {
+  public encrypt(message: Uint8Array): Buffer {
     // Encrypt the message using the public key
-    const dataEncrypted: Uint8Array = encrypt(this.publicKeyA, message)
+    const dataEncrypted: Buffer = encrypt(this.publicKeyA, message);
 
-    // Sign the encrypted message using the private key
-    const encodeSignMessage: Buffer = encodeSign(dataEncrypted, this.privateKeyA)
-    return encodeSignMessage
+    // If signing is enabled, sign the encrypted message using the private key and return the signed message
+    if (signEnabled()) {
+      const encodeSignMessage: Buffer = encodeSign(dataEncrypted, this.privateKeyA);
+      return encodeSignMessage;
+    }
+
+    // If signing is not enabled, return only the encrypted data
+    return dataEncrypted;
   }
 
   /**
-   * Decrypts a message and verifies its signature.
+   * Decrypts a signed and encrypted message, and verifies its signature if signing is enabled.
    * 
    * @param {Uint8Array} messageEncrypt - The signed and encrypted message to be decrypted.
-   * @returns {Buffer} - The decrypted message if the signature is valid.
-   * @throws {Error} - Throws an error if the signature is invalid.
+   * @returns {Buffer} - The decrypted plaintext message if the signature is valid or if signing is disabled.
+   * @throws {Error} - Throws an error if the signature is invalid and `throwOnInvalid` is set to true.
    */
-  public decrypt (messageEncrypt: Uint8Array): Buffer {
-    // Decode the signed and encrypted message, then verify the signature
-    const { verify, cipherText }: VerifyMessage = verifyMessage(
-      (decodedSignMessage(messageEncrypt) as DecodedSignMessage), 
-      this.publicKeyA
-    )
+  public decrypt(messageEncrypt: Uint8Array): Buffer {
+    let cipherText = messageEncrypt;
 
-    // If the signature is not valid, throw an error
-    if (!verify) throw new Error(signThrowMessage())
+    // If signing is enabled, verify the signature
+    if (signEnabled()) {
+      // Decode and verify the signed message
+      const { verify, cipherText }: VerifyMessage = verifyMessage(
+        decodedSignMessage(messageEncrypt) as DecodedSignMessage,
+        this.publicKeyA
+      );
 
-    // If the signature is valid, decrypt the cipher text using the private key
-    return decrypt(this.privateKeyA, cipherText)
+      // If the signature is invalid and `throwOnInvalid` is true, throw an error
+      if (signThrowOnInvalid() && !verify) 
+        throw new Error(signErrorMessage());
+      
+
+      // If the signature is valid, decrypt the ciphertext
+      return decrypt(this.privateKeyA, cipherText);
+    }
+
+    // If signing is not enabled, directly decrypt the message without signature verification
+    return decrypt(this.privateKeyA, cipherText);
   }
 }

@@ -8,7 +8,8 @@
     "declarationDir": "./types",
     "declarationMap": true,
     "strict": true,                 // เปิดใช้งานโหมด strict
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*","src/types/global.d.ts"],
   "exclude": ["node_modules"]

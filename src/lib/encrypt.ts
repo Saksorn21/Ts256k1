@@ -8,7 +8,7 @@ import {
 import {
   ConstsType,
   isEphemeralKeyCompressed,
-  isSignatureOptsLowS
+  signUseLowS
 } from '../config'
 
 import { PrivateKey } from './PrivateKey'
@@ -25,11 +25,27 @@ import { PublicKey } from './PublicKey'
  */
 function _encrypt(key: Uint8Array, plainText: Uint8Array): Uint8Array {
   // TODO: xchacha20poly1305 nonce 24 bytes
-  const nonce: Uint8Array = randomBytes(ConstsType.XCHACHA20_NONCE_LENGTH);
-  const cipher = xchacha20(key, nonce);
-  const ciphered = cipher.encrypt(plainText);
-  const encrypted = ciphered.subarray(0, ciphered.length - ConstsType.AEAD_TAG_LENGTH);
-  const tag = ciphered.subarray(ciphered.length - ConstsType.AEAD_TAG_LENGTH);
+    const nonce: Uint8Array = randomBytes(
+      ConstsType.XCHACHA20_NONCE_LENGTH
+  );
+    const cipher = xchacha20(key, nonce);
+    const _b = new Uint8Array(
+      plainText.length + 
+      ConstsType.AEAD_TAG_LENGTH
+  )
+      _b.set(plainText, 0)
+    const _s = _b.subarray(0, plainText.length)
+    const ciphered = cipher.encrypt(_s,_b);
+    const encrypted = ciphered
+      .subarray(0, 
+        ciphered.length - 
+        ConstsType.AEAD_TAG_LENGTH
+      );
+    const tag = ciphered
+      .subarray(
+        ciphered.length - 
+        ConstsType.AEAD_TAG_LENGTH
+      );
   return concatBytes(nonce, tag, encrypted);
 }
 
@@ -64,7 +80,7 @@ export function encrypt(k1RawPK: Hex, msg: Uint8Array): Buffer {
 
   let pk: Uint8Array;
   
-  //configuration (file: ts256k1.config.json))
+  //configuration (file: ts256k1.config.cjs
   if (isEphemeralKeyCompressed()) {
     pk = temporaryStorageKey.publicKey.compressed;
   } else {
@@ -85,7 +101,7 @@ export function encrypt(k1RawPK: Hex, msg: Uint8Array): Buffer {
 function signMessage(encryptedData: Uint8Array, privateKey: Hex): Buffer {
     const messageHash = sha256(encryptedData);
     const signature = K1.sign(messageHash, privateKey, {
-        lowS: isSignatureOptsLowS(),  //configuration (file: ts256k1.config.json))
+        lowS: signUseLowS(),  //configuration (file: ts256k1.config.json))
         extraEntropy: new Uint8Array([10, 20, 30, 9]),
         prehash: false
     });

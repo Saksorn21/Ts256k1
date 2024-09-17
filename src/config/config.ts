@@ -1,57 +1,37 @@
 
+import { loadConfig } from './loadConfig'
 
-import { readFileSync } from 'fs';
-
-/**
- * @interface ConfigJson
- * Represents the configuration options for the library.
- * @property {boolean} hkdfKeyCompressed - Indicates whether the HKDF key should be compressed.
- * @property {boolean} ephemeralKeyCompressed - Indicates whether the ephemeral key should be compressed.
- * @property {string} signThrowMessage - The message to be thrown when a signature verification fails.
- * @property {boolean} signatureOptsLowS - Indicates whether the signature options should use low S.
- */
-interface ConfigJson {
-  hkdfKeyCompressed: boolean;
-  ephemeralKeyCompressed: boolean;
-  signThrowMessage: string;
-  signatureOptsLowS: boolean
-}
-
-/**
- * Reads and parses the configuration JSON file.
- * @function loadedConfigJson
- * @returns {ConfigJson} - The configuration options loaded from the JSON file.
- */
-function loadedConfigJson(): ConfigJson {
-  return JSON.parse(readFileSync('./ts256k1.config.json', 'utf-8'));
-}
 
 /**
  * @class Config
  * Represents the configuration settings for the library.
  */
 class Config {
-  private readonly configJson: ConfigJson = loadedConfigJson()
+  private readonly loader: Config256k1 = loadConfig()
 
   /**
    * @property {boolean} isHkdfKeyCompressed - Whether the HKDF key is compressed.
    * @property {boolean} isEphemeralKeyCompressed - Whether the ephemeral key is compressed.
    * @property {boolean} isSignatureOptsLowS - Whether the signature options should use low S.
    */
-  public readonly isHkdfKeyCompressed: ConfigJson['hkdfKeyCompressed'];
-  public readonly isEphemeralKeyCompressed: ConfigJson['ephemeralKeyCompressed'];
-  public readonly signThrowMessage: ConfigJson['signThrowMessage'];
-  public readonly isSignatureOptsLowS: ConfigJson['signatureOptsLowS'];
+  public readonly isHkdfKeyCompressed: Config256k1['hkdfKeyCompressed'];
+  public readonly isEphemeralKeyCompressed: Config256k1['ephemeralKeyCompressed'];
+  public readonly signEnabled: Config256k1['signature']['enabled']
+  public readonly signThrowOnInvalid: Config256k1['signature']['throwOnInvalid']
+  public readonly signErrorMessage: Config256k1['signature']['errorMessage']
+  public readonly signUseLowS: Config256k1['signature']['useLowS']
 
   /**
    * Initializes the Config instance by loading settings from the JSON configuration file.
    */
   constructor() {
     
-    this.isHkdfKeyCompressed = this.configJson.hkdfKeyCompressed;
-    this.isEphemeralKeyCompressed = this.configJson.ephemeralKeyCompressed;
-    this.signThrowMessage = this.configJson.signThrowMessage;
-    this.isSignatureOptsLowS = this.configJson.signatureOptsLowS;
+    this.isHkdfKeyCompressed = this.loader.hkdfKeyCompressed;
+    this.isEphemeralKeyCompressed = this.loader.ephemeralKeyCompressed;
+    this.signErrorMessage = this.loader.signature.errorMessage;
+    this.signEnabled = this.loader.signature.enabled
+    this.signThrowOnInvalid = this.loader.signature.throwOnInvalid
+    this.signUseLowS = this.loader.signature.useLowS
   }
 }
 
@@ -72,6 +52,12 @@ export const isHkdfKeyCompressed = (): ConfigJson['hkdfKeyCompressed'] => TS256K
  */
 export const isEphemeralKeyCompressed = (): ConfigJson['ephemeralKeyCompressed'] => TS256K1_CONFIG.isEphemeralKeyCompressed;
 
-export const signThrowMessage = (): ConfigJson['signThrowMessage'] => TS256K1_CONFIG.signThrowMessage;
-export const isSignatureOptsLowS = (): ConfigJson['signatureOptsLowS'] => TS256K1_CONFIG.isSignatureOptsLowS
+/**
+ * Gets whether the signature options
+ * 
+ */
+export const signEnabled = (): Config256k1['signature']['enabled'] => TS256K1_CONFIG.signEnabled
+export const signThrowOnInvalid = (): Config256k1['signature']['throwOnInvalid'] => TS256K1_CONFIG.signThrowOnInvalid
+export const signErrorMessage = (): Config256k1['signature']['errorMessage'] => TS256K1_CONFIG.signErrorMessage
+export const signUseLowS = (): Config256k1['signature']['useLowS'] => TS256K1_CONFIG.signUseLowS
 

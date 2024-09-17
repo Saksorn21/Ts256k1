@@ -1,6 +1,6 @@
 # Ts256k1
 
-**Ts256k1** is a TypeScript library for working with the `secp256k1` elliptic curve. It includes functionality for key generation, encryption, and decryption using `secp256k1` and the `xchacha20poly1305` algorithm.
+**Ts256k1** is a TypeScript library for working with the `secp256k1` elliptic curve. It includes functionality for key generation, encryption, decryption, signing, and signature verification using `secp256k1` and the `xchacha20poly1305` algorithm.
 
 ## Installation
 
@@ -8,11 +8,9 @@ To install the library, you can use npm or yarn:
 
 ```bash
 npm install ts256k1
-```
-
-or
-
-```bash
+<sub>or</sub>
+bun add ts256k1
+<sub>or</sub>
 yarn add ts256k1
 ```
 
@@ -91,50 +89,73 @@ The library provides various utilities for encoding and decoding:
 
 ## Configuration
 
-Configuration is managed via a JSON file (`ts256k1.config.json`). The settings you can configure are:
+Configuration files must be written in CommonJS format and saved as `.cjs`. This ensures compatibility with the library's CommonJS format. The settings you can configure are:
 
-- `hkdfKeyCompressed`: Boolean indicating if the HKDF key should be compressed.
-- `ephemeralKeyCompressed`: Boolean indicating if the ephemeral key should be compressed.
+- `hkdfKeyCompressed`: A boolean that indicates if the HKDF key should be compressed. (Default: false)
+- `ephemeralKeyCompressed`: A boolean that indicates if the ephemeral key should be compressed. (Default: false)
+- `signature`: An object that contains signature options:
+  - `enabled`: A boolean that indicates whether signature functionality is enabled. (Default: true)
+  - `throwOnInvalid`: A boolean that indicates whether an error should be thrown if the signature is invalid. (Default: true)
+  - `errorMessage`: A string specifying the error message to be thrown if the signature is invalid. (Default: "Invalid signature")
+  - `useLowS`: A boolean that indicates whether the signature should use low S. (Default: true)
 
-Example configuration file (`ts256k1.config.json`):
+Example configuration file (`ts256k1.config.cjs`):
 
-```json
-{
-  "hkdfKeyCompressed": false,
-  "ephemeralKeyCompressed": false
+```JavaScript
+module.exports = {
+  hkdfKeyCompressed: false, 
+  ephemeralKeyCompressed: false,
+  signature: {
+    enabled: true,
+    throwOnInvalid: true,
+    errorMessage: 'Invalid signature',
+    useLowS: true
+  }
 }
 ```
 
 ## API
 
-### Class: `Ts256k1`
+### Class: **Ts256k1**
 
-Provides encryption and decryption functionality.
+This class provides encryption, decryption, and key pair generation (private and public keys).
 
-- `static getKeyPairs(secret?: Uint8Array): PrivateKey`
-- `constructor(secret: string | Uint8Array, publicKey: string | Uint8Array)`
-- `encrypt(msg: Uint8Array): Uint8Array`
-- `decrypt(msg: Uint8Array): Uint8Array`
+- `static getKeyPairs(secret?: Uint8Array): PrivateKey` — Generates and returns a private key based on the provided secret.
+- `constructor(secret: string | Uint8Array, publicKey: string | Uint8Array)` — Initializes an instance with a private and public key.
+- `encrypt(msg: Uint8Array): Uint8Array` — Encrypts the provided message using the public key.
+- `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message using the private key.
 
-### Class: `PublicKey`
+### Class: **PublicKey**
 
-Represents a public key.
+This class represents a public key.
 
-- `static fromHex(hex: string): PublicKey`
-- `get compressed(): Buffer`
-- `get uncompressed(): Buffer`
-- `toHex(compressed: boolean = true): string`
+- `static fromHex(hex: string): PublicKey` — Creates a public key from a hexadecimal string.
+- `get compressed(): Buffer` — Returns the compressed form of the public key.
+- `get uncompressed(): Buffer` — Returns the uncompressed form of the public key.
+- `toHex(compressed: boolean = true): string` — Returns the public key as a hexadecimal string, either compressed or uncompressed.
 
-### Class: `PrivateKey`
+### Class: **PrivateKey**
 
-Represents a private key.
+This class represents a private key.
 
-- `static fromHex(hex: string): PrivateKey`
-- `get secret(): Uint8Array`
-- `get secretToHex(): string`
-- `readonly publicKey: PublicKey`
-- `encapsulate(pk: PublicKey): Uint8Array`
-- `multiply(pk: PublicKey, compressed: boolean = false): Uint8Array`
+- `static fromHex(hex: string): PrivateKey` — Creates a private key from a hexadecimal string.
+- `get secret(): Uint8Array` — Returns the private key in Uint8Array format.
+- `get secretToHex(): string` — Returns the private key as a hexadecimal string.
+- `readonly publicKey: PublicKey` — Returns the associated public key for this private key.
+- `encapsulate(pk: PublicKey): Uint8Array` — Encapsulates a public key to generate a shared secret.
+- `multiply(pk: PublicKey, compressed: boolean = false): Uint8Array` — Multiplies the private key with the public key and returns the result.
+
+### Class: **Service**
+
+This class handles encryption, decryption, and message signing/verification.
+
+- `constructor(privateKeyA: string | Uint8Array, publicKeyA: string | Uint8Array)` — Initializes the service with a private and public key.
+- `encrypt(msg: Uint8Array): Uint8Array` — Encrypts the provided message and signs it if signature functionality is enabled.
+- `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
+
+## Message Signing and Verification
+
+Our encryption process includes an additional layer of security by signing the encrypted data using the sender’s private key. When decrypting, the signature is verified using the sender’s public key to ensure the data has not been tampered with. This ensures both message integrity and authenticity.
 
 ## About
 

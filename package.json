@@ -55,12 +55,15 @@
   "scripts": {
     "dev": "bun run --watch tests/test.ts",
     "build": "tsc",
+    "build:esm": "tsc --target es6 --module es2022 --outDir esm ",
+    "lint": "standard --fix",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@noble/ciphers": "1.0.0",
     "@noble/curves": "1.6.0",
-    "@noble/hashes": "1.5.0"
+    "@noble/hashes": "1.5.0",
+    "standard": "^17.1.2"
   },
   "devDependencies": {
     "typescript": "^5.6.2"
