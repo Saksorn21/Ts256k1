@@ -1,5 +1,5 @@
 {
-  "name": "Ts256k1",
+  "name": "@nyren/ts256k1",
   "description": "Ts256k1 is a TypeScript library for working with the secp256k1 elliptic curve. It includes functionality for key generation, encryption, and decryption using secp256k1 and the xchacha20poly1305 algorithm",
   "version": "1.0.0",
   "keywords": [
@@ -71,8 +71,8 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:clean": "rm -rf cjs/* esm/* 2> /dev/null",
     "build": "npm run build:clean; npm run build:cjs && npm run build:esm",
-    "lint": "prettier --check 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
-    "format": "prettier --write 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
+    "lint": "prettier --check 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'types/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
+    "format": "prettier --write 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'types/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
     "test": "jest --coverage"
   },
   "dependencies": {
@@ -96,8 +96,5 @@
   "bugs": {
     "url": "https://github.com/Saksorn21/Ts256k1/issues"
   },
-  "homepage": "https://github.com/Saksorn21/Ts256k1#readme",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  }
+  "homepage": "https://github.com/Saksorn21/Ts256k1#readme"
 }
