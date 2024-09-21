@@ -1,5 +1,5 @@
 import { K1, xchacha20, concatBytes, sha256 } from '../utils'
-import { ConstsType, isEphemeralKeyCompressed } from '../config'
+import { ConstsType, isEphemeralKeyCompressed, signUseLowS } from '../config'
 
 import { PrivateKey } from './PrivateKey'
 import { PublicKey } from './PublicKey'
@@ -164,7 +164,10 @@ export function verifyMessage(
 ): VerifyMessage {
   const { signBytes, encryptMessage } = signatureRS
   const encryptHex = sha256(encryptMessage)
-  const verify = K1.verify(signBytes, encryptHex, publicKey)
+  const verify = K1.verify(signBytes, encryptHex, publicKey, {
+    lowS: signUseLowS(),
+    prehash: false,
+  })
 
   return {
     verify: verify,
