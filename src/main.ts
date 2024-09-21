@@ -1,4 +1,3 @@
-
 import { PrivateKey } from './lib/PrivateKey'
 import { PublicKey } from './lib/PublicKey'
 import { Service } from './lib/Service'
@@ -14,7 +13,7 @@ import { Service } from './lib/Service'
 export class Ts256k1 {
   /**
    * Generate a new secret key and public key pair.
-   * 
+   *
    * @static
    * @method getKeyPairs
    * @param {Uint8Array} [secret] - An optional secret key in Uint8Array format.
@@ -26,42 +25,42 @@ export class Ts256k1 {
    * console.log(privateKey, publicKey);
    */
   public static getKeyPairs(secret?: Uint8Array): PrivateKey {
-    return new PrivateKey(secret);
+    return new PrivateKey(secret)
   }
- private service: Service
+  private service: Service
   /**
    * Constructor for the Ts256k1 class.
-   * 
+   *
    * @param {string | Uint8Array} secret - The secret key in either hexadecimal string or Uint8Array format.
    * @param {string | Uint8Array} publicKey - The public key in either hexadecimal string or Uint8Array format.
    */
   constructor(
-    private readonly secret: string | Uint8Array, 
+    private readonly secret: string | Uint8Array,
     private readonly publicKey: string | Uint8Array
   ) {
-  this.service  = new Service(this.secret, this.publicKey)
+    this.service = new Service(this.secret, this.publicKey)
   }
 
   /**
    * Encrypt a message using the public key.
-   * 
+   *
    * @method encrypt
    * @param {Uint8Array} msg - The message to be encrypted.
    * @returns {Uint8Array} - The encrypted message.
    */
   public encrypt(msg: Uint8Array): Uint8Array {
-    return this.service. encrypt(msg);
+    return this.service.encrypt(msg)
   }
 
   /**
    * Decrypt a message using the secret key.
-   * 
+   *
    * @method decrypt
    * @param {Uint8Array} msg - The encrypted message.
    * @returns {Uint8Array} - The decrypted message.
    */
   public decrypt(msg: Uint8Array): Uint8Array {
-    return this.service.decrypt(msg);
+    return this.service.decrypt(msg)
   }
 
   /**
@@ -69,9 +68,9 @@ export class Ts256k1 {
    * @param {PrivateKey | PublicKey} other - The instace of PrivateKey or PublicKey to compare with.
    * @returns {boolean} - True if the keys are equal, false otherwise.
    */
- public equals(other: PrivateKey| PublicKey): boolean {
-    return this.service.equals(other);
+  public equals(other: PrivateKey | PublicKey): boolean {
+    return this.service.equals(other)
   }
 }
 
-export { PrivateKey, PublicKey } 
+export { PrivateKey, PublicKey }

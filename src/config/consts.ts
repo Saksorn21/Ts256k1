@@ -1,5 +1,3 @@
-
-
 export const ConstsType = {
   SECRET_KEY_LENGTH: 32,
   COMPRESSED_PUBLIC_KEY_SIZE: 33,

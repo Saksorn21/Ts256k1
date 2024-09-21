@@ -2,13 +2,12 @@ import type { PrivateKey } from '../lib/PrivateKey'
 import type { PublicKey } from '../lib/PublicKey'
 
 declare global {
-
   /**
    * @type Hex
    * @description A type alias for a hexadecimal string.
    */
   type Hex = string | Uint8Array
-  
+
   /**
    * @interface Config256k1
    * @description An interface for the configuration options.
@@ -21,20 +20,19 @@ declare global {
    * @property {boolean} signature.useLowS - Indicates whether the signature should use low S.
    */
   interface Config256k1 {
-      hkdfKeyCompressed: boolean;
-      ephemeralKeyCompressed: boolean;
-      signature: {
-        enabled: boolean;
-        throwOnInvalid: boolean;
-        useLowS: boolean;
-        errorMessage: string;
-      }
+    hkdfKeyCompressed: boolean
+    ephemeralKeyCompressed: boolean
+    signature: {
+      enabled: boolean
+      throwOnInvalid: boolean
+      useLowS: boolean
+      errorMessage: string
+    }
   }
   interface BaseTs256k1 {
     encrypt(msg: Uint8Array): Uint8Array
     decrypt(msg: Uint8Array): Uint8Array
     equals(other: PrivateKey | PublicKey): boolean
   }
-  
 }
 export {}

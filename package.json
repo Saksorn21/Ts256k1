@@ -65,12 +65,12 @@
   ],
   "scripts": {
     "dev": "bun run --watch tests/test.ts",
-    "build:cjs": "tsc --project tsconfig.cjs.json",
-    "build:esm": "tsc --project tsconfig.esm.json",
-    "build": "bun run build:clean && bun run build:cjs && bun run build:esm",
-    "build:clean": "rm cjs/**/* esm/**/* 2> /dev/null",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:clean": "rm -rf cjs/* esm/* 2> /dev/null",
+    "build": "npm run build:clean; npm run build:cjs && npm run build:esm",
     "lint": "prettier --check 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
-    "format": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts,mjs}'",
+    "format": "prettier --write 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
     "test": "jest --coverage"
   },
   "dependencies": {

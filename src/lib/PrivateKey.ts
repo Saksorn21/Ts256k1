@@ -1,15 +1,7 @@
+import { PublicKey } from './PublicKey'
+import { isHkdfKeyCompressed, ConstsType } from '../config'
 
-import { PublicKey } from './PublicKey';
-import { isHkdfKeyCompressed, ConstsType } from '../config';
-
-import { 
-  K1,
-  getSharedKey,
-  decodeHex,
-  bytesToHex,
-  randomBytes,
-  equalBytes
-} from '../utils';
+import { K1, getSharedKey, decodeHex, bytesToHex, randomBytes } from '../utils'
 
 const { getPublicKey, getSharedSecret, utils } = K1
 /**
@@ -25,36 +17,36 @@ export class PrivateKey {
    * @returns {PrivateKey} - A new instance of PrivateKey.
    */
   public static fromHex(hex: string): PrivateKey {
-    return new PrivateKey(decodeHex(hex));
+    return new PrivateKey(decodeHex(hex))
   }
 
-  private readonly data: Uint8Array;
+  private readonly data: Uint8Array
 
   /**
    * The public key derived from the private key.
    *
    * @property {PublicKey} publicKey - The public key that corresponds to this private key.
    */
-  public readonly publicKey: PublicKey;
+  public readonly publicKey: PublicKey
 
   /**
    * Retrieves the secret key as a Uint8Array.
-   * 
+   *
    * @property {Uint8Array} secret - The secret key in byte array format.
    * @returns {Uint8Array} - The secret key as a byte array (Uint8Array).
    */
   get secret(): Uint8Array {
-    return Buffer.from(this.data);
+    return Buffer.from(this.data)
   }
 
   /**
    * Converts the secret key to a hexadecimal string.
-   * 
+   *
    * @property {string} secretToHex - The secret key in hexadecimal format.
    * @returns {string} - The hexadecimal representation of the secret key.
    */
   get secretToHex(): string {
-    return bytesToHex(this.data);
+    return bytesToHex(this.data)
   }
 
   /**
@@ -65,10 +57,10 @@ export class PrivateKey {
    * @throws {Error} If the secret key is invalid.
    */
   constructor(secret?: Uint8Array) {
-    const sk = secret ? secret : this.getValidSecret();
-    if (!this.validateSecret(sk)) throw new Error('Invalid private key');
-    this.data = sk;
-    this.publicKey = new PublicKey(this.getPublicKey(sk));
+    const sk = secret ? secret : this.getValidSecret()
+    if (!this.validateSecret(sk)) throw new Error('Invalid private key')
+    this.data = sk
+    this.publicKey = new PublicKey(this.getPublicKey(sk))
   }
 
   /**
@@ -79,16 +71,16 @@ export class PrivateKey {
    * @returns {Uint8Array} - The derived shared secret.
    */
   public encapsulate(pk: PublicKey): Uint8Array {
-    let senderPoint: Uint8Array;
-    let sharedPoint: Uint8Array;
+    let senderPoint: Uint8Array
+    let sharedPoint: Uint8Array
     if (isHkdfKeyCompressed()) {
-      senderPoint = this.publicKey.compressed;
-      sharedPoint = this.multiply(pk, true);
+      senderPoint = this.publicKey.compressed
+      sharedPoint = this.multiply(pk, true)
     } else {
-      senderPoint = this.publicKey.uncompressed;
-      sharedPoint = this.multiply(pk, false);
+      senderPoint = this.publicKey.uncompressed
+      sharedPoint = this.multiply(pk, false)
     }
-    return getSharedKey(senderPoint, sharedPoint);
+    return getSharedKey(senderPoint, sharedPoint)
   }
 
   /**
@@ -112,7 +104,7 @@ export class PrivateKey {
    * @returns {boolean} - True if the secret key is valid, otherwise false.
    */
   private validateSecret(secret: Uint8Array): boolean {
-    return utils.isValidPrivateKey(secret);
+    return utils.isValidPrivateKey(secret)
   }
 
   /**
@@ -122,10 +114,10 @@ export class PrivateKey {
    * @returns {Uint8Array} - A valid secret key.
    */
   private getValidSecret(): Uint8Array {
-    let secret: Uint8Array;
+    let secret: Uint8Array
     do {
       secret = randomBytes(ConstsType.SECRET_KEY_LENGTH)
-    } while (!this.validateSecret(secret));
+    } while (!this.validateSecret(secret))
 
     return secret
   }
@@ -140,6 +132,4 @@ export class PrivateKey {
   private getPublicKey(secret: Uint8Array): Uint8Array {
     return getPublicKey(secret)
   }
-  
-  
 }

@@ -1,4 +1,3 @@
- 
 export {
   xchacha20,
   concatBytes,
@@ -6,7 +5,7 @@ export {
   hkdf,
   secp256k1 as K1,
   sha256,
-  equalBytes
+  equalBytes,
 } from './noble'
 export * from './elliptic'
 export * from './bytes'
