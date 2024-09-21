@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2020",
     "declarationDir": "./types",
-    "moduleResolution": "Node10",
+    "moduleResolution": "Node16",
     "lib": [
       "es2020"
     ],

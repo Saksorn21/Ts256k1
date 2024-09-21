@@ -18,13 +18,13 @@
   "license": "MIT",
   "author": "BOAT saksorn (Thailand)",
   "type": "commonjs",
-  "main": "main.js",
+  "main": "cjs/main.js",
   "types": "types/main.d.ts",
   "exports": {
     ".": {
       "require": {
         "types": "./types/main.d.ts",
-        "default": "./main.js"
+        "default": "./cjs/main.js"
       },
       "import": {
         "types": "./types/main.d.ts",
@@ -34,17 +34,17 @@
     "./utils": {
       "require": {
         "types": "./types/utils/bytes.d.ts",
-        "default": "./utils/bytes.js"
+        "default": "./cjs/utils/bytes.js"
       },
       "import": {
-        "types": "./esm/types/utils/bytes.d.ts",
+        "types": "./types/utils/bytes.d.ts",
         "default": "./esm/utils/bytes.js"
       }
     },
     "./service": {
       "require": {
         "types": "./types/lib/Service.d.ts",
-        "default": "./lib/Service.js"
+        "default": "./cjs/lib/Service.js"
       },
       "import": {
         "types": "./types/lib/Service.d.ts",
@@ -53,12 +53,9 @@
     }
   },
   "files": [
-    "lib/",
+    "cjs/",
+    "esm/",
     "types/",
-    "utils/",
-    "config/",
-    "main.js",
-    "esm.mjs",
     "README.md",
     "LICENSE",
     "ts256k1.config.json"
