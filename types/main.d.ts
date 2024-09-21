@@ -1,11 +1,11 @@
 import { PrivateKey } from './lib/PrivateKey';
+import { PublicKey } from './lib/PublicKey';
 /**
  * @class Ts256k1 - A class for generating and managing 256-bit secret keys, and for encrypting and decrypting messages.
  * @example
  * const k1 = new Ts256k1(privateKey, publicKey);
  * const msg = utf8ToBytes('hello');
  * k1.decrypt(k1.encrypt(msg)).toString();
- *
  * @type {import('ts256k1').Ts256k1} Ts256k1
  */
 export declare class Ts256k1 {
@@ -50,10 +50,11 @@ export declare class Ts256k1 {
      */
     decrypt(msg: Uint8Array): Uint8Array;
     /**
-      public equals(other: PrivateKey): boolean {
-        return equalBytes(this.data, other.data);
-      }
-      */
-    recoverPublicKey(msg: Uint8Array, signature: string | Uint8Array, recoveryId?: number): void;
+     * @method equals
+     * @param {PrivateKey | PublicKey} other - The instace of PrivateKey or PublicKey to compare with.
+     * @returns {boolean} - True if the keys are equal, false otherwise.
+     */
+    equals(other: PrivateKey | PublicKey): boolean;
 }
+export { PrivateKey, PublicKey };
 //# sourceMappingURL=main.d.ts.map

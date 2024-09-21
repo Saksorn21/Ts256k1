@@ -1,6 +1,10 @@
 {
   "hkdfKeyCompressed": false, 
   "ephemeralKeyCompressed": false ,
-  "signThrowMessage": "Invalid signature",
-  "signatureOptsLowS": true
+  "signatureOptions": {
+    "enabled": true,           // เปิดหรือปิดการเซ็นข้อมูล
+    "throwOnInvalid": true,    // โยนข้อผิดพลาดถ้าลายเซ็นไม่ถูกต้อง
+    "errorMessage": "Invalid signature",  // ข้อความเมื่อเกิดข้อผิดพลาด
+    "useLowS": true
+  }
 }

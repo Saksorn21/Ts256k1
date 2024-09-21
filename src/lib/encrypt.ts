@@ -23,29 +23,25 @@ import { PublicKey } from './PublicKey'
  * @param {Uint8Array} plainText - The message to encrypt.
  * @returns {Uint8Array} - The encrypted message, consisting of nonce, tag, and encrypted data concatenated together.
  */
-function _encrypt(key: Uint8Array, plainText: Uint8Array): Uint8Array {
-  // TODO: xchacha20poly1305 nonce 24 bytes
-    const nonce: Uint8Array = randomBytes(
-      ConstsType.XCHACHA20_NONCE_LENGTH
-  );
-    const cipher = xchacha20(key, nonce);
-    const _b = new Uint8Array(
-      plainText.length + 
-      ConstsType.AEAD_TAG_LENGTH
-  )
-      _b.set(plainText, 0)
-    const _s = _b.subarray(0, plainText.length)
-    const ciphered = cipher.encrypt(_s,_b);
-    const encrypted = ciphered
-      .subarray(0, 
-        ciphered.length - 
-        ConstsType.AEAD_TAG_LENGTH
-      );
-    const tag = ciphered
-      .subarray(
-        ciphered.length - 
-        ConstsType.AEAD_TAG_LENGTH
-      );
+export function _encrypt(key: Uint8Array, plainText: Uint8Array): Uint8Array {
+  // Generate a random nonce (24 bytes)
+  const nonce: Uint8Array = randomBytes(ConstsType.XCHACHA20_NONCE_LENGTH);
+
+  // Create the cipher using xchacha20
+  const cipher = xchacha20(key, nonce);
+
+  // Create a buffer to hold the encrypted message and tag
+  const buffer = new Uint8Array(plainText.length + ConstsType.AEAD_TAG_LENGTH);
+
+  // Set the plaintext into the buffer
+  buffer.set(plainText, 0);
+
+  // Encrypt the message
+  const ciphered = cipher.encrypt(buffer.subarray(0, plainText.length), buffer);
+
+  // Extract the encrypted message and tag
+  const encrypted = ciphered.subarray(0, ciphered.length - ConstsType.AEAD_TAG_LENGTH);
+  const tag = ciphered.subarray(ciphered.length - ConstsType.AEAD_TAG_LENGTH);
   return concatBytes(nonce, tag, encrypted);
 }
 
@@ -80,7 +76,7 @@ export function encrypt(k1RawPK: Hex, msg: Uint8Array): Buffer {
 
   let pk: Uint8Array;
   
-  //configuration (file: ts256k1.config.cjs
+  // Check the configuration to determine if ephemeral key compression is enabled.
   if (isEphemeralKeyCompressed()) {
     pk = temporaryStorageKey.publicKey.compressed;
   } else {
@@ -98,10 +94,12 @@ export function encrypt(k1RawPK: Hex, msg: Uint8Array): Buffer {
  * @param {string | Uint8Array} privateKey - The private key used for signing, provided either as a hexadecimal string or as a Uint8Array.
  * @returns {Buffer} - The generated signature in Buffer format.
  */
-function signMessage(encryptedData: Uint8Array, privateKey: Hex): Buffer {
+export function signMessage(encryptedData: Uint8Array, privateKey: Hex): Buffer {
     const messageHash = sha256(encryptedData);
     const signature = K1.sign(messageHash, privateKey, {
-        lowS: signUseLowS(),  //configuration (file: ts256k1.config.json))
+      // Check the configuration for the 'useLowS' option to determine 
+      // whether to use low S in the signature.
+        lowS: signUseLowS(), 
         extraEntropy: new Uint8Array([10, 20, 30, 9]),
         prehash: false
     });
@@ -113,12 +111,12 @@ function signMessage(encryptedData: Uint8Array, privateKey: Hex): Buffer {
 /**
  * Encodes the signed message by concatenating the signature and the encrypted message.
  * @function encodeSign
- * @param {Uint8Array} encryptedMessage - The encrypted message to be signed.
+ * @param {Uint8Array} cipherText - The encrypted message to be signed.
  * @param {string | Uint8Array} privateKey - The private key used to sign the message, either as a hex string or Uint8Array.
- * @returns {Buffer} - A Buffer containing both the signature and the encrypted message.
+ * @returns {Uint8Array} - A Uint8Array containing both the signature and the encrypted message.
  */
-export function encodeSign(encryptedMessage: Uint8Array, privateKey: Hex): Buffer {
-    const createSignature = signMessage(encryptedMessage, privateKey);
-    // Concatenate the signature and the encrypted message, returning it as a Buffer
-    return Buffer.from(concatBytes(createSignature, encryptedMessage));
+export function encodeSign(cipherText: Uint8Array, privateKey: Hex): Buffer {
+    const createSignature = signMessage(cipherText, privateKey);
+  // Concatenate the signature and the encrypted message, returning it as a Buffer
+    return Buffer.from(concatBytes(createSignature, cipherText))
 }

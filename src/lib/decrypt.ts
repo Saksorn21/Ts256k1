@@ -17,7 +17,7 @@ import { PublicKey } from './PublicKey';
  * @property {Uint8Array} signBytes - The signature of the message.
  * @property {Uint8Array} encryptMessage - The encrypted message.
  */
-export declare interface DecodedSignMessage{
+export declare interface DecodeSignMessage{
   signBytes: Uint8Array,
   encryptMessage: Uint8Array
 }
@@ -32,6 +32,30 @@ export declare interface VerifyMessage{
   cipherText: Uint8Array
 }
 /**
+ * Helper function to extract nonce, tag, and encrypted data. 
+ * @function extractParts
+ * @param {Uint8Array} cipherText - The encrypted message.
+ * @returns {object} - An object containing the tag, encrypted message, and nonce.
+ */
+
+export function extractParts(cipherText: Uint8Array): { 
+    nonce: Uint8Array, 
+    tag: Uint8Array, 
+    encrypted: Uint8Array
+  } {
+  
+  const nonceTagLength = 
+    ConstsType.XCHACHA20_NONCE_LENGTH + 
+    ConstsType.AEAD_TAG_LENGTH;
+
+  // Extract the nonce, tag, and encrypted message from the cipherText
+  const nonce = cipherText.subarray(0, ConstsType.XCHACHA20_NONCE_LENGTH);
+  const tag = cipherText.subarray(ConstsType.XCHACHA20_NONCE_LENGTH, nonceTagLength);
+  const encrypted = cipherText.subarray(nonceTagLength);
+
+  return { nonce, tag, encrypted };
+}
+/**
  * Decrypts a message using the given private key.
  * 
  * This function handles decryption by extracting the nonce, tag, and encrypted part from the cipher text.
@@ -42,34 +66,25 @@ export declare interface VerifyMessage{
  * @param {Uint8Array} cipherText - The message to decrypt, which includes nonce, tag, and encrypted data.
  * @returns {Uint8Array} - The decrypted message.
  */
-function _decrypt(
-  key: Uint8Array,
-  cipherText: Uint8Array
-): Uint8Array {
-    const nonceTagLength = 
-      ConstsType.XCHACHA20_NONCE_LENGTH + 
-      ConstsType.AEAD_TAG_LENGTH;
-    const nonce = cipherText
-      .subarray(0, 
-        ConstsType.XCHACHA20_NONCE_LENGTH
-      );
-    const tag = cipherText
-      .subarray(
-        ConstsType.XCHACHA20_NONCE_LENGTH, 
-        nonceTagLength
-      );
-    const encrypted = cipherText.subarray(nonceTagLength);
+// Decryption function
+export function _decrypt(key: Uint8Array, cipherText: Uint8Array): Uint8Array {
+  // Extract nonce, tag, and encrypted message
+  const { nonce, tag, encrypted } = extractParts(cipherText);
 
-    const decipher = xchacha20(key, Uint8Array.from(nonce)); // to reset byteOffset
-    const ciphered = concatBytes(encrypted, tag);
-    const _b = new Uint8Array(
-      encrypted.length + 
-      ConstsType.AEAD_TAG_LENGTH
-    )
-      _b.set(ciphered, 0)
-    const _s = _b.subarray(0, encrypted.length)
-  
-  return decipher.decrypt(_b, _s);
+  // Create the decipher using xchacha20
+  const decipher = xchacha20(key, nonce);
+
+  // Combine the encrypted message and tag
+  const ciphered = concatBytes(encrypted, tag);
+
+  // Create a buffer for decryption
+  const buffer = new Uint8Array(ciphered.length);
+  buffer.set(ciphered, 0);
+
+  // Decrypt the message
+  const decrypted = decipher.decrypt(buffer, buffer.subarray(0, encrypted.length));
+
+  return decrypted;
 }
 
 /**
@@ -109,14 +124,14 @@ export function decrypt(k1RawSK: Hex, msg: Uint8Array): Buffer {
  * Determines the size of the public key based on whether it is compressed or not.
  * 
  * This function checks if ephemeral key compression is enabled by calling `isEphemeralKeyCompressed`.
- * It then returns the size of the public key in bytes: either the compressed or uncompressed size.
+ * It then returns the size of the public key in bytes: either the compressed (33 bytes) or uncompressed size (65 bytes).
  * 
  * @function isCompressed
  * @returns {number} - The size of the public key in bytes. Returns `COMPRESSED_PUBLIC_KEY_SIZE` if the key is compressed, 
  *                     otherwise returns `UNCOMPRESSED_PUBLIC_KEY_SIZE`.
  */
-function isCompressed(): number {
-  //configuration (file: ts256k1.config.json))
+export function isCompressed(): number {
+  // Check the configuration to determine if ephemeral key compression is enabled.
   return isEphemeralKeyCompressed() ? 
     ConstsType.COMPRESSED_PUBLIC_KEY_SIZE : ConstsType.UNCOMPRESSED_PUBLIC_KEY_SIZE;
 }
@@ -127,7 +142,7 @@ function isCompressed(): number {
  * @param {Uint8Array} encodedEncrypt - The signed and encrypted message.
  * @returns {DecodedSignMessage} - An object containing the signature and the encrypted message.
  */
-export function decodedSignMessage(encodedEncrypt: Uint8Array): DecodedSignMessage {
+export function decodeSignMessage(encodedEncrypt: Uint8Array): DecodeSignMessage {
     const sign = encodedEncrypt.subarray(0, ConstsType.SIGNATURE_SIZE);
     const encrypted = encodedEncrypt.subarray(ConstsType.SIGNATURE_SIZE);
 
@@ -144,7 +159,7 @@ export function decodedSignMessage(encodedEncrypt: Uint8Array): DecodedSignMessa
  * @param {string | Uint8Array} publicKey - The public key used to verify the signature, provided either as a hex string or Uint8Array.
  * @returns {VerifyMessage} - An object containing the verification result (boolean) and the original cipher text.
  */
-export function verifyMessage(signatureRS: DecodedSignMessage, publicKey: Hex): VerifyMessage {
+export function verifyMessage(signatureRS: DecodeSignMessage, publicKey: Hex): VerifyMessage {
     const { signBytes, encryptMessage } = signatureRS;
     const encryptHex = sha256(encryptMessage);
     const verify = K1.verify(signBytes, encryptHex, publicKey);

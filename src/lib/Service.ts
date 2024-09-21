@@ -2,15 +2,19 @@ import { encrypt, encodeSign } from './encrypt'
 import { 
   decrypt, 
   verifyMessage, 
-  decodedSignMessage, 
+  decodeSignMessage, 
   type VerifyMessage, 
-  type DecodedSignMessage
+  type DecodeSignMessage
 } from './decrypt'
 import { 
   signEnabled, 
   signThrowOnInvalid,
-  signErrorMessage
+  signErrorMessage,
+  ConstsType
 } from '../config';
+import { equalBytes, normalizeToUint8Array } from '../utils';
+import { PrivateKey } from './PrivateKey'
+import { PublicKey } from './PublicKey'
 
 /**
  * @class Service
@@ -39,12 +43,13 @@ export class Service {
    */
   public encrypt(message: Uint8Array): Buffer {
     // Encrypt the message using the public key
-    const dataEncrypted: Buffer = encrypt(this.publicKeyA, message);
+    const dataEncrypted: Buffer = encrypt(this.publicKeyA, message)
 
     // If signing is enabled, sign the encrypted message using the private key and return the signed message
     if (signEnabled()) {
       const encodeSignMessage: Buffer = encodeSign(dataEncrypted, this.privateKeyA);
-      return encodeSignMessage;
+      
+      return encodeSignMessage
     }
 
     // If signing is not enabled, return only the encrypted data
@@ -65,13 +70,13 @@ export class Service {
     if (signEnabled()) {
       // Decode and verify the signed message
       const { verify, cipherText }: VerifyMessage = verifyMessage(
-        decodedSignMessage(messageEncrypt) as DecodedSignMessage,
+        decodeSignMessage(messageEncrypt) as DecodeSignMessage,
         this.publicKeyA
       );
 
-      // If the signature is invalid and `throwOnInvalid` is true, throw an error
+      // Check the configuration to determine If the signature is invalid and `throwOnInvalid` is true, throw an error
       if (signThrowOnInvalid() && !verify) 
-        throw new Error(signErrorMessage());
+        throw new Error(signErrorMessage()); // Check the configuration to determine `signErrorMessage` is a function that returns the error message
       
 
       // If the signature is valid, decrypt the ciphertext
@@ -81,4 +86,43 @@ export class Service {
     // If signing is not enabled, directly decrypt the message without signature verification
     return decrypt(this.privateKeyA, cipherText);
   }
+
+  /**
+   * Compares this key with another PrivateKey or PublicKey instance.
+   * Converts the current key to a Uint8Array if it is in hex format.
+   * If the current publicKeyA is compressed, it compares it with the compressed version of the other PublicKey.
+   * Otherwise, it compares with the uncompressed version.
+   *
+   * @method equals
+   * @param {PrivateKey | PublicKey} other - The PrivateKey or PublicKey instance to compare with.
+   * @returns {boolean} - Returns true if the two instances are equal, false otherwise.
+   * @throws {TypeError} - Throws an error if `other` is neither a PrivateKey nor a PublicKey instance.
+   */
+  public equals(other: PrivateKey | PublicKey): boolean {
+    // Check if other is a PrivateKey and compare
+    if (other instanceof PrivateKey) {
+      const privA = normalizeToUint8Array(this.privateKeyA)
+      return equalBytes(privA, other.secret);
+    } 
+
+    // Check if other is a PublicKey and compare
+    if (other instanceof PublicKey) {
+      const pubA = normalizeToUint8Array(this.publicKeyA)
+      // If publicKeyA is compressed, compare compressed versions, otherwise compare uncompressed versions
+      const data = pubA.length === ConstsType.COMPRESSED_PUBLIC_KEY_SIZE ? other.compressed : other.uncompressed;
+      return equalBytes(pubA, data);
+    }
+
+    // If neither condition matches, throw error
+    throw new TypeError(
+      `Type mismatch: Expected instance of PrivateKey or PublicKey, but got ${typeof other}.`
+    );
+  }
+}
+export { 
+  encrypt, 
+  encodeSign, 
+  decrypt, 
+  decodeSignMessage, 
+  verifyMessage 
 }

@@ -31,10 +31,12 @@ export function getSharedKey (
 
 export function hexToPublicKey (hex: string): Uint8Array  {
   const decoded = decodeHex(hex)
-    if (decoded.length === ConstsType.ETH_PUBLIC_KEY_SIZE) {
+    //If 64 bytes, then it's a uncompressed key
+  if (decoded.length === ConstsType.ETH_PUBLIC_KEY_SIZE) {
       const fixed = new Uint8Array(1 + decoded.length)
         fixed.set([0x04])
         fixed.set(decoded, 1)
+    
     return fixed
     }
     return decoded

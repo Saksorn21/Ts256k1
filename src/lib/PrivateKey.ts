@@ -7,7 +7,8 @@ import {
   getSharedKey,
   decodeHex,
   bytesToHex,
-  randomBytes
+  randomBytes,
+  equalBytes
 } from '../utils';
 
 const { getPublicKey, getSharedSecret, utils } = K1
@@ -100,7 +101,7 @@ export class PrivateKey {
    */
   public multiply(pk: PublicKey, compressed: boolean = false): Uint8Array {
     //TODO: .slice(1) - remove 0x
-    return getSharedSecret(this.data, pk.compressed, compressed).slice(1)
+    return getSharedSecret(this.data, pk.compressed, compressed)
   }
 
   /**
@@ -139,4 +140,6 @@ export class PrivateKey {
   private getPublicKey(secret: Uint8Array): Uint8Array {
     return getPublicKey(secret)
   }
+  
+  
 }

@@ -1,7 +1,7 @@
 
 import { PrivateKey } from './lib/PrivateKey'
+import { PublicKey } from './lib/PublicKey'
 import { Service } from './lib/Service'
-import {K1} from './utils';
 
 /**
  * @class Ts256k1 - A class for generating and managing 256-bit secret keys, and for encrypting and decrypting messages.
@@ -9,7 +9,6 @@ import {K1} from './utils';
  * const k1 = new Ts256k1(privateKey, publicKey);
  * const msg = utf8ToBytes('hello');
  * k1.decrypt(k1.encrypt(msg)).toString();
- *
  * @type {import('ts256k1').Ts256k1} Ts256k1
  */
 export class Ts256k1 {
@@ -64,12 +63,15 @@ export class Ts256k1 {
   public decrypt(msg: Uint8Array): Uint8Array {
     return this.service.decrypt(msg);
   }
-/** 
-  public equals(other: PrivateKey): boolean {
-    return equalBytes(this.data, other.data);
-  }
-  */
-  public recoverPublicKey(msg: Uint8Array, signature: string | Uint8Array , recoveryId: number = 0) {
-   // return K1.recoverPublicKey(msg, signature, recoveryId)
+
+  /**
+   * @method equals
+   * @param {PrivateKey | PublicKey} other - The instace of PrivateKey or PublicKey to compare with.
+   * @returns {boolean} - True if the keys are equal, false otherwise.
+   */
+ public equals(other: PrivateKey| PublicKey): boolean {
+    return this.service.equals(other);
   }
 }
+
+export { PrivateKey, PublicKey } 

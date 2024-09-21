@@ -8,9 +8,9 @@ To install the library, you can use npm or yarn:
 
 ```bash
 npm install ts256k1
-<sub>or</sub>
+or
 bun add ts256k1
-<sub>or</sub>
+or
 yarn add ts256k1
 ```
 
@@ -64,8 +64,16 @@ const message = utf8ToBytes('hello, Ts256k1');
 const encryptedMessage = ts256k1.encrypt(message);
 
 // Decrypt the message
-const decryptedMessage = ts256k1.decrypt(encryptedMessage);
+const decryptedMessage = ts256k1.decrypt(encryptedMessage); // return Uint8Array
 console.log(`Decrypted Message: ${bytesToUtf8(decryptedMessage)}`);
+```
+## All imports
+```typescript
+import { Ts256k1, PrivateKey, PublicKey } from 'ts256k1'
+import { encrypt, encodeSing, decrypt, decodeSignMessage, verifyMessage } from 'ts256k1/service'
+//TODO: Data conversion, see below
+import utils from 'ts256k1/utils'
+
 ```
 
 ## Utilities
@@ -124,6 +132,7 @@ This class provides encryption, decryption, and key pair generation (private and
 - `constructor(secret: string | Uint8Array, publicKey: string | Uint8Array)` — Initializes an instance with a private and public key.
 - `encrypt(msg: Uint8Array): Uint8Array` — Encrypts the provided message using the public key.
 - `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message using the private key.
+- - `equals(other: PrivateKey | PublicKey): boolean` - Compares this key with another PrivateKey or PublicKey instance.
 
 ### Class: **PublicKey**
 
@@ -152,6 +161,7 @@ This class handles encryption, decryption, and message signing/verification.
 - `constructor(privateKeyA: string | Uint8Array, publicKeyA: string | Uint8Array)` — Initializes the service with a private and public key.
 - `encrypt(msg: Uint8Array): Uint8Array` — Encrypts the provided message and signs it if signature functionality is enabled.
 - `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
+- `equals(other: PrivateKey | PublicKey): boolean` - Compares this key with another PrivateKey or PublicKey instance.
 
 ## Message Signing and Verification
 

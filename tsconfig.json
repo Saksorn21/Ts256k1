@@ -1,16 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES6",                // รองรับฟีเจอร์ของ ES6 ขึ้นไป
-    "module": "CommonJS",           // ตั้งค่าให้เป็น CommonJS (Node.js)
-    "outDir": "./",             // โฟลเดอร์ที่เก็บไฟล์ที่คอมไพล์แล้ว
-    "esModuleInterop": false,        // รองรับการใช้โมดูลทั้ง CommonJS และ ES Modules
-    "declaration": true,            // สร้างไฟล์ .d.ts สำหรับ TypeScript users
+    "target": "es2020",
     "declarationDir": "./types",
+    "moduleResolution": "Node10",
+    "lib": [
+      "es2020"
+    ],
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
     "declarationMap": true,
-    "strict": true,                 // เปิดใช้งานโหมด strict
+    "allowSyntheticDefaultImports": false,
+    "allowUnreachableCode": false,
+    "esModuleInterop": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "useDefineForClassFields": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*","src/types/global.d.ts"],
+  "include": ["src/**/*", "src/types/**/*.d.ts"],
   "exclude": ["node_modules"]
 }
