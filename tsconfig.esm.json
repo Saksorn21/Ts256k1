@@ -3,6 +3,6 @@
   "compilerOptions": {
     "module": "es2020", 
     "outDir": "./esm",
-    "moduleResolution": "Node16",
+    "moduleResolution": "node10"
   }
 }

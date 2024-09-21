@@ -12,7 +12,7 @@
     "declarationMap": true,
     "allowSyntheticDefaultImports": false,
     "allowUnreachableCode": false,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": false,

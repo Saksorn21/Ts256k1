@@ -13,7 +13,9 @@
     "security",
     "ecdsa",
     "key exchange",
-    "crypto"
+    "crypto",
+    "signature",
+    "curve"
   ],
   "license": "MIT",
   "author": "BOAT saksorn (Thailand)",
@@ -60,6 +62,9 @@
     "LICENSE",
     "ts256k1.config.json"
   ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "dev": "bun run --watch tests/test.ts",
     "build:cjs": "tsc -p tsconfig.cjs.json",
