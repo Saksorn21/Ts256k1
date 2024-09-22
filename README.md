@@ -1,10 +1,10 @@
-# Ts256k1
+# nyren-ts256k1
 
-**Ts256k1** is a TypeScript library for working with the `secp256k1` elliptic curve. It includes functionality for key generation, encryption, decryption, signing, and signature verification using `secp256k1` and the `xchacha20poly1305` algorithm.
+**nyren-ts256k1** is a TypeScript library for working with the `secp256k1` elliptic curve. It includes functionality for key generation, encryption, decryption, signing, and signature verification using `secp256k1` and the `xchacha20poly1305` algorithm.
 
 ## Installation
 
-To install the library, you can use npm or yarn:
+To install the library, you can use npm or bun or yarn:
 
 ```bash
 npm i @nyren/ts256k1
@@ -16,7 +16,7 @@ yarn add @nyren/ts256k1
 
 ## Usage
 
-**Ts256k1** supports both `CommonJS` and `ES Module` formats. You can import the library in different ways depending on your module system.
+**nyren-ts256k1** supports both `CommonJS` and `ES Module` formats. You can import the library in different ways depending on your module system.
 
 ### CommonJs
 
