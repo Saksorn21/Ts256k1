@@ -124,15 +124,28 @@ module.exports = {
 
 ## API
 
+Here’s how you can describe the **Ts256k1** class in your `.md` file, highlighting that the methods come from extending the **Service** class without repeating all the method details:
+
+---
+
 ### Class: **Ts256k1**
 
-This class provides encryption, decryption, and key pair generation (private and public keys).
+The **Ts256k1** class is a simplified interface for generating and managing key pairs, as well as encrypting and decrypting messages. This class extends the functionality of the `Service` class, inheriting all of its encryption and decryption capabilities.
 
-- `static getKeyPairs(secret?: Uint8Array): PrivateKey` — Generates and returns a private key based on the provided secret.
-- `constructor(secret: string | Uint8Array, publicKey: string | Uint8Array)` — Initializes an instance with a private and public key.
-- `encrypt(msg: Uint8Array): Uint8Array` — Encrypts the provided message using the public key.
-- `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message using the private key.
-- - `equals(other: PrivateKey | PublicKey): boolean` - Compares this key with another PrivateKey or PublicKey instance.
+- **Inheritance**: `Ts256k1` extends `Service`, which means all methods available in `Service` (like `encrypt`, `decrypt`, and `equals`) are also available in `Ts256k1`.
+
+#### Methods:
+- `static getKeyPairs(secret?: Uint8Array): PrivateKey`
+  - Generates a new private and public key pair.
+  - **Parameters**: 
+    - `secret` _(optional)_: An optional 32-byte `Uint8Array` secret key.
+  - **Returns**: `PrivateKey` instance.
+  
+- `constructor(secret: string | Uint8Array, publicKey: string | Uint8Array)`
+  - Creates an instance of `Ts256k1` with a specified private and public key.
+
+#### Note:
+- For more details on encryption, decryption, and key comparison methods, refer to the **Service** class documentation.
 
 ### Class: **PublicKey**
 
