@@ -23,8 +23,8 @@ yarn add @nyren/ts256k1
 If you are using **CommonJS**, you can import Ts256k1 like this:
 
 ```javascript
-const { Ts256k1 } = require('ts256k1');
-const utils = require('ts256k1/utils')
+const { Ts256k1 } = require('@nyren/ts256k1');
+
 ```
 
 ### ES Modules
@@ -32,14 +32,14 @@ const utils = require('ts256k1/utils')
 If you are using **ES Modules**, you can import Ts256k1 like this:
 
 ```typescript
-import { Ts256k1 } from 'ts256k1';
-import utils from 'ts256k1/utils'
+import { Ts256k1 } from '@nyren/ts256k1';
+
 ```
 
 ### Generating Key Pairs
 
 ```typescript
-import { Ts256k1 } from 'ts256k1';
+import { Ts256k1 } from '@nyren/ts256k1';
 
 // Generate a new key pair
 const keyPair = Ts256k1.getKeyPairs();
@@ -53,8 +53,8 @@ console.log(`Public Key: ${publicKey}`);
 ### Encrypting and Decrypting Messages
 
 ```typescript
-import { Ts256k1 } from 'ts256k1';
-import { utf8ToBytes, bytesToUtf8 } from 'ts256k1/utils';
+import { Ts256k1 } from '@nyren/ts256k1';
+import { utf8ToBytes, bytesToUtf8 } from '@nyren/ts256k1/utils';
 
 // Create a Ts256k1 instance with your keys
 const ts256k1 = new Ts256k1(privateKey, publicKey);
@@ -67,12 +67,23 @@ const encryptedMessage = ts256k1.encrypt(message);
 const decryptedMessage = ts256k1.decrypt(encryptedMessage); // return Uint8Array
 console.log(`Decrypted Message: ${bytesToUtf8(decryptedMessage)}`);
 ```
+### Utils bytes
+
+```typescript
+import { bytesToBase64, base64ToBytes } from '@nyren/ts256k1/utils'
+const encryptMessage = new Uint8Array[1,2,3,4]
+const toBase64 = bytesToBase64(encryptMassage)
+const base64To = base64ToBytes(toBase64)
+// return Buffer If you want Uint8Array 'Uint8Array.from(base64To)': Uint8Array
+
+```
+
 ## All imports
 ```typescript
-import { Ts256k1, PrivateKey, PublicKey } from 'ts256k1'
-import { encrypt, encodeSing, decrypt, decodeSignMessage, verifyMessage } from 'ts256k1/service'
+import { Ts256k1, PrivateKey, PublicKey } from '@nyren/ts256k1'
+import { Service, encrypt, encodeSing, decrypt, decodeSignMessage, verifyMessage } from '@nyren/ts256k1/service'
 //TODO: Data conversion, see below
-import utils from 'ts256k1/utils'
+import utils from '@nyren/ts256k1/utils'
 
 ```
 
@@ -85,15 +96,15 @@ The library provides various utilities for encoding and decoding:
 - `bytesToUtf8(bytes: Uint8Array): string`
 - `utf8ToBytes(utf8: string): Uint8Array`
 - `bytesToBase64(bytes: Uint8Array): string`
-- `base64ToBytes(base64: string): Uint8Array`
+- `base64ToBytes(base64: string): Buffer`
 - `bytesToAscii(bytes: Uint8Array): string`
-- `asciiToBytes(ascii: string): Uint8Array`
-- `bytesToLatin1(bytes: Uint8Array): string`
-- `latin1ToBytes(latin1: string): Uint8Array`
+- `asciiToBytes(ascii: string): Buffer`
+- `bytesToLatin1(bytes: Buffer): string`
+- `latin1ToBytes(latin1: string): Buffer`
 - `bytesToUcs2(bytes: Uint8Array): string`
-- `ucs2ToBytes(ucs2: string): Uint8Array`
+- `ucs2ToBytes(ucs2: string): Buffer`
 - `remove0x(hex: string): string`
-- `decodeHex(hex: string): Uint8Array`
+- `decodeHex(hex: string): Buffer`
 
 ## Configuration
 
@@ -123,10 +134,6 @@ module.exports = {
 ```
 
 ## API
-
-Here’s how you can describe the **Ts256k1** class in your `.md` file, highlighting that the methods come from extending the **Service** class without repeating all the method details:
-
----
 
 ### Class: **Ts256k1**
 

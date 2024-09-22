@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.3] - 2024-09-22
+### Changed
+- Updated `README.md` to fix typos and improve clarity.
+  
 ## [1.0.2] - 2024-09-22
 ### Changed
 - Updated `README.md` to fix typos and improve clarity.
