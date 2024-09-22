@@ -7,11 +7,11 @@
 To install the library, you can use npm or yarn:
 
 ```bash
-npm install ts256k1
+npm i @nyren/ts256k1
 or
-bun add ts256k1
+bun add @nyren/ts256k1
 or
-yarn add ts256k1
+yarn add @nyren/ts256k1
 ```
 
 ## Usage
