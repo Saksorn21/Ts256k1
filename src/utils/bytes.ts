@@ -80,3 +80,26 @@ export function normalizeToUint8Array(data: Hex): Uint8Array {
   }
   return data
 }
+
+const utils = {
+  bytesToHex,
+  hexToBytes,
+  bytesToUtf8,
+  utf8ToBytes,
+  bytesToBase64,
+  base64ToBytes,
+  bytesToAscii,
+  asciiToBytes,
+  bytesToLatin1,
+  latin1ToBytes,
+  bytesToUcs2,
+  ucs2ToBytes,
+  remove0x,
+  decodeHex,
+  isBytes,
+  abytes,
+  isString,
+  normalizeToUint8Array,
+}
+export default utils
+
