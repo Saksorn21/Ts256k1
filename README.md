@@ -105,6 +105,8 @@ The library provides various utilities for encoding and decoding:
 - `ucs2ToBytes(ucs2: string): Buffer`
 - `remove0x(hex: string): string`
 - `decodeHex(hex: string): Buffer`
+- `normalizeToUint8Array(data: string | Uint8array): Uint8Array`
+
 
 ## Configuration
 
@@ -132,6 +134,11 @@ module.exports = {
   }
 }
 ```
+
+#### Note:
+- On **`ephemeralKeyCompressed = true`**, the payload would be: `33 Bytes + Ciphered` instead of `65 Bytes + Ciphered`.
+
+- On **`hkdfKeyCompressed = true`**, the hkdf key would be derived from `ephemeral public key (compressed) + shared public key (compressed)` instead of `ephemeral public key (uncompressed) + shared public key (uncompressed)`.
 
 ## API
 
@@ -207,6 +214,10 @@ These libraries are designed with performance and security in mind, following be
 - **Encryption**: The library uses XChaCha20-Poly1305 for encryption, a secure AEAD (Authenticated Encryption with Associated Data) cipher that provides both confidentiality and integrity.
 
 We encourage all users to follow best security practices when handling private keys and sensitive information. Always validate your inputs and keep your dependencies up to date to benefit from the latest security patches.
+
+## Changelog
+
+See [CHANGELOG](CHANGELOG.md).
 
 ## License
 

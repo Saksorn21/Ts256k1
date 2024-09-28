@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.4 - 1.1.0] - 2024-09-26
+### Changed
+- Updated `README.md` to fix typos and improve clarity.
+- Updated `utils` export default.
+
+### Added
+- Add a new Class `CompressionService` to collect compression, decompression, data and manage files, caches [`See`](README.md#class-CompressionService)
+- Add a new function to manage encryption data.
+- Supports data compression / decompression with Deflate / Inflate class.
+
 ## [1.0.3] - 2024-09-22
 ### Changed
 - Updated `README.md` to fix typos and improve clarity.

@@ -6,5 +6,10 @@ module.exports = {
     throwOnInvalid: true,
     errorMessage: 'Invalid signature',
     useLowS: true
+  },
+  compressService: {
+    enabled: true,
+    useTemp: false
   }
 }
+
