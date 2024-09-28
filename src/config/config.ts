@@ -28,12 +28,12 @@ class Config {
    * Initializes the Config instance by loading settings from the JSON configuration file.
    */
   constructor() {
-    this.isHkdfKeyCompressed = this.loader.hkdfKeyCompressed
-    this.isEphemeralKeyCompressed = this.loader.ephemeralKeyCompressed
-    this.signErrorMessage = this.loader.signature.errorMessage
-    this.signEnabled = this.loader.signature.enabled
-    this.signThrowOnInvalid = this.loader.signature.throwOnInvalid
-    this.signUseLowS = this.loader.signature.useLowS
+    this.isHkdfKeyCompressed = this.loader?.hkdfKeyCompressed ?? false
+    this.isEphemeralKeyCompressed = this.loader?.ephemeralKeyCompressed ?? false
+    this.signErrorMessage = this.loader?.signature?.errorMessage ?? 'Invalid signature'
+    this.signEnabled = this.loader?.signature?.enabled ?? true
+    this.signThrowOnInvalid = this.loader?.signature?.throwOnInvalid ?? true
+    this.signUseLowS = this.loader?.signature?.useLowS ?? true
   }
 }
 

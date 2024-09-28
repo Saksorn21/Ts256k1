@@ -102,4 +102,3 @@ const utils = {
   normalizeToUint8Array,
 }
 export default utils
-

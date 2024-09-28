@@ -9,7 +9,7 @@ module.exports = {
   },
   compressService: {
     enabled: true,
-    useTemp: false
+    useTemp: false // File cache for root project
   }
 }
 
