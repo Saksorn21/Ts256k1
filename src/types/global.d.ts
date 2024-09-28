@@ -7,7 +7,8 @@ declare global {
    * @description A type alias for a hexadecimal string.
    */
   type Hex = string | Uint8Array
-
+ var CACHE_DIR: string
+  
   /**
    * @interface Config256k1
    * @description An interface for the configuration options.
