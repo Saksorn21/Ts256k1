@@ -6,4 +6,5 @@ export const ConstsType = {
   SIGNATURE_SIZE: 64,
   XCHACHA20_NONCE_LENGTH: 24,
   AEAD_TAG_LENGTH: 16,
+  PREFIX_COMPRESS_LENGTH: 8,
 } as const
