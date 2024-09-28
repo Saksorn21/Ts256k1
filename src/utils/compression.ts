@@ -7,38 +7,73 @@ import {
   type DeflateOptions,
 } from 'pako'
 
-import {
-  concatBytes as concat,
-  utf8ToBytes as u8a,
-  bytesToUtf8 as au8,
-  bytesToHex as toHex,
-} from './index'
-
+/**
+ * CompressOpts is a type that extends DeflateOptions with additional 'coverage' property
+ * @type {Object} CompressOpts
+ * @property {1 | 2 | 3 | 4 | null} coverage - Specifies the level of compression coverage.
+ */
 export type CompressOpts = DeflateOptions & {
-  coverage?: 1 | 2 | 3 | 4 | null
+  coverage: 1 | 2 | 3 | 4 | null
 }
 
-export function compressData(
+/**
+ * Compresses the provided data using an optional dictionary and specified options.
+ *
+ * @param {Uint8Array} dictionary - The optional dictionary to use for compression.
+ * @param {DeflateOptions} options - The options for the compression process.
+ * @param {Uint8Array[]} data - The data to be compressed.
+ * @returns {Uint8Array} - The compressed data.
+ */
+function compressData(
   dictionary: Uint8Array,
   options: DeflateOptions,
   ...data: Uint8Array[]
 ): Uint8Array
-export function compressData(
+
+/**
+ * Compresses the provided data using specified options.
+ *
+ * @param {DeflateOptions} options - The options for the compression process.
+ * @param {Uint8Array[]} data - The data to be compressed.
+ * @returns {Uint8Array} - The compressed data.
+ */
+function compressData(
   options: DeflateOptions,
   ...data: Uint8Array[]
 ): Uint8Array
-export function compressData(
+
+/**
+ * Compresses a single Uint8Array using an optional dictionary and specified options.
+ *
+ * @param {Uint8Array} dictionary - The optional dictionary to use for compression.
+ * @param {DeflateOptions} options - The options for the compression process.
+ * @param {Uint8Array} data - The data to be compressed.
+ * @returns {Uint8Array} - The compressed data.
+ */
+function compressData(
   dictionary: Uint8Array,
-  options: DeflateOptions,
-  data: Uint8Array
-): Uint8Array
-export function compressData(
   options: DeflateOptions,
   data: Uint8Array
 ): Uint8Array
 
-// Compress data with pako
-export function compressData(
+/**
+ * Compresses a single Uint8Array using specified options.
+ *
+ * @param {DeflateOptions} options - The options for the compression process.
+ * @param {Uint8Array} data - The data to be compressed.
+ * @returns {Uint8Array} - The compressed data.
+ */
+function compressData(options: DeflateOptions, data: Uint8Array): Uint8Array
+
+/**
+ * Compresses the provided data using an optional dictionary or specified options.
+ *
+ * @param {Uint8Array | DeflateOptions} dictionaryOrOptions - The optional dictionary or options for compression.
+ * @param {DeflateOptions | Uint8Array} optionsOrData - The options for compression or data to compress.
+ * @param {Uint8Array[]} data - The data to be compressed.
+ * @returns {Uint8Array} - The compressed data.
+ */
+function compressData(
   dictionaryOrOptions: Uint8Array | DeflateOptions,
   optionsOrData: DeflateOptions | Uint8Array,
   ...data: Uint8Array[]
@@ -48,26 +83,23 @@ export function compressData(
   let dataArray: Uint8Array[]
   let compress: Deflate
 
-  // ตรวจสอบว่า dictionary หรือ options ถูกส่งมาเป็นพารามิเตอร์แรก
   if (dictionaryOrOptions instanceof Uint8Array) {
     dictionary = dictionaryOrOptions
     opts = optionsOrData as DeflateOptions
 
-    // ตรวจสอบว่ามีการส่งหลาย data (rest parameters) หรือแค่ตัวเดียว
     if (data.length > 0) {
-      dataArray = data // รับค่าจาก rest parameters (...data)
+      dataArray = data
     } else {
-      dataArray = [optionsOrData as Uint8Array] // รับแค่ค่าพารามิเตอร์เดียว
+      dataArray = [optionsOrData as Uint8Array]
     }
   } else {
     dictionary = undefined
     opts = dictionaryOrOptions as DeflateOptions
 
-    // ตรวจสอบว่า data ถูกส่งมาเป็น rest หรือเป็นพารามิเตอร์เดียว
     if (data.length > 0) {
-      dataArray = [optionsOrData as Uint8Array, ...data] // มี rest parameters
+      dataArray = [optionsOrData as Uint8Array, ...data]
     } else {
-      dataArray = [optionsOrData as Uint8Array] // มีแค่พารามิเตอร์เดียว
+      dataArray = [optionsOrData as Uint8Array]
     }
   }
 
@@ -81,7 +113,6 @@ export function compressData(
     ...opts,
   })
 
-  //ตอนนี้ dataArray จะมีข้อมูลที่ถูกต้องไม่ว่ามันจะมาจาก single data หรือ rest parameters
   dataArray.forEach((dataPiece, index) => {
     compress.push(dataPiece, index === dataArray.length - 1)
   })
@@ -91,22 +122,23 @@ export function compressData(
     throw new Error('Compression error' + compress.msg)
   }
 
-  // คืนค่าข้อมูลที่ถูกบีบอัด
-  return compress.result // เปลี่ยนเป็นผลลัพธ์การบีบอัดจริง
+  return compress.result
 }
 
-// Decompress data with pako
-
-export function decompressData(
-  data: Uint8Array,
-  opts?: InflateOptions
-): Uint8Array {
+/**
+ * Decompresses the provided data using the specified options.
+ *
+ * @param {Uint8Array} data - The compressed data to decompress.
+ * @param {InflateOptions} [opts] - Optional settings for the decompression.
+ * @returns {Uint8Array} - The decompressed data.
+ */
+function decompressData(data: Uint8Array, opts?: InflateOptions): Uint8Array {
   const decompressedData = new Inflate({
     windowBits: opts?.windowBits || -15,
     raw: opts?.raw ?? true,
-    dictionary: opts?.dictionary ?? undefined,
-    ...opts,
+    dictionary: opts?.dictionary,
   })
+
   decompressedData.push(data, true)
 
   if (decompressedData.err) {
@@ -116,23 +148,27 @@ export function decompressData(
   return decompressedData.result as Uint8Array
 }
 
-export function calculateChunkSize(
+/**
+ * Calculates the total size and chunk size based on the input data array and chunk count.
+ *
+ * @param {Uint8Array[]} dataArray - The array of data to calculate size from.
+ * @param {number} chunkCount - The number of chunks to divide the total size into.
+ * @returns {{ totalSize: number; chunkSize: number }} - The total size and chunk size.
+ * @throws Will throw an error if chunkCount is less than or equal to zero.
+ */
+function calculateChunkSize(
   dataArray: Uint8Array[],
   chunkCount: number
 ): { totalSize: number; chunkSize: number } {
-  console.debug(dataArray, chunkCount)
-  const totalSize = dataArray.reduce((sum, data) => sum + data.length, 0) // คำนวณขนาดทั้งหมด
-  console.log('totalSize', totalSize)
-
-  // ตรวจสอบ chunkCount ต้องมีค่ามากกว่า 0
   if (chunkCount <= 0) {
     throw new Error('chunkCount must be greater than 0.')
   }
 
-  // กำหนด chunkSize
+  const totalSize = dataArray.reduce((sum, data) => sum + data.length, 0)
   const chunkSize = Math.ceil(totalSize / chunkCount)
 
-  // ตรวจสอบว่า chunkSize ไม่เกิน totalSize
   return { totalSize, chunkSize: Math.min(chunkSize, totalSize) }
 }
+export { compressData, decompressData, calculateChunkSize }
+// Exporting the types used
 export type { DeflateFunctionOptions, InflateOptions, DeflateOptions }

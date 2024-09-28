@@ -6,10 +6,6 @@ module.exports = {
     throwOnInvalid: true,
     errorMessage: 'Invalid signature',
     useLowS: true
-  },
-  compressService: {
-    enabled: true,
-    useTemp: false // File cache for root project
   }
 }
 

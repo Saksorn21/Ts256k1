@@ -30,7 +30,8 @@ class Config {
   constructor() {
     this.isHkdfKeyCompressed = this.loader?.hkdfKeyCompressed ?? false
     this.isEphemeralKeyCompressed = this.loader?.ephemeralKeyCompressed ?? false
-    this.signErrorMessage = this.loader?.signature?.errorMessage ?? 'Invalid signature'
+    this.signErrorMessage =
+      this.loader?.signature?.errorMessage ?? 'Invalid signature'
     this.signEnabled = this.loader?.signature?.enabled ?? true
     this.signThrowOnInvalid = this.loader?.signature?.throwOnInvalid ?? true
     this.signUseLowS = this.loader?.signature?.useLowS ?? true

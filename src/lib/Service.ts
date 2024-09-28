@@ -13,6 +13,12 @@ import {
   ConstsType,
 } from '../config'
 import { equalBytes, normalizeToUint8Array } from '../utils'
+import {
+  CompressionService,
+  type CompressOpts,
+  type InflateOptions,
+} from './CompressionService'
+
 import { PrivateKey } from './PrivateKey'
 import { PublicKey } from './PublicKey'
 
@@ -21,17 +27,23 @@ import { PublicKey } from './PublicKey'
  * A class that handles encryption, decryption, and message signing/verification.
  */
 export class Service {
+  private compression: CompressionService
   /**
    * Initializes a new instance of the Service class.
    *
    * @constructor
    * @param {string | Uint8Array} privateKeyA - The private key used for signing and decrypting messages.
    * @param {string | Uint8Array} publicKeyA - The public key used for encrypting messages.
+   * @param {boolean} [useTemp] - Whether to use a temporary file for caching the root project.
    */
   constructor(
     private readonly privateKeyA: Hex,
-    private readonly publicKeyA: Hex
-  ) {}
+    private readonly publicKeyA: Hex,
+    useTemp?: boolean
+  ) {
+    // Instantiates the CompressionService class.
+    this.compression = new CompressionService(useTemp)
+  }
 
   /**
    * Encrypts a message using the provided public key, and signs the encrypted data using the private key
@@ -89,6 +101,45 @@ export class Service {
   }
 
   /**
+   * Gets the cache directory where cache files will be stored.
+   *
+   * @property {string} cacheDir - The directory where the cache files will be stored.
+   * @returns {string} - The directory where the cache files will be stored.
+   */
+  get cacheDir(): string {
+    return this.compression.cacheDir
+  }
+
+  /**
+   * Compresses a Uint8Array using the provided options.
+   * @param {Uint8Array} message - The Uint8Array to be compressed.
+   * @param {CompressOpts} opts - The options for compressing the Uint8Array, including coverage.
+   * @returns {Uint8Array} - The compressed message.
+   */
+  public encryptAndCompress(
+    message: Uint8Array,
+    opts: CompressOpts
+  ): Uint8Array {
+    const dataEncrypted: Buffer = this.encrypt(message)
+    return this.compression.compress(dataEncrypted, opts)
+  }
+
+  /**
+   * Decompresses and decrypts a Uint8Array using the provided options.
+   *
+   * @param {Uint8Array} messageEncrypt - The encrypted message to be decompressed and decrypted.
+   * @param {InflateOptions} opts - The decompression options to apply.
+   * @returns {Uint8Array} - The decrypted and decompressed message.
+   */
+  public decryptAndDecompress(
+    messageEncrypt: Uint8Array,
+    opts: InflateOptions
+  ): Uint8Array {
+    const cipherText = this.compression.decompress(messageEncrypt, opts)
+    return this.decrypt(cipherText)
+  }
+
+  /**
    * Compares this key with another PrivateKey or PublicKey instance.
    * Converts the current key to a Uint8Array if it is in hex format.
    * If the current publicKeyA is compressed, it compares it with the compressed version of the other PublicKey.
@@ -123,4 +174,14 @@ export class Service {
     )
   }
 }
-export { encrypt, encodeSign, decrypt, decodeSignMessage, verifyMessage }
+export {
+  encrypt,
+  encodeSign,
+  decrypt,
+  decodeSignMessage,
+  verifyMessage,
+  CompressionService,
+}
+export * from '../utils/compression'
+export * from '../utils/handlersFiles'
+export type { VerifyMessage, DecodeSignMessage, CompressOpts, InflateOptions }

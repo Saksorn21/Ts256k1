@@ -9,8 +9,8 @@ import {
 import { join } from 'path'
 import { tmpdir, homedir } from 'os'
 import { utf8ToBytes as u8a, bytesToUtf8 as au8 } from './bytes'
-
 import { ConstsType } from '../config'
+
 export interface RawPreload {
   [name: string]: {
     prefix: string
@@ -19,33 +19,54 @@ export interface RawPreload {
   }
 }
 
+/**
+ * Generates a random UUID (Universal Unique Identifier).
+ *
+ * @returns {string} A randomly generated UUID string.
+ */
 export const UUID = (): string =>
   `${Math.random().toString(16).substring(2, 10)}`
 
+/**
+ * Resolves and normalizes a file path.
+ * If the path starts with `~`, it is replaced with the user's home directory.
+ *
+ * @param {...string[]} paths - The parts of the file path.
+ * @returns {string} The resolved file path.
+ */
 export function resolvePath(...paths: string[]): string {
   let fullPath = join(...paths)
 
-  // ถ้า path เริ่มต้นด้วย ~ ให้ขยายเป็น home directory
+  // If path starts with ~, replace it with home directory
   if (fullPath.startsWith('~')) {
-    fullPath = join(homedir(), fullPath.slice(1)) // ลบ ~ แล้วรวมกับ home directory
+    fullPath = join(homedir(), fullPath.slice(1)) // Remove ~ and join with home directory
   }
 
   return fullPath
 }
-// Set cache directory
+
+/**
+ * Sets the cache directory to either the system temporary directory or the project's root cache directory.
+ *
+ * @param {boolean} [useTemp=false] - Whether to use the system temporary directory for cache.
+ */
 export function setCacheDirectory(useTemp: boolean = false): void {
   const cacheDir = useTemp ? tmpdir() : resolvePath(process.cwd(), 'cache')
 
-  // Set custom cache directory path globally or as part of a config object
+  // Set the cache directory globally or in a config object
   globalThis.CACHE_DIR = cacheDir
 
-  // ตรวจสอบว่ามี directory แล้วหรือยัง ถ้าไม่มีก็สร้าง
+  // Ensure the cache directory exists
   ensureDirectoryExists()
 }
 
-// Ensure directory exists, create if not
+/**
+ * Ensures that the cache directory exists, creating it if it does not.
+ *
+ * @returns {string} The path of the cache directory.
+ */
 export function ensureDirectoryExists(): string {
-  const cacheDir = globalThis.CACHE_DIR // ใช้ default path ถ้าไม่มีการตั้งค่า
+  const cacheDir = globalThis.CACHE_DIR
 
   if (!existsSync(cacheDir)) {
     mkdirSync(cacheDir, { recursive: true })
@@ -54,29 +75,47 @@ export function ensureDirectoryExists(): string {
   return cacheDir
 }
 
-// Remove a cache file
+/**
+ * Removes a cache file from the specified directory.
+ *
+ * @param {string} filename - The name of the file to remove.
+ * @param {string} dir - The directory containing the file.
+ */
 export function removeCacheFile(filename: string, dir: string): void {
   const filePath = resolvePath(dir, filename)
 
   if (existsSync(filePath)) {
-    unlinkSync(filePath) // ลบไฟล์
+    unlinkSync(filePath) // Remove file
     console.log(`Cache file removed: ${filename}`)
   } else {
     console.error(`File not found: ${filename}`)
   }
 }
 
-// List all cache files
+/**
+ * Lists all cache files in the specified directory.
+ *
+ * @param {string} dir - The directory to list files from.
+ * @returns {string[]} An array of file names in the directory.
+ */
 export function listCacheFiles(dir: string): string[] {
   try {
-    return readdirSync(dir) // อ่านรายชื่อไฟล์ในไดเรกทอรี
+    return readdirSync(dir) // Read files in directory
   } catch (err) {
     console.error(`Error reading directory: ${dir}`, err)
     return []
   }
 }
 
-// Write binary data to cache file
+/**
+ * Writes binary data to a cache file.
+ *
+ * @param {Uint8Array} data - The binary data to write to the cache file.
+ * @param {string} dir - The directory where the file will be saved.
+ * @param {string} uuid - A unique identifier for the file.
+ * @param {number} dataCount - A count of the data size or chunks.
+ * @returns {Uint8Array} The UUID converted to bytes for later retrieval.
+ */
 export function writeFileBit(
   data: Uint8Array,
   dir: string,
@@ -86,51 +125,70 @@ export function writeFileBit(
   const PREFIX = uuid
   const filePath = resolvePath(dir, `${PREFIX}_${dataCount}.bin`)
 
-  writeFileSync(filePath, data) // เขียนข้อมูลลงไฟล์แบบ synchronous
+  writeFileSync(filePath, data) // Write data to file synchronously
   return u8a(PREFIX) // Return the UUID for later retrieval
 }
 
-// Read binary data from cache file
+/**
+ * Reads binary data from a cache file.
+ *
+ * @param {string} nameFileBit - The name of the cache file to read.
+ * @param {string} dir - The directory containing the cache file.
+ * @returns {Uint8Array} The binary data read from the cache file.
+ */
 export function readFileBit(nameFileBit: string, dir: string): Uint8Array {
   const filePath = resolvePath(dir, `${nameFileBit}`)
 
-  const data = readFileSync(filePath) // อ่านข้อมูลแบบ synchronous
-  return data // คืนค่า Uint8Array
+  return readFileSync(filePath) // Read data synchronously
 }
 
-// Find files by prefix in the directory
+/**
+ * Finds files in the cache directory that match a specified prefix.
+ *
+ * @param {Uint8Array} prefix - The prefix to search for in the file names.
+ * @param {string} dir - The directory to search in.
+ * @returns {string | undefined} The first matching file name, or undefined if none is found.
+ */
 export function findFilesByPrefix(
   prefix: Uint8Array,
   dir: string
 ): string | undefined {
   try {
-    const files = listCacheFiles(dir) // อ่านไฟล์ในไดเรกทอรีแบบ synchronous
-    const matchingFiles = files.filter(file => file.startsWith(au8(prefix))) // ค้นหาไฟล์ที่ขึ้นต้นด้วย prefix
+    const files = listCacheFiles(dir)
+    const matchingFiles = files.filter(file => file.startsWith(au8(prefix))) // Search for files starting with prefix
     console.log('matchingFiles', matchingFiles)
-    return matchingFiles[0] // คืนค่าไฟล์แรกที่ตรงกับ prefix
+    return matchingFiles[0] // Return the first matching file
   } catch (err) {
     console.error(`Error reading directory: ${dir}`, err)
     return undefined
   }
 }
 
+/**
+ * Preloads all cache files from the specified directory.
+ *
+ * @param {string} dir - The directory to preload files from.
+ * @returns {RawPreload} An object containing the preloaded cache data.
+ */
 export function preloadAllCacheFiles(dir: string): RawPreload {
-  let prefix: string = ''
-  let raw: RawPreload = {}
-  let totalSize: number = 0
-  let data: Uint8Array = new Uint8Array()
-
   return analyzeFiles(dir)
 }
+
+/**
+ * Analyzes cache files in the specified directory.
+ *
+ * @param {string} dir - The directory to analyze.
+ * @param {Uint8Array} [PREFIX] - An optional prefix to search for specific files.
+ * @returns {RawPreload} An object containing the cache data.
+ */
 export function analyzeFiles(dir: string, PREFIX?: Uint8Array): RawPreload {
   let result: RawPreload = {}
 
-  // ค้นหาไฟล์ตาม PREFIX หรือดึงไฟล์ทั้งหมด
+  // Find cache files by PREFIX or retrieve all files
   const fileCache = PREFIX
     ? findFilesByPrefix(PREFIX, dir)
     : listCacheFiles(dir)
 
-  // ตรวจสอบว่า fileCache เป็น array หรือไฟล์เดี่ยว
   if (Array.isArray(fileCache)) {
     processMultipleFiles(fileCache, dir, result)
   } else if (fileCache) {
@@ -143,7 +201,11 @@ export function analyzeFiles(dir: string, PREFIX?: Uint8Array): RawPreload {
 }
 
 /**
- * ประมวลผลหลายไฟล์
+ * Processes multiple cache files.
+ *
+ * @param {string[]} fileCache - The array of cache file names.
+ * @param {string} dir - The directory containing the cache files.
+ * @param {RawPreload} result - The result object to store the processed data.
  */
 function processMultipleFiles(
   fileCache: string[],
@@ -164,7 +226,11 @@ function processMultipleFiles(
 }
 
 /**
- * ประมวลผลไฟล์เดี่ยว
+ * Processes a single cache file.
+ *
+ * @param {string} file - The cache file name.
+ * @param {string} dir - The directory containing the cache file.
+ * @param {RawPreload} result - The result object to store the processed data.
  */
 function processSingleFile(
   file: string,
@@ -181,13 +247,16 @@ function processSingleFile(
 }
 
 /**
- * แยกข้อมูลจากชื่อไฟล์ เช่น prefix และ totalSize
+ * Extracts file information such as the prefix and total size from the file name.
+ *
+ * @param {string} fileName - The file name to extract information from.
+ * @returns {Object} An object containing the file prefix and total size.
  */
 function extractFileInfo(fileName: string): {
   prefix: string
   totalSize: number
 } {
-  const prefix = fileName.substring(0, 8) // ดึงค่าจากชื่อไฟล์ (ตัวอย่าง)
-  const totalSize = parseInt(fileName.substring(9).split('.')[0], 10) // แปลงเป็นตัวเลขจากชื่อไฟล์
+  const prefix = fileName.substring(0, 8) // Extract prefix from file name
+  const totalSize = parseInt(fileName.substring(9).split('.')[0], 10) // Extract total size from file name
   return { prefix, totalSize }
 }
