@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>46/46</span>
+                <span class='fraction'>47/47</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>46/46</span>
+                <span class='fraction'>47/47</span>
             </div>
         
             
@@ -109,7 +109,8 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -125,6 +126,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -138,43 +154,31 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { PrivateKey } from './lib/PrivateKey'
 import { PublicKey } from './lib/PublicKey'
 import { Service } from './lib/Service'
-&nbsp;
 /**
- * @class Ts256k1 - A class for generating and managing 256-bit secret keys, and for encrypting and decrypting messages.
+ * @class Ts256k1 - Extends the Service class to provide key management and encryption/decryption functionality using secp256k1 and XChaCha20-Poly1305.
+ * Inherits methods for encryption, decryption, and key pair validation.
  * @example
  * const k1 = new Ts256k1(privateKey, publicKey);
  * const msg = utf8ToBytes('hello');
- * k1.decrypt(k1.encrypt(msg)).toString();
- * @type {import('ts256k1').Ts256k1} Ts256k1
+ * const encryptedMsg = k1.encrypt(msg);
+ * const decryptedMsg = k1.decrypt(encryptedMsg);
+ * console.log(decryptedMsg.toString()); // "hello"
  */
-export class Ts256k1 extends Service{
+export class Ts256k1 extends Service {
   /**
-   * Generate a new secret key and public key pair.
+   * Generates a new secp256k1 secret and public key pair.
+   * This method provides a new instance of the PrivateKey class.
    *
    * @static
    * @method getKeyPairs
-   * @param {Uint8Array} [secret] - An optional secret key in Uint8Array format.
-   * @returns {PrivateKey} - A new instance of PrivateKey.
+   * @param {Uint8Array} [secret] - Optional secret key in Uint8Array format. If not provided, a random key will be generated.
+   * @returns {PrivateKey} - A new PrivateKey instance.
    * @example
    * const k1 = Ts256k1.getKeyPairs();
    * const privateKey = k1.secretToHex();
@@ -184,20 +188,19 @@ export class Ts256k1 extends Service{
   public static getKeyPairs(secret?: Uint8Array): PrivateKey {
     return new PrivateKey(secret)
   }
+&nbsp;
   /**
-   * Constructor for the Ts256k1 class.
+   * Constructs an instance of the Ts256k1 class.
+   * This class extends the functionality of the Service class, providing encryption and decryption features using the given key pair.
    *
    * @param {string | Uint8Array} secret - The secret key in either hexadecimal string or Uint8Array format.
    * @param {string | Uint8Array} publicKey - The public key in either hexadecimal string or Uint8Array format.
+   * @example
+   * const ts = new Ts256k1(secretKey, publicKey);
    */
-  constructor(
-    secret: string | Uint8Array,
-    publicKey: string | Uint8Array
-  ) {
+  constructor(secret: Hex, publicKey: Hex) {
     super(secret, publicKey)
-   // this.service = new Service(this.secret, this.publicKey)
   }
-&nbsp;
 }
 &nbsp;
 export { PrivateKey, PublicKey }
@@ -208,7 +211,7 @@ export { PrivateKey, PublicKey }
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-09-22T02:19:10.016Z
+                at 2024-09-30T05:57:02.128Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

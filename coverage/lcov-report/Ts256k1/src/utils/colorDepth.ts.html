@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Ts256k1/src/config/loadConfig.ts</title>
+    <title>Code coverage report for Ts256k1/src/utils/colorDepth.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">Ts256k1/src/config</a> loadConfig.ts</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">Ts256k1/src/utils</a> colorDepth.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">51.61% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>31/31</span>
+                <span class='fraction'>16/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">51.61% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>31/31</span>
+                <span class='fraction'>16/31</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,59 +103,59 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { resolve } from 'path'
-import { existsSync } from 'fs'
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { WriteStream } from 'tty'
+import { env } from 'process'
 &nbsp;
 /**
- * @function loadConfig
- * @description
- * Loads the configuration from the provided path.
- * @returns {Config256k1} - The loaded configuration object.
+ * @function getColorDepth
+ * @description Determines the terminal's color depth.
+ *
+ * This function attempts to get the color depth from `WriteStream.prototype.getColorDepth()`.
+ * If it fails, the function checks the `TERM` environment variable for common terminal types
+ * that support 256 colors (e.g., `xterm-256color`). If the terminal supports 256 colors,
+ * it returns 8 (for 256 color terminals). Otherwise, it returns 4 (for 16 color terminals).
+ *
+ * @returns {number} - The color depth of the terminal. Possible values are:
+ *                     - 8 for 256 color terminals
+ *                     - 4 for 16 color terminals
  */
-export function loadConfig(): Config256k1 {
-  // Check if the config file exists in the current directory root project
-  const configPath = resolve(process.cwd(), 'ts256k1.config.cjs')
-  let config: Config256k1
-  // If the config file exists, load it
-  if (existsSync(configPath)) {
-    config = require(configPath)
-  } else {
-    // default config see https://github.com/Saksorn21/Ts256k1?tab=readme-ov-file#configuration
-    config = {
-      hkdfKeyCompressed: false,
-      ephemeralKeyCompressed: false,
-      signature: {
-        enabled: true,
-        throwOnInvalid: true,
-        errorMessage: 'Invalid signature',
-        useLowS: true,
-      },
-    }
-  }
-  return config
-}
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export function getColorDepth(): number {</span></span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    return WriteStream.prototype.getColorDepth()</span>
+<span class="cstat-no" title="statement not covered" >  } catch (error: unknown) {</span>
+<span class="cstat-no" title="statement not covered" >    const terminal = env.TERM</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // Check for common terminal types that support 256 colors</span>
+<span class="cstat-no" title="statement not covered" >    if (terminal) {</span>
+<span class="cstat-no" title="statement not covered" >      if (terminal.includes('256color') || terminal.includes('xterm')) {</span>
+<span class="cstat-no" title="statement not covered" >        return 8 // 256 color terminal</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    return 4 // Default to 16 color terminal</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
