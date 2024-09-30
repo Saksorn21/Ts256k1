@@ -171,4 +171,9 @@ function calculateChunkSize(
 }
 export { compressData, decompressData, calculateChunkSize }
 // Exporting the types used
-export type { CompressOpts, DeflateFunctionOptions, InflateOptions, DeflateOptions }
+export type {
+  CompressOpts,
+  DeflateFunctionOptions,
+  InflateOptions,
+  DeflateOptions,
+}

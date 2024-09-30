@@ -157,9 +157,9 @@ export class Service {
     return this.decrypt(cipherText)
   }
 
- /**
+  /**
    * Provides additional methods for managing compression cache and related settings.
-   * 
+   *
    * @returns {CompressionOptions} An object containing utility methods for cache management
    * and access to the cache directory.
    */

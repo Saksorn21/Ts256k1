@@ -3,7 +3,7 @@ import {
   hexToBytes as toBytse,
   bytesToUtf8 as toUtf8,
   utf8ToBytes as u8ToBytes,
-  concatBytes
+  concatBytes,
 } from './noble'
 type Title = 'base64' | 'hex' | 'utf8' | 'ascii' | 'ucs2' | 'latin1' | 'Title'
 export const bytesToHex = (msg: Uint8Array): string => toHex(msg)
@@ -104,4 +104,3 @@ const utils = {
 }
 export { concatBytes }
 export default utils
-
