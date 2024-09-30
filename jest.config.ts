@@ -7,5 +7,9 @@ export default {
   testTimeout: 30000,
     roots: ['<rootDir>/__tests__/'],
     moduleFileExtensions: ['ts', 'js'],
-
+  transform: {
+    '^.+\\.ts$': ['ts-jest', {
+      tsconfig: './__tests__/tsconfig.test.json',
+    }],
+  },
 };
