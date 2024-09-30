@@ -165,6 +165,7 @@ The **Ts256k1** class is a simplified interface for generating and managing key 
 
 This class represents a public key.
 
+- `constructor(privateKey: Uint8Array)` - Initializes the public with a privite key.
 - `static fromHex(hex: string): PublicKey` — Creates a public key from a hexadecimal string.
 - `get compressed(): Buffer` — Returns the compressed form of the public key.
 - `get uncompressed(): Buffer` — Returns the uncompressed form of the public key.
@@ -174,6 +175,7 @@ This class represents a public key.
 
 This class represents a private key.
 
+- `constructor(secret?: Uint8Array)` - Initializes the privatekey with a [private key].
 - `static fromHex(hex: string): PrivateKey` — Creates a private key from a hexadecimal string.
 - `get secret(): Uint8Array` — Returns the private key in Uint8Array format.
 - `get secretToHex(): string` — Returns the private key as a hexadecimal string.
@@ -192,11 +194,30 @@ This class handles encryption, decryption, and message signing/verification.
 - `decryptAndDecompress(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
 - `equals(other: PrivateKey | PublicKey): boolean` - Compares this key with another PrivateKey or PublicKey instance.
 
-### Function color
-- color[color: string]: string
-- color[color: string].bold: string
-#### Support color
+### Class: **CompressionService**
 
+This class handles compressData, decompressData
+- `type CompressOpts = DeflateOptions`
+  - coverage: `1 | 2 | 3 | 4 | null`
+- `constructor(useTemp: boolean = false)` - Initializes the compressionservice.
+  - Whether to use the system's temporary directory for cache.
+- `static extractDictionary(data: Uint8Array, coverage: CompressOpts): Uint8Array` - Extracts a portion of the data to be used as the compression dictionary.
+- `get UUID(): string` - The generated UUID for cache file names.
+- `get cacheDir(): string` - The directory where the cache files are stored
+- `compress(data: Uint8Array, options: CompressOpts): Uint8Array` - Compresses the provided data using the given options.
+- `decompress(data: Uint8Array, options?: InflateOptions): Uint8Array` - Decompresses the provided compressed data using the given options.
+- `compressSync(options: DeflateOptions = {}, ...data: Uint8Array[]): Uint8Array` - Compresses multiple Uint8Array data synchronously using deflate options.
+- `decompressSync(options: InflateOptions = {}, data: Uint8Array): Uint8Array` - Decompresses multiple Uint8Array data synchronously using inflate options.
+- `listCacheFiles(): string[]` - Lists all cache files in the current cache directory.
+- `removeCacheFile(filename: string): void` - Removes a specific cache file by filename.
+- `clearCache(): void` - Clears all cache files from the cache directory.
+
+### Function color
+- `color[colorname: string]: string`
+- `color[colorname: string].bold: string`
+#### Support colors
+- `type ColorName = 'blue' `#5f5fff` | 'gray' `#808080` | 'green' `#5faf5f | 'plum' `#d787d7` | 'orangered' `#ff8700` | 'red' `#ff0000` | 'olive' `#d7af00` | 'white' `#ffffff` | 'cyan' `#87afff``
+  - 16-color & 256-color
 ## Message Signing and Verification
 
 Our encryption process includes an additional layer of security by signing the encrypted data using the sender’s private key. When decrypting, the signature is verified using the sender’s public key to ensure the data has not been tampered with. This ensures both message integrity and authenticity.
