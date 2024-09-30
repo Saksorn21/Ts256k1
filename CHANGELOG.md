@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.2] - 2024-09-30
+### Changed
+- I encountered an issue with the `workflow`, where version **1.1.1** uploaded through the `workflow` had no compiled files. Therefore, I updated the version and uploaded it to npm myself
 ## [1.1.1] - 2024-09-30
 ### Added
 - **New methods**: Added `encryptAndCompress` and `decryptAndDecompress` in the `Service` class for managing encrypted data with compression.
