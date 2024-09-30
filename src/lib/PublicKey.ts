@@ -1,5 +1,6 @@
 import { PrivateKey } from './PrivateKey'
-import { K1, bytesToHex, hexToPublicKey, getSharedKey } from '../utils'
+import { K1, bytesToHex } from '../utils/noble'
+import { hexToPublicKey, getSharedKey } from '../utils/elliptic'
 import { isHkdfKeyCompressed } from '../config'
 
 /**

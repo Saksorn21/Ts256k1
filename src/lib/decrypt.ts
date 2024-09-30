@@ -1,4 +1,4 @@
-import { K1, xchacha20, concatBytes, sha256 } from '../utils'
+import { K1, xchacha20, concatBytes, sha256 } from '../utils/noble'
 import { ConstsType, isEphemeralKeyCompressed, signUseLowS } from '../config'
 
 import { PrivateKey } from './PrivateKey'

@@ -21,7 +21,7 @@
   "license": "MIT",
   "author": "BOAT saksorn (Thailand)",
   "type": "commonjs",
-  "main": "cjs/main.js",
+  "main": "src/main.js",
   "types": "types/main.d.ts",
   "exports": {
     ".": {
@@ -36,12 +36,12 @@
     },
     "./utils": {
       "require": {
-        "types": "./types/utils/bytes.d.ts",
-        "default": "./cjs/utils/bytes.js"
+        "types": "./types/utils/index.d.ts",
+        "default": "./cjs/utils/index.js"
       },
       "import": {
-        "types": "./types/utils/bytes.d.ts",
-        "default": "./esm/utils/bytes.js"
+        "types": "./types/utils/index.d.ts",
+        "default": "./esm/utils/index.js"
       }
     },
     "./service": {

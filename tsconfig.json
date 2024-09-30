@@ -6,6 +6,8 @@
     "lib": [
       "es2020"
     ],
+     "typeRoots": ["./node_modules/@types", "./src/types/global.d.ts"],
+
     "strict": true,
     "sourceMap": true,
     "declaration": true,
@@ -21,6 +23,6 @@
     "useDefineForClassFields": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*", "src/types/**/*.d.ts"],
+  "include": ["src/**/*", "src/types/*.d.ts", "tests/test.ts"],
   "exclude": ["node_modules"]
 }

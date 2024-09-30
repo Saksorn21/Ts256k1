@@ -9,5 +9,5 @@ export {
 export { xchacha20poly1305 as xchacha20 } from '@noble/ciphers/chacha'
 export { randomBytes } from '@noble/ciphers/webcrypto'
 export { hkdf } from '@noble/hashes/hkdf'
-export { secp256k1 } from '@noble/curves/secp256k1'
 export { sha256 } from '@noble/hashes/sha256'
+export { secp256k1 as K1 } from '@noble/curves/secp256k1'

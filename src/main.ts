@@ -1,7 +1,6 @@
 import { PrivateKey } from './lib/PrivateKey'
 import { PublicKey } from './lib/PublicKey'
 import { Service } from './lib/Service'
-
 /**
  * @class Ts256k1 - Extends the Service class to provide key management and encryption/decryption functionality using secp256k1 and XChaCha20-Poly1305.
  * Inherits methods for encryption, decryption, and key pair validation.

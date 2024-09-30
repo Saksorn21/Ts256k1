@@ -1,13 +1,22 @@
 # Changelog
 
-## [1.0.4 - 1.1.0] - 2024-09-26
+## [Unreleased] - 2024-09-29
+### Changed
+- Updated `README.md` to fix typos and improve clarity.
+- Modify the `utils` file structure and it **does not affect the functionality.**
+
+### Added
+- Add a new method to manage encryption data in Class Service.
+  - `encryptAndCompress` and `decryptAnddecompress` 
+- Add a new function color Colorize text, [`See`](README.md#Function-color)
+- 
+## [Unreleased] - 2024-09-26
 ### Changed
 - Updated `README.md` to fix typos and improve clarity.
 - Updated `utils` export default.
 
 ### Added
 - Add a new Class `CompressionService` to collect compression, decompression, data and manage files, caches [`See`](README.md#class-CompressionService)
-- Add a new function to manage encryption data.
 - Supports data compression / decompression with Deflate / Inflate class.
 
 ## [1.0.3] - 2024-09-22

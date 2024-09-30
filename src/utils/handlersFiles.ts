@@ -9,16 +9,29 @@ import {
 import { join } from 'path'
 import { tmpdir, homedir } from 'os'
 import { utf8ToBytes as u8a, bytesToUtf8 as au8 } from './bytes'
-import { ConstsType } from '../config'
+import { color } from './color'
 
+/**
+ * @interface RawPreload
+ * @description Represents the raw preload data.
+ * @proprety {string} prefix - The prefix file of the preload.
+ */
 export interface RawPreload {
-  [name: string]: {
+  [prefix: string]: {
     prefix: string
     totalSize: number
     dataStorage: Uint8Array
   }
 }
 
+/**
+ * @type {Function} errorDirectory
+ * @description Creates a directory for error messages.
+ * @param {string} p - The path to the directory.
+ * @returns {stirng} - Error message.
+ */
+const errorDirectory: Function = (p: string): string => `${color.red.bold(`Error reading directory:`) }${color.white.bold(p)}`
+  
 /**
  * Generates a random UUID (Universal Unique Identifier).
  *
@@ -69,7 +82,7 @@ export function ensureDirectoryExists(): string {
   const cacheDir = globalThis.CACHE_DIR
 
   if (!existsSync(cacheDir)) {
-    mkdirSync(cacheDir, { recursive: true })
+    mkdirSync(cacheDir, { recursive: true, mode: 0o777 })
   }
 
   return cacheDir
@@ -86,9 +99,9 @@ export function removeCacheFile(filename: string, dir: string): void {
 
   if (existsSync(filePath)) {
     unlinkSync(filePath) // Remove file
-    console.log(`Cache file removed: ${filename}`)
+    console.log(`${color.orangered.bold(`Cache file removed:`)} ${color.white.bold(filename)}`)
   } else {
-    console.error(`File not found: ${filename}`)
+    console.error(`${color.red.bold(`File not found: ${color.white.bold(filename)}`)}`)
   }
 }
 
@@ -102,7 +115,7 @@ export function listCacheFiles(dir: string): string[] {
   try {
     return readdirSync(dir) // Read files in directory
   } catch (err) {
-    console.error(`Error reading directory: ${dir}`, err)
+    console.error(errorDirectory(dir), err)
     return []
   }
 }
@@ -156,10 +169,9 @@ export function findFilesByPrefix(
   try {
     const files = listCacheFiles(dir)
     const matchingFiles = files.filter(file => file.startsWith(au8(prefix))) // Search for files starting with prefix
-    console.log('matchingFiles', matchingFiles)
     return matchingFiles[0] // Return the first matching file
   } catch (err) {
-    console.error(`Error reading directory: ${dir}`, err)
+    console.error(errorDirectory(dir), err)
     return undefined
   }
 }

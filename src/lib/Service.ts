@@ -12,7 +12,8 @@ import {
   signErrorMessage,
   ConstsType,
 } from '../config'
-import { equalBytes, normalizeToUint8Array } from '../utils'
+import { normalizeToUint8Array } from '../utils/bytes'
+import { equalBytes } from '../utils/noble'
 import {
   CompressionService,
   type CompressOpts,
@@ -24,7 +25,7 @@ import { PublicKey } from './PublicKey'
 
 /**
  * @class Service
- * A class that handles encryption, decryption, and message signing/verification.
+ * A class that handles encryption, decryption, and message signing/verification and compress/decompress.
  */
 export class Service {
   private compression: CompressionService
@@ -139,6 +140,20 @@ export class Service {
     return this.decrypt(cipherText)
   }
 
+  public compressed(useTemp: boolean){
+    const instance: CompressionService = new CompressionService(useTemp)
+    
+      return {
+        cacheDir: instance.cacheDir,
+      compress: (data:Uint8Array, opts: CompressOpts) => instance.compress(data, opts),
+      decompress: (data:Uint8Array, opts: InflateOptions) => instance.decompress(data,opts),
+      listCacheFiles: () => instance.listCacheFiles(),
+      removeCacheFile: (filename: string) => instance.removeCacheFile(filename),
+      clearCache: () => instance.clearCache(),
+     }
+  
+  }
+
   /**
    * Compares this key with another PrivateKey or PublicKey instance.
    * Converts the current key to a Uint8Array if it is in hex format.
@@ -182,6 +197,5 @@ export {
   verifyMessage,
   CompressionService,
 }
-export * from '../utils/compression'
-export * from '../utils/handlersFiles'
+export { compressData, decompressData } from '../utils/compression'
 export type { VerifyMessage, DecodeSignMessage, CompressOpts, InflateOptions }

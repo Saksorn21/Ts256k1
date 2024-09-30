@@ -1,5 +1,5 @@
-import { concatBytes, hkdf, sha256, decodeHex } from './index'
-
+import { concatBytes, hkdf, sha256 } from './noble'
+import { decodeHex } from './bytes'
 import { ConstsType } from '../config'
 
 export function combineKeys(master: Uint8Array): Uint8Array {

@@ -1,15 +1,13 @@
-import type { PrivateKey } from '../lib/PrivateKey'
-import type { PublicKey } from '../lib/PublicKey'
 
 declare global {
   /**
-   * @type Hex
+   * @type {Hex}
    * @description A type alias for a hexadecimal string.
    */
   type Hex = string | Uint8Array
 
   /**
-   * @type global
+   * @type {global}
    * @description A type alias for the global object.
    */
   var CACHE_DIR: string
@@ -35,10 +33,6 @@ declare global {
       errorMessage: string
     }
   }
-  interface BaseTs256k1 {
-    encrypt(msg: Uint8Array): Uint8Array
-    decrypt(msg: Uint8Array): Uint8Array
-    equals(other: PrivateKey | PublicKey): boolean
-  }
+  
 }
 export {}

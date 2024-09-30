@@ -188,7 +188,14 @@ This class handles encryption, decryption, and message signing/verification.
 - `constructor(privateKeyA: string | Uint8Array, publicKeyA: string | Uint8Array)` — Initializes the service with a private and public key.
 - `encrypt(msg: Uint8Array): Uint8Array` — Encrypts the provided message and signs it if signature functionality is enabled.
 - `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
+- `encryptAndCompress(msg: Uint8Array): Uint8Array` — Encrypts the provided message and signs it if signature functionality is enabled.
+- `decryptAndDecompress(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
 - `equals(other: PrivateKey | PublicKey): boolean` - Compares this key with another PrivateKey or PublicKey instance.
+
+### Function color
+- color[color: string]: string
+- color[color: string].bold: string
+#### Support color
 
 ## Message Signing and Verification
 

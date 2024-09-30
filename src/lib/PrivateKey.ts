@@ -1,7 +1,8 @@
 import { PublicKey } from './PublicKey'
 import { isHkdfKeyCompressed, ConstsType } from '../config'
-
-import { K1, getSharedKey, decodeHex, bytesToHex, randomBytes } from '../utils'
+import { K1, randomBytes } from '../utils/noble'
+import { getSharedKey } from '../utils/elliptic'
+import { decodeHex, bytesToHex } from '../utils'
 
 const { getPublicKey, getSharedSecret, utils } = K1
 /**
