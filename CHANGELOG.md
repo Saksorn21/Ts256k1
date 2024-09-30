@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.1] - 2024-09-30
+## [1.1.2] - 2024-09-30
 ### Added
 - **New methods**: Added `encryptAndCompress` and `decryptAndDecompress` in the `Service` class for managing encrypted data with compression.
 - **Colorize Function**: Added a new function `color` to colorize text output. See the documentation for usage details.
