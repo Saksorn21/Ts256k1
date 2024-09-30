@@ -26,15 +26,16 @@ describe('Elliptical Functions', () => {
 
   it('should convert hex string to public key', () => {
     const hex =
-      'de9edb7d7b7dc1b4d35b61c2ece435373f8343c85b78674dadfc7e146f882b4f' // ตัวอย่าง hex string
+      'de9edb7d7b7dc1b4d35b61c2ece435373f8343c85b78674dadfc7e146f882b4f' 
     const publicKey = hexToPublicKey(hex)
     const expectedPublicKey = bytesToHex(K1.getPublicKey(randomBytes(32)))
     const uncomm = new Uint8Array(64)
-    uncomm.set(hexToBytes(expectedPublicKey), 1)
+    uncomm.set(hexToBytes(expectedPublicKey), 0)
+    uncomm.set(hexToBytes(bytesToHex(publicKey)), 32)
 
     expect(hexToPublicKey(bytesToHex(uncomm)).length).toBe(65)
     expect(hexToPublicKey(expectedPublicKey).length).toBe(33)
     expect(publicKey).toBeInstanceOf(Uint8Array)
-    // ทดสอบเพิ่มเติมเช่นว่าคีย์ที่ถูกสร้างนั้นถูกต้องหรือไม่
+
   })
 })
