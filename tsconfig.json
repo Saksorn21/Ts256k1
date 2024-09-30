@@ -6,8 +6,6 @@
     "lib": [
       "es2020"
     ],
-     "typeRoots": ["./src/types/global.d.ts"],
-
     "strict": true,
     "sourceMap": true,
     "declaration": true,
