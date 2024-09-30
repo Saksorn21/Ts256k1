@@ -106,7 +106,8 @@ The library provides various utilities for encoding and decoding:
 - `remove0x(hex: string): string`
 - `decodeHex(hex: string): Buffer`
 - `normalizeToUint8Array(data: string | Uint8array): Uint8Array`
-
+- `color[colorname: string]: string`
+- `color[colorname: string].bold: string`
 
 ## Configuration
 
