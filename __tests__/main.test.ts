@@ -1,7 +1,8 @@
 import { Ts256k1 } from '../src/main'
 import { PrivateKey } from '../src/lib/PrivateKey';
 import { PublicKey } from '../src/lib/PublicKey'
-import { randomBytes, bytesToHex, hexToBytes, bytesToUtf8, K1 } from '../src/utils'
+import { bytesToHex, hexToBytes, bytesToUtf8 } from '../src/utils'
+import { K1, randomBytes } from '../src/utils/noble';
 
 
 describe("class main Ts256k1 implements Service", () => {

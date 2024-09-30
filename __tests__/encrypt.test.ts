@@ -1,5 +1,6 @@
 import { encrypt, encodeSign } from '../src/lib/encrypt';
-import { randomBytes, utf8ToBytes } from '../src/utils';
+import { utf8ToBytes } from '../src/utils';
+import { randomBytes } from '../src/utils/noble';
 import { PublicKey, PrivateKey } from '../src/main';
 import { ConstsType } from '../src/config';
 

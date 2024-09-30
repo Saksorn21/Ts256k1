@@ -1,6 +1,6 @@
 import { combineKeys, getSharedKey, hexToPublicKey } from '../src/utils/elliptic'
-import { K1, randomBytes, bytesToHex, hexToBytes } from '../src/utils/'
-
+import { bytesToHex, hexToBytes } from '../src/utils/'
+import { K1, randomBytes } from '../src/utils/noble';
 
 describe('Elliptical Functions', () => {
   it('should combine keys using HKDF and SHA256', () => {

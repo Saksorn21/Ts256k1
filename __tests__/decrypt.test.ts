@@ -1,6 +1,7 @@
 import { decrypt, decodeSignMessage, verifyMessage, extractParts } from '../src/lib/decrypt';
 import { encrypt } from '../src/lib/encrypt';
-import { randomBytes, utf8ToBytes, bytesToHex } from '../src/utils';
+import { utf8ToBytes, bytesToHex } from '../src/utils';
+import { randomBytes } from '../src/utils/noble';
 import { PrivateKey } from '../src/main';
 import * as config from '../src/config';
 describe('Decryption Tests', () => {

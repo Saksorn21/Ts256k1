@@ -5,7 +5,7 @@ import {decodeSignMessage, verifyMessage , decrypt} from '../src/lib/decrypt';
 import * as ser from '../src/lib/Service';
 import { PrivateKey } from '../src/lib/PrivateKey';
 import { PublicKey } from '../src/lib/PublicKey';
-import {randomBytes, K1} from '../src/utils'
+import { K1, randomBytes } from '../src/utils/noble';
 import { signEnabled, signThrowOnInvalid, signErrorMessage } from '../src/config';
 
 jest.mock('../src/lib/encrypt', () => ({
