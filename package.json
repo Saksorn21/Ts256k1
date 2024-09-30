@@ -70,8 +70,8 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:clean": "rm -rf cjs/* esm/* 2> /dev/null",
     "build": "npm run build:clean; npm run build:cjs && npm run build:esm",
-    "lint": "prettier --check 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'types/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
-    "format": "prettier --write 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'types/**/*.{js,ts}' 'tests/**/*.{js,ts,mjs}'",
+    "lint": "prettier --check 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'types/**/*.{js,ts}' '__tests__/**/*.{js,ts,mjs}'",
+    "format": "prettier --write 'src/**/*.{js,ts}' 'esm/**/*.{js,ts}' 'cjs/**/*.{js,ts}' 'types/**/*.{js,ts}' '__tests__/**/*.{js,ts,mjs}'",
     "test": "jest --coverage"
   },
   "dependencies": {

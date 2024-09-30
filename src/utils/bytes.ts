@@ -102,5 +102,6 @@ const utils = {
   isString,
   normalizeToUint8Array,
 }
-export default utils
 export { concatBytes }
+export default utils
+
