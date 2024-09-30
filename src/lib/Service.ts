@@ -23,6 +23,33 @@ import {
 import { PrivateKey } from './PrivateKey'
 import { PublicKey } from './PublicKey'
 
+// Define the return type for the compressionOpts method
+export interface CompressionOptions {
+  /**
+   * The directory where cache files are stored.
+   */
+  cacheDir: string
+
+  /**
+   * Lists all cache files in the cache directory.
+   *
+   * @returns {string[]} An array of cache file names.
+   */
+  listCacheFiles: () => string[]
+
+  /**
+   * Removes a specific cache file from the cache directory.
+   *
+   * @param {string} filename - The name of the cache file to remove.
+   */
+  removeCacheFile: (filename: string) => void
+
+  /**
+   * Clears all cache files in the cache directory.
+   */
+  clearCache: () => void
+}
+
 /**
  * @class Service
  * A class that handles encryption, decryption, and message signing/verification and compress/decompress.
@@ -102,16 +129,6 @@ export class Service {
   }
 
   /**
-   * Gets the cache directory where cache files will be stored.
-   *
-   * @property {string} cacheDir - The directory where the cache files will be stored.
-   * @returns {string} - The directory where the cache files will be stored.
-   */
-  get cacheDir(): string {
-    return this.compression.cacheDir
-  }
-
-  /**
    * Compresses a Uint8Array using the provided options.
    * @param {Uint8Array} message - The Uint8Array to be compressed.
    * @param {CompressOpts} opts - The options for compressing the Uint8Array, including coverage.
@@ -140,18 +157,19 @@ export class Service {
     return this.decrypt(cipherText)
   }
 
-  public compressed(useTemp: boolean) {
-    const instance: CompressionService = new CompressionService(useTemp)
-
+ /**
+   * Provides additional methods for managing compression cache and related settings.
+   * 
+   * @returns {CompressionOptions} An object containing utility methods for cache management
+   * and access to the cache directory.
+   */
+  public compressionOpts(): CompressionOptions {
     return {
-      cacheDir: instance.cacheDir,
-      compress: (data: Uint8Array, opts: CompressOpts) =>
-        instance.compress(data, opts),
-      decompress: (data: Uint8Array, opts: InflateOptions) =>
-        instance.decompress(data, opts),
-      listCacheFiles: () => instance.listCacheFiles(),
-      removeCacheFile: (filename: string) => instance.removeCacheFile(filename),
-      clearCache: () => instance.clearCache(),
+      cacheDir: this.compression.cacheDir,
+      listCacheFiles: () => this.compression.listCacheFiles(),
+      removeCacheFile: (filename: string) =>
+        this.compression.removeCacheFile(filename),
+      clearCache: () => this.compression.clearCache(),
     }
   }
 
