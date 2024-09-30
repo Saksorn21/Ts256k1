@@ -21,7 +21,7 @@
   "license": "MIT",
   "author": "BOAT saksorn (Thailand)",
   "type": "commonjs",
-  "main": "src/main.js",
+  "main": "cjs/main.js",
   "types": "types/main.d.ts",
   "exports": {
     ".": {
@@ -60,8 +60,7 @@
     "esm/",
     "types/",
     "README.md",
-    "LICENSE",
-    "ts256k1.config.json"
+    "LICENSE"
   ],
   "engines": {
     "node": ">=12.0.0"
