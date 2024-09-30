@@ -53,4 +53,6 @@ describe('getColorDepth', () => {
     const depth = getColorDepth();
     expect(depth).toBe(4);
   });
+
+  
 });
