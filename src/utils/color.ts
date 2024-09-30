@@ -191,7 +191,8 @@ const color: ColorInterface = new Proxy({} as ColorInterface, {
  */
 const namespace: { color: typeof color, reset: typeof reset, bold: typeof bold } = { color, reset, bold };
 
-export { color, reset, bold };
+export { color, reset, bold, getColor, Colorizer };
+export type { ColorName, ColorInterface, ColorMethods }
 export default namespace;
 
 
