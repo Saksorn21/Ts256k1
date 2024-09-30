@@ -1,4 +1,3 @@
-
 declare global {
   /**
    * @type {Hex}
@@ -33,6 +32,5 @@ declare global {
       errorMessage: string
     }
   }
-  
 }
 export {}

@@ -140,18 +140,19 @@ export class Service {
     return this.decrypt(cipherText)
   }
 
-  public compressed(useTemp: boolean){
+  public compressed(useTemp: boolean) {
     const instance: CompressionService = new CompressionService(useTemp)
-    
-      return {
-        cacheDir: instance.cacheDir,
-      compress: (data:Uint8Array, opts: CompressOpts) => instance.compress(data, opts),
-      decompress: (data:Uint8Array, opts: InflateOptions) => instance.decompress(data,opts),
+
+    return {
+      cacheDir: instance.cacheDir,
+      compress: (data: Uint8Array, opts: CompressOpts) =>
+        instance.compress(data, opts),
+      decompress: (data: Uint8Array, opts: InflateOptions) =>
+        instance.decompress(data, opts),
       listCacheFiles: () => instance.listCacheFiles(),
       removeCacheFile: (filename: string) => instance.removeCacheFile(filename),
       clearCache: () => instance.clearCache(),
-     }
-  
+    }
   }
 
   /**

@@ -1,27 +1,35 @@
 import { getColorDepth } from './colorDepth'
 
-
 /**
  * @interface ColorMethods - An interface for the color methods.
  * @description Represents methods for applying color styles.
  */
 interface ColorMethods {
-  (message: string): string;
-  bold: (message: string) => string;
+  (message: string): string
+  bold: (message: string) => string
 }
 
 /**
  * @type {ColorName} - A type representing available color names.
  */
-type ColorName = 'blue' | 'gray' | 'green' | 'plum' | 'orangered' | 'red' | 'olive' | 'white' | 'cyan';
+type ColorName =
+  | 'blue'
+  | 'gray'
+  | 'green'
+  | 'plum'
+  | 'orangered'
+  | 'red'
+  | 'olive'
+  | 'white'
+  | 'cyan'
 
 /**
  * @type {ColorInterface} - A map from color names to color methods.
  * @description Represents an interface for accessing color methods by name.
  */
 type ColorInterface = {
-  [color in ColorName]: ColorMethods;
-};
+  [color in ColorName]: ColorMethods
+}
 
 /**
  * Define color mappings for 16 colors and 256 colors
@@ -32,7 +40,7 @@ type ColorInterface = {
 /**
  * A map containing 16-color ANSI codes.
  * Each color name is mapped to its respective 16-color terminal code.
- * 
+ *
  * @type {Map<string, number>}
  */
 const color16: Map<string, number> = new Map<string, number>([
@@ -44,13 +52,13 @@ const color16: Map<string, number> = new Map<string, number>([
   ['red', 31],
   ['olive', 33],
   ['white', 37],
-  ['cyan', 36]
-]);
+  ['cyan', 36],
+])
 
 /**
  * A map containing 256-color ANSI codes.
  * Each color name is mapped to its respective 256-color terminal code.
- * 
+ *
  * @type {Map<string, number>}
  */
 const color256: Map<string, number> = new Map<string, number>([
@@ -62,8 +70,8 @@ const color256: Map<string, number> = new Map<string, number>([
   ['red', 196], // mapped to Red1
   ['olive', 178], // mapped to Gold3
   ['white', 231], // mapped to Grey100
-  ['cyan', 111] // mapped to Grey100
-]);
+  ['cyan', 111], // mapped to Grey100
+])
 
 /**
  * @function getColor
@@ -72,24 +80,24 @@ const color256: Map<string, number> = new Map<string, number>([
  * @returns {string} - The escape code for the specified color or an empty string if unsupported.
  */
 const getColor: Function = function (color: ColorName): string {
-  const colorDepth = getColorDepth(); 
+  const colorDepth = getColorDepth()
 
   // If no color is found in the mapping, return an empty string.
-  if (!color256.has(color)) return ''; 
+  if (!color256.has(color)) return ''
 
   // If color depth is 256, return the color code
   if (colorDepth >= 8) {
-    const code = color256.get(color);
-    return `\x1B[38;5;${code}m`;
+    const code = color256.get(color)
+    return `\x1B[38;5;${code}m`
   }
   // If color depth is 16, return the color code
   if (colorDepth >= 4) {
-    const code = color16.get(color);
-    return `\x1B[${code}m`;
+    const code = color16.get(color)
+    return `\x1B[${code}m`
   }
   // If color depth is less than 4, return an empty string
-  return ''; // No color
-};
+  return '' // No color
+}
 
 /**
  * @function bold
@@ -98,7 +106,8 @@ const getColor: Function = function (color: ColorName): string {
  * @param {string} message - The message to be bolded.
  * @returns {string} - The bolded message or plain text if unsupported.
  */
-const bold = (message: string): string => getColorDepth() >= 4 ? `\x1B[1m${message}\x1B[22m` : message; // Reset style
+const bold = (message: string): string =>
+  getColorDepth() >= 4 ? `\x1B[1m${message}\x1B[22m` : message // Reset style
 
 /**
  * @constant
@@ -108,23 +117,23 @@ const bold = (message: string): string => getColorDepth() >= 4 ? `\x1B[1m${messa
 const reset: Record<string, string> = {
   color: '\x1B[39m',
   style: '\x1B[22m',
-  all: '\x1B[0m'
-};
+  all: '\x1B[0m',
+}
 
 /**
  * @class Colorizer
  * @description A class responsible for applying color and style to a message.
  */
 class Colorizer {
-  private styles: Array<(message: string) => string> = [];
-  private colorCode: string = '';
+  private styles: Array<(message: string) => string> = []
+  private colorCode: string = ''
 
   /**
    * @constructor
    * @param {ColorName} color - The name of the color to apply.
    */
   constructor(private color: ColorName) {
-    this.colorCode = getColor(this.color); // Get color code from the getColor function
+    this.colorCode = getColor(this.color) // Get color code from the getColor function
   }
 
   /**
@@ -135,13 +144,13 @@ class Colorizer {
    * @returns {string} - The styled message.
    */
   private applyStyles(message: string): string {
-    let styledMessage = this.colorCode + message + reset.color;
+    let styledMessage = this.colorCode + message + reset.color
 
-    this.styles.forEach((style) => {
-      styledMessage = style(styledMessage);
-    });
+    this.styles.forEach(style => {
+      styledMessage = style(styledMessage)
+    })
 
-    return styledMessage + reset.style;
+    return styledMessage + reset.style
   }
 
   /**
@@ -150,8 +159,8 @@ class Colorizer {
    * @returns {this} - The current Colorizer instance for chaining.
    */
   bold(): this {
-    this.styles.push((message: string) => bold(message));
-    return this;
+    this.styles.push((message: string) => bold(message))
+    return this
   }
 
   /**
@@ -161,7 +170,7 @@ class Colorizer {
    * @returns {string} - The fully styled message.
    */
   apply(message: string): string {
-    return this.applyStyles(message);
+    return this.applyStyles(message)
   }
 }
 
@@ -172,27 +181,31 @@ class Colorizer {
  */
 const color: ColorInterface = new Proxy({} as ColorInterface, {
   get(_, colorName: ColorName) {
-    const applyColor = (message: string) => new Colorizer(colorName).apply(message);
+    const applyColor = (message: string) =>
+      new Colorizer(colorName).apply(message)
     return new Proxy(applyColor, {
       get(target, style: 'bold') {
         // If the style is bold, return a new Colorizer that applies bold style to the message
         if (style === 'bold') {
-          return (message: string) => new Colorizer(colorName).bold().apply(message);
+          return (message: string) =>
+            new Colorizer(colorName).bold().apply(message)
         }
-        return target;
-      }
-    });
-  }
-});
+        return target
+      },
+    })
+  },
+})
 
 /**
  * The default export provides access to color, reset, and bold functions.
  * @type {{ color: typeof color, reset: typeof reset, bold: typeof bold }}
  */
-const namespace: { color: typeof color, reset: typeof reset, bold: typeof bold } = { color, reset, bold };
+const namespace: {
+  color: typeof color
+  reset: typeof reset
+  bold: typeof bold
+} = { color, reset, bold }
 
-export { color, reset, bold, getColor, Colorizer };
+export { color, reset, bold, getColor, Colorizer }
 export type { ColorName, ColorInterface, ColorMethods }
-export default namespace;
-
-
+export default namespace

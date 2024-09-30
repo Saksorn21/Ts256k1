@@ -30,8 +30,9 @@ export interface RawPreload {
  * @param {string} p - The path to the directory.
  * @returns {stirng} - Error message.
  */
-const errorDirectory: Function = (p: string): string => `${color.red.bold(`Error reading directory:`) }${color.white.bold(p)}`
-  
+const errorDirectory: Function = (p: string): string =>
+  `${color.red.bold(`Error reading directory:`)}${color.white.bold(p)}`
+
 /**
  * Generates a random UUID (Universal Unique Identifier).
  *
@@ -99,9 +100,13 @@ export function removeCacheFile(filename: string, dir: string): void {
 
   if (existsSync(filePath)) {
     unlinkSync(filePath) // Remove file
-    console.log(`${color.orangered.bold(`Cache file removed:`)} ${color.white.bold(filename)}`)
+    console.log(
+      `${color.orangered.bold(`Cache file removed:`)} ${color.white.bold(filename)}`
+    )
   } else {
-    console.error(`${color.red.bold(`File not found: ${color.white.bold(filename)}`)}`)
+    console.error(
+      `${color.red.bold(`File not found: ${color.white.bold(filename)}`)}`
+    )
   }
 }
 

@@ -160,7 +160,10 @@ export class CompressionService {
    * @param {Uint8Array} data - The compressed data to be decompressed.
    * @returns {Uint8Array} - The decompressed data.
    */
-  public decompressSync(options: InflateOptions = {}, data: Uint8Array): Uint8Array {
+  public decompressSync(
+    options: InflateOptions = {},
+    data: Uint8Array
+  ): Uint8Array {
     return decompressData(data, options)
   }
 
