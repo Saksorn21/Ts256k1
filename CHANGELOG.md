@@ -1,36 +1,28 @@
 # Changelog
 
-## [Unreleased] - 2024-09-29
-### Changed
-- Updated `README.md` to fix typos and improve clarity.
-- Modify the `utils` file structure and it **does not affect the functionality.**
-
+## [1.1.0] - 2024-09-30
 ### Added
-- Add a new method to manage encryption data in Class Service.
-  - `encryptAndCompress` and `decryptAnddecompress` 
-- Add a new function color Colorize text, [`See`](README.md#Function-color)
-- 
-## [Unreleased] - 2024-09-26
+- **New methods**: Added `encryptAndCompress` and `decryptAndDecompress` in the `Service` class for managing encrypted data with compression.
+- **Colorize Function**: Added a new function `color` to colorize text output. See the documentation for usage details.
+- **CompressionService Class**: Added the `CompressionService` class to handle data compression, decompression, and cache management. Supports data compression using the Deflate/Inflate class.
+  
 ### Changed
-- Updated `README.md` to fix typos and improve clarity.
-- Updated `utils` export default.
-
-### Added
-- Add a new Class `CompressionService` to collect compression, decompression, data and manage files, caches [`See`](README.md#class-CompressionService)
-- Supports data compression / decompression with Deflate / Inflate class.
+- **README.md**: Updated to fix typos and improve clarity.
+- **Utils Structure**: Modified the utils file structure. This change does not affect existing functionality.
+- **Utils Export**: Updated utils export default structure.
 
 ## [1.0.3] - 2024-09-22
 ### Changed
-- Updated `README.md` to fix typos and improve clarity.
-  
+- **README.md**: Updated to fix typos and improve clarity.
+
 ## [1.0.2] - 2024-09-22
 ### Changed
-- Updated `README.md` to fix typos and improve clarity.
+- **README.md**: Updated to fix typos and improve clarity.
 
 ## [1.0.1] - 2024-09-22
 ### Changed
-- Refactored `Ts256k1` class to extend the `Service` class instead of creating a new instance using `new Service`.
+- **Refactor**: Refactored the `Ts256k1` class to extend the `Service` class, instead of creating a new instance using `new Service`.
 
 ## [1.0.0] - 2024-09-21
 ### Added
-- Initial release of the library with encryption, decryption, and [`more...`](README.md#api) functionality.
+- **Initial Release**: First release of the library with encryption, decryption, and other functionality.
