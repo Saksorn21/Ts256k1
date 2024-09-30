@@ -4,7 +4,7 @@ import { loadConfig } from './loadConfig'
  * @class Config
  * Represents the configuration settings for the library.
  */
-class Config {
+export class Config {
   /**
    * @method loader
    * @description The configuration loader.
@@ -28,6 +28,7 @@ class Config {
    * Initializes the Config instance by loading settings from the JSON configuration file.
    */
   constructor() {
+    
     this.isHkdfKeyCompressed = this.loader?.hkdfKeyCompressed ?? false
     this.isEphemeralKeyCompressed = this.loader?.ephemeralKeyCompressed ?? false
     this.signErrorMessage =
