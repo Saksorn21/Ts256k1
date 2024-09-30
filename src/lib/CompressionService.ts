@@ -16,7 +16,7 @@ import {
   type RawPreload,
 } from '../utils/handlersFiles'
 import { ConstsType } from '../config'
-import { concatBytes, bytesToUtf8, utf8ToBytes } from '../utils/'
+import { concatBytes, bytesToUtf8, utf8ToBytes } from '../utils/noble'
 
 export interface CacheEntry {
   PREFIXUUID: string
