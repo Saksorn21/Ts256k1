@@ -12,7 +12,7 @@ import {
  * @type {Object} CompressOpts
  * @property {1 | 2 | 3 | 4 | null} coverage - Specifies the level of compression coverage.
  */
-export type CompressOpts = DeflateOptions & {
+type CompressOpts = DeflateOptions & {
   coverage: 1 | 2 | 3 | 4 | null
 }
 
@@ -171,4 +171,4 @@ function calculateChunkSize(
 }
 export { compressData, decompressData, calculateChunkSize }
 // Exporting the types used
-export type { DeflateFunctionOptions, InflateOptions, DeflateOptions }
+export type { CompressOpts, DeflateFunctionOptions, InflateOptions, DeflateOptions }
