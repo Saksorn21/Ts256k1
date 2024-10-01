@@ -51,3 +51,26 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+merge-to-main:
+    needs: collect-data  
+    runs-on: ubuntu-latest
+    if: success()  
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main  
+          fetch-depth: 0  
+
+      - name: Merge testing into main
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git checkout main
+          git merge testing
+
+      - name: Push changes to main
+        run: git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
