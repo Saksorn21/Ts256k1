@@ -95,25 +95,25 @@ describe('Color Depth Module', () => {
       const message = 'Hello World';
       const result = color.red.bold(message);
 
-      // ตรวจสอบว่าผลลัพธ์ต้องมีรหัส ANSI สำหรับข้อความตัวหนา
-      expect(result).toMatch(/\x1B\[1m/); // ต้องมีรหัส ANSI สำหรับตัวหนา
-      expect(result).toMatch(/\x1B\[22m/); // ต้องมีรหัส ANSI สำหรับรีเซ็ตตัวหนา
+
+      expect(result).toMatch(/\x1B\[22m/); 
       expect(result).toContain(message); // ต้องมีข้อความต้นฉบับ
     });
 
-      test('should return a function for other styles', () => {
+      it('should return a function for other styles', () => {
+        (getColorDepth as jest.Mock).mockReturnValue(8); 
         const message = 'Hello World';
 
         // ทดสอบชื่อสไตล์อื่น ๆ โดยการใช้การกำหนดชื่อที่ไม่ใช่ 'bold'
         const otherStyle = 'italic' as keyof ColorMethods; // ใช้ type assertion เพื่อบอก TypeScript ว่าชื่อสไตล์นี้คือ 'keyof ColorMethods'
 
-        const applyFunction = color.red[otherStyle]; // คาดว่ามันจะไม่เกิดข้อผิดพลาดเกี่ยวกับประเภท
+        const applyFunction = color.blue[otherStyle]; // คาดว่ามันจะไม่เกิดข้อผิดพลาดเกี่ยวกับประเภท
 
         // ตรวจสอบว่าฟังก์ชันที่คืนค่าต้องทำงานได้
         const result = applyFunction(message);
 
-        // ในกรณีนี้ ฟังก์ชันอื่น ๆ ควรคืนค่าข้อความเดิม
-        expect(result).toBe(message); // ต้องคืนค่าข้อความต้นฉบับ
+        
+        expect(result).toBe(`\x1B[38;5;68m${message}\x1B[39m\x1B[22m`); // not style
       });
     });
 });

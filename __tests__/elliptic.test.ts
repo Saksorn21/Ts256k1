@@ -26,7 +26,7 @@ describe('Elliptical Functions', () => {
 
   it('should convert hex string to public key', () => {
     const hex =
-      'de9edb7d7b7dc1b4d35b61c2ece435373f8343c85b78674dadfc7e146f882b4f' 
+      'de9edb7d7b7dc1b4d35b61c2ece435373f8343c85b78674dadfc7e146f882b48' 
     const publicKey = hexToPublicKey(hex)
     const expectedPublicKey = bytesToHex(K1.getPublicKey(randomBytes(32)))
     const uncomm = new Uint8Array(64)

@@ -4,7 +4,7 @@ import { loadConfig } from '../src/config/loadConfig'
 // Mock loadConfig function globally for the entire test file
 jest.mock('../src/config/loadConfig')
 
-describe('Config Class', () => {
+describe('Config Class line 31-37', () => {
    beforeEach(() => {
     jest.clearAllMocks()
    })

@@ -28,7 +28,6 @@ export class Config {
    * Initializes the Config instance by loading settings from the JSON configuration file.
    */
   constructor() {
-    
     this.isHkdfKeyCompressed = this.loader?.hkdfKeyCompressed ?? false
     this.isEphemeralKeyCompressed = this.loader?.ephemeralKeyCompressed ?? false
     this.signErrorMessage =
