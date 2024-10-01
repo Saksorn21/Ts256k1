@@ -21,7 +21,9 @@ jobs:
       
       - run: npm ci
 
-      - name: Nyren Run Testing
+      - name: Nyren Run Testing by, jest-ts
+        run: npm run test
+      - name: Node Testing
         run: npm test -- --json --outputFile=coverage/nyren-tests-results.json
       
       - name: Upload test results
