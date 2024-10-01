@@ -1,4 +1,4 @@
-# Coverage Report
+# Nyren Coverage Report
 
 ## [Summary] - 2024-10-01
 - **Statements:** 88.11%
