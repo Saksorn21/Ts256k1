@@ -43,5 +43,5 @@ jobs:
           git add coverage/nyren-tests-results-formatted.json
           git commit -m "Add test results"
           git push
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
