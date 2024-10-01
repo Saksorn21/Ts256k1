@@ -43,6 +43,8 @@ jobs:
           git config --global user.name "Saksorn21"
           git config --global user.email "boat_saksorn@icloud.com"
           git add coverage/nyren-tests-results-formatted.json
+          git add coverage/cover.xml
+          git add coverage/coverage-final.json
           git commit -m "Add test results"
           git push
         env:
