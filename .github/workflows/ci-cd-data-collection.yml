@@ -45,7 +45,7 @@ jobs:
           git add coverage/nyren-tests-results.json
           git add coverage/clover.xml
           git add coverage/coverage-final.json
-          git commit -m "Add test results"
+          git commit -m "Add test coverage reports $(date '+%Y-%m-%d %H:%M:%S')"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
