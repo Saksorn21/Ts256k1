@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased] - 2024-10-01
+
+### Added
+- New tests for the following utilities:
+  - `./utils/color`: 100% coverage
+  - `./utils/colorDepth`: 100% coverage
+  - `./utils/elliptic`: 100% coverage
+  - `./config/config`: 100% coverage
+
+### Tests
+- Enhanced test coverage across utility and configuration files, achieving full coverage for the specified functions.
+
 ## [1.1.2] - 2024-09-30
 ### Changed
 - I encountered an issue with the `workflow`, where version **1.1.1** uploaded through the `workflow` had no compiled files. Therefore, I updated the version and uploaded it to npm myself
