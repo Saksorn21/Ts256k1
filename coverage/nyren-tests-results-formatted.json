@@ -26,218 +26,16 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1727757173947,
+  "startTime": 1727758177750,
   "success": true,
   "testResults": [
     {
       "assertionResults": [
         {
           "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 6,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return the escape code for 256 color depth",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return the escape code for 256 color depth"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return the escape code for 16 color depth",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return the escape code for 16 color depth"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return an empty string for unsupported colors",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return an empty string for unsupported colors"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return an empty string when color depth is less than 4",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return an empty string when color depth is less than 4"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "bold"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module bold should return bolded message when supported",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return bolded message when supported"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "bold"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module bold should return plain message when not supported",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return plain message when not supported"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class should apply color to the message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should apply color to the message"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class class Colorizer macth func color to the message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "class Colorizer macth func color to the message"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class should apply bold style to the message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should apply bold style to the message"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class should not apply color if color depth is less than 4",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should not apply color if color depth is less than 4"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Color Proxy"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Color Proxy should apply bold style",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should apply bold style"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Color Proxy"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Color Proxy should return a function for other styles",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return a function for other styles"
-        }
-      ],
-      "endTime": 1727757178123,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/color.test.ts",
-      "startTime": 1727757174169,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
             "bytes"
           ],
-          "duration": 8,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes utf8 test",
@@ -252,7 +50,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes hex test",
@@ -267,7 +65,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes base64 test",
@@ -327,7 +125,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes normalizeToUint8Array test",
@@ -390,7 +188,7 @@
             "bytes",
             "isBytes"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isBytes should return false for other types (string)",
@@ -406,7 +204,7 @@
             "bytes",
             "isBytes"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isBytes should return false for null",
@@ -470,7 +268,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 29,
+          "duration": 30,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should throw a TypeError for a string",
@@ -486,7 +284,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should throw a TypeError for null",
@@ -534,7 +332,7 @@
             "bytes",
             "isString"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isString should not throw an error when the second argument is a string",
@@ -597,7 +395,7 @@
           "ancestorTitles": [
             "test hex"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "test hex removes 0x",
@@ -612,7 +410,7 @@
           "ancestorTitles": [
             "test hex"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "test hex converts hex to buffer",
@@ -624,10 +422,212 @@
           "title": "converts hex to buffer"
         }
       ],
-      "endTime": 1727757178143,
+      "endTime": 1727758181769,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/bytes.test.ts",
-      "startTime": 1727757174156,
+      "startTime": 1727758177936,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 7,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return the escape code for 256 color depth",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return the escape code for 256 color depth"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return the escape code for 16 color depth",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return the escape code for 16 color depth"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return an empty string for unsupported colors",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return an empty string for unsupported colors"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return an empty string when color depth is less than 4",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return an empty string when color depth is less than 4"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "bold"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module bold should return bolded message when supported",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return bolded message when supported"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "bold"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module bold should return plain message when not supported",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return plain message when not supported"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class should apply color to the message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should apply color to the message"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class class Colorizer macth func color to the message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "class Colorizer macth func color to the message"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class should apply bold style to the message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should apply bold style to the message"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 8,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class should not apply color if color depth is less than 4",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should not apply color if color depth is less than 4"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Color Proxy"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Color Proxy should apply bold style",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should apply bold style"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Color Proxy"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Color Proxy should return a function for other styles",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return a function for other styles"
+        }
+      ],
+      "endTime": 1727758181913,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/color.test.ts",
+      "startTime": 1727758177962,
       "status": "passed",
       "summary": ""
     },
@@ -638,7 +638,7 @@
             "Service Class",
             "encrypt method"
           ],
-          "duration": 9,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class encrypt method should encrypt a message and return encrypted data",
@@ -702,7 +702,7 @@
             "Service Class",
             "decrypt method"
           ],
-          "duration": 16,
+          "duration": 20,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class decrypt method should throw an error if the signature is invalid and throwOnInvalid is true",
@@ -718,7 +718,7 @@
             "Service Class",
             "decrypt method"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class decrypt method should not throw an error if the signature is invalid and throwOnInvalid is false",
@@ -734,7 +734,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 9,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return true for equal PrivateKeys",
@@ -782,7 +782,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 9,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal keys",
@@ -814,7 +814,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 26,
+          "duration": 42,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal public keys uncompressed",
@@ -826,10 +826,95 @@
           "title": "should return false for unequal public keys uncompressed"
         }
       ],
-      "endTime": 1727757178355,
+      "endTime": 1727758182149,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/Service.test.ts",
-      "startTime": 1727757174130,
+      "startTime": 1727758177957,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 164,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should encrypt and decrypt the message with compressed public key",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should encrypt and decrypt the message with compressed public key"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 84,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should encrypt and decrypt the message with uncompressed public key",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should encrypt and decrypt the message with uncompressed public key"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 53,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should correctly decode the signed message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should correctly decode the signed message"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 56,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should verify the message signature correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should verify the message signature correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 43,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should extract parts from cipher text",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should extract parts from cipher text"
+        }
+      ],
+      "endTime": 1727758182460,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/decrypt.test.ts",
+      "startTime": 1727758181783,
       "status": "passed",
       "summary": ""
     },
@@ -839,7 +924,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 9,
+          "duration": 11,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should throw an error if private key is invalid (not 32 bytes)",
@@ -854,7 +939,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 46,
+          "duration": 51,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should return valid key pair from static getKeyPairs method",
@@ -884,7 +969,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 79,
+          "duration": 99,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should correctly encrypt and decrypt a message",
@@ -899,7 +984,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return true for equal PrivateKeys",
@@ -914,7 +999,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return true for equal PublicKeys",
@@ -929,7 +1014,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 4,
+          "duration": 3,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should throw TypeError for invalid comparison type",
@@ -959,7 +1044,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 10,
+          "duration": 8,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return false for unequal public keys",
@@ -971,10 +1056,10 @@
           "title": "should return false for unequal public keys"
         }
       ],
-      "endTime": 1727757178666,
+      "endTime": 1727758182504,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/main.test.ts",
-      "startTime": 1727757178157,
+      "startTime": 1727758181924,
       "status": "passed",
       "summary": ""
     },
@@ -984,7 +1069,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 95,
+          "duration": 96,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should encrypt the message with a public key",
@@ -999,7 +1084,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 34,
+          "duration": 38,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should throw an error for invalid public key",
@@ -1014,7 +1099,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 45,
+          "duration": 48,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should return encrypted message with signature",
@@ -1026,10 +1111,10 @@
           "title": "should return encrypted message with signature"
         }
       ],
-      "endTime": 1727757178812,
+      "endTime": 1727758182575,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/encrypt.test.ts",
-      "startTime": 1727757178381,
+      "startTime": 1727758182171,
       "status": "passed",
       "summary": ""
     },
@@ -1039,7 +1124,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 3,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth returns WriteStream.prototype.getColorDepth()",
@@ -1069,7 +1154,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth falls back to 4 when no process.env.TERM when getColorDepth throws an error",
@@ -1084,7 +1169,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error",
@@ -1096,120 +1181,10 @@
           "title": "falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error"
         }
       ],
-      "endTime": 1727757178851,
+      "endTime": 1727758182685,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/colorDepth.test.ts",
-      "startTime": 1727757178679,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 181,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should encrypt and decrypt the message with compressed public key",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should encrypt and decrypt the message with compressed public key"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 120,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should encrypt and decrypt the message with uncompressed public key",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should encrypt and decrypt the message with uncompressed public key"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 48,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should correctly decode the signed message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should correctly decode the signed message"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 57,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should verify the message signature correctly",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should verify the message signature correctly"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 43,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should extract parts from cipher text",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 3,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should extract parts from cipher text"
-        }
-      ],
-      "endTime": 1727757178869,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/decrypt.test.ts",
-      "startTime": 1727757178134,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Config Class line 31-37"
-          ],
-          "duration": 4,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 6,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should initialize with default values when loader has missing values"
-        }
-      ],
-      "endTime": 1727757179060,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
-      "startTime": 1727757178879,
+      "startTime": 1727758182515,
       "status": "passed",
       "summary": ""
     },
@@ -1219,7 +1194,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 2,
+          "duration": 3,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should combine keys using HKDF and SHA256",
@@ -1249,7 +1224,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 95,
+          "duration": 57,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should convert hex string to public key",
@@ -1261,35 +1236,10 @@
           "title": "should convert hex string to public key"
         }
       ],
-      "endTime": 1727757179073,
+      "endTime": 1727758182719,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/elliptic.test.ts",
-      "startTime": 1727757178824,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "test random keys"
-          ],
-          "duration": 104,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "test random keys tests randomkey",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 3,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "tests randomkey"
-        }
-      ],
-      "endTime": 1727757179173,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/random.test.ts",
-      "startTime": 1727757178861,
+      "startTime": 1727758182485,
       "status": "passed",
       "summary": ""
     },
@@ -1299,7 +1249,7 @@
           "ancestorTitles": [
             "config/consts test"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "config/consts test ConstType ",
@@ -1375,10 +1325,60 @@
           "title": "should expose helper functions that return config values"
         }
       ],
-      "endTime": 1727757179224,
+      "endTime": 1727758182755,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config.test.ts",
-      "startTime": 1727757179066,
+      "startTime": 1727758182587,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Config Class line 31-37"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should initialize with default values when loader has missing values"
+        }
+      ],
+      "endTime": 1727758182947,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
+      "startTime": 1727758182728,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "test random keys"
+          ],
+          "duration": 120,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "test random keys tests randomkey",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "tests randomkey"
+        }
+      ],
+      "endTime": 1727758182983,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/random.test.ts",
+      "startTime": 1727758182691,
       "status": "passed",
       "summary": ""
     }
@@ -19366,28 +19366,28 @@
         "45": 2,
         "46": 1,
         "47": 1,
-        "48": 15,
-        "49": 15,
-        "50": 15,
-        "51": 15,
+        "48": 8,
+        "49": 8,
+        "50": 8,
+        "51": 8,
         "52": 1,
         "53": 1,
-        "54": 36,
-        "55": 36,
-        "56": 36,
-        "57": 36,
-        "58": 14,
-        "59": 36,
-        "60": 36,
+        "54": 40,
+        "55": 40,
+        "56": 40,
+        "57": 40,
+        "58": 16,
+        "59": 40,
+        "60": 40,
         "61": 1,
         "62": 21,
         "63": 21,
         "64": 21,
         "65": 21,
-        "66": 27,
-        "67": 27,
-        "68": 27,
-        "69": 27,
+        "66": 20,
+        "67": 20,
+        "68": 20,
+        "69": 20,
         "70": 1,
         "71": 1,
         "72": 1,
@@ -19395,12 +19395,12 @@
         "74": 1,
         "75": 1,
         "76": 1,
-        "77": 7,
-        "78": 7,
-        "79": 3,
-        "80": 3,
-        "81": 4,
-        "82": 4,
+        "77": 11,
+        "78": 11,
+        "79": 5,
+        "80": 5,
+        "81": 6,
+        "82": 6,
         "83": 1,
         "84": 1,
         "85": 1,
@@ -20209,16 +20209,16 @@
       },
       "b": {
         "0": [
-          6
+          5
         ],
         "1": [
-          16
+          13
         ],
         "2": [
-          1
+          2
         ],
         "3": [
-          4
+          3
         ],
         "4": [
           3
@@ -20245,31 +20245,31 @@
           2
         ],
         "12": [
-          15
+          8
         ],
         "13": [
-          13
+          6
         ],
         "14": [
           4
         ],
         "15": [
-          11
+          4
         ],
         "16": [
-          11
+          4
         ],
         "17": [
-          36
+          40
         ],
         "18": [
-          14
+          16
         ],
         "19": [
-          14
+          16
         ],
         "20": [
-          9
+          11
         ],
         "21": [
           2
@@ -20281,22 +20281,22 @@
           6
         ],
         "24": [
-          27
+          20
         ],
         "25": [
           6
         ],
         "26": [
-          7
+          11
         ],
         "27": [
-          6
+          8
         ],
         "28": [
-          3
+          5
         ],
         "29": [
-          4
+          6
         ]
       },
       "fnMap": {
@@ -20759,10 +20759,10 @@
       },
       "f": {
         "0": 0,
-        "1": 6,
-        "2": 16,
-        "3": 1,
-        "4": 4,
+        "1": 5,
+        "2": 13,
+        "3": 2,
+        "4": 3,
         "5": 3,
         "6": 1,
         "7": 3,
@@ -20771,12 +20771,12 @@
         "10": 1,
         "11": 4,
         "12": 2,
-        "13": 15,
-        "14": 11,
-        "15": 36,
+        "13": 8,
+        "14": 4,
+        "15": 40,
         "16": 21,
-        "17": 27,
-        "18": 7
+        "17": 20,
+        "18": 11
       }
     },
     "/home/runner/work/Ts256k1/Ts256k1/src/utils/color.ts": {
@@ -31385,13 +31385,13 @@
           11
         ],
         "2": [
-          16
+          13
         ],
         "3": [
-          1
+          2
         ],
         "4": [
-          4
+          3
         ],
         "5": [
           9
@@ -31681,9 +31681,9 @@
       "f": {
         "0": 38,
         "1": 11,
-        "2": 16,
-        "3": 1,
-        "4": 4,
+        "2": 13,
+        "3": 2,
+        "4": 3,
         "5": 9,
         "6": 13,
         "7": 31,
