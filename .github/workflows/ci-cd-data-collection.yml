@@ -25,9 +25,23 @@ jobs:
         run: npm run test
       - name: Node Testing
         run: npm test -- --json --outputFile=coverage/nyren-tests-results.json
-      
+      - name: Format JSON with jq
+        run: |
+          sudo apt-get install jq
+          jq . coverage/nyren-tests-results.json > coverage/nyren-tests-results-formatted.json
+      - name: Check coverage directory
+        run: ls coverage
       - name: Upload test results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: coverage/nyren-tests-results.json
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Saksorn21"
+          git config --global user.email "boat_saksorn@icloud.com"
+          git add coverage/nyren-tests-results-formatted.json
+          git commit -m "Add test results"
+          git push
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
