@@ -1,3 +1,4 @@
+[![Test Data Collection](https://github.com/Saksorn21/Ts256k1/actions/workflows/ci-cd-data-collection.yml/badge.svg?branch=testing)](https://github.com/Saksorn21/Ts256k1/actions/workflows/ci-cd-data-collection.yml)
 # nyren-ts256k1
 
 **nyren-ts256k1** is a TypeScript library for working with the `secp256k1` elliptic curve. It includes functionality for key generation, encryption, decryption, signing, and signature verification using `secp256k1` and the `xchacha20poly1305` algorithm.
