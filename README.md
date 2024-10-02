@@ -74,7 +74,7 @@ import { bytesToBase64, base64ToBytes } from '@nyren/ts256k1/utils'
 const encryptMessage = new Uint8Array[1,2,3,4]
 const toBase64 = bytesToBase64(encryptMassage)
 const base64To = base64ToBytes(toBase64)
-// return Buffer If you want Uint8Array 'Uint8Array.from(base64To)': Uint8Array
+// return Buffer If you want Uint8Array 'new Uint8Array(base64To)': Uint8Array
 
 ```
 
@@ -82,6 +82,7 @@ const base64To = base64ToBytes(toBase64)
 ```typescript
 import { Ts256k1, PrivateKey, PublicKey } from '@nyren/ts256k1'
 import { Service, encrypt, encodeSing, decrypt, decodeSignMessage, verifyMessage } from '@nyren/ts256k1/service'
+import { CompressionService, compressData, decompressData, } from '@nyren/ts256k1/service'
 //TODO: Data conversion, see below
 import utils from '@nyren/ts256k1/utils'
 
@@ -193,6 +194,7 @@ This class handles encryption, decryption, and message signing/verification.
 - `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
 - `encryptAndCompress(msg: Uint8Array): Uint8Array` — Encrypts the provided message and signs it if signature functionality is enabled.
 - `decryptAndDecompress(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
+- `compressionOpts(): CompressionOptions` - Provides additional methods for managing compression cache and related settings.
 - `equals(other: PrivateKey | PublicKey): boolean` - Compares this key with another PrivateKey or PublicKey instance.
 
 ### Class: **CompressionService**
@@ -217,8 +219,9 @@ This class handles compressData, decompressData
 - `color[colorname: string]: string`
 - `color[colorname: string].bold: string`
 #### Support colors
-- `type ColorName = 'blue' `#5f5fff` | 'gray' `#808080` | 'green' `#5faf5f | 'plum' `#d787d7` | 'orangered' `#ff8700` | 'red' `#ff0000` | 'olive' `#d7af00` | 'white' `#ffffff` | 'cyan' `#87afff``
+type ColorName = 'blue' `#5f5fff` | 'gray' `#808080` | 'green' `#5faf5f | 'plum' `#d787d7` | 'orangered' `#ff8700` | 'red' `#ff0000` | 'olive' `#d7af00` | 'white' `#ffffff` | 'cyan' `#87afff`
   - 16-color & 256-color
+
 ## Message Signing and Verification
 
 Our encryption process includes an additional layer of security by signing the encrypted data using the sender’s private key. When decrypting, the signature is verified using the sender’s public key to ensure the data has not been tampered with. This ensures both message integrity and authenticity.
