@@ -218,7 +218,7 @@ This class handles compressData, decompressData
 - `color[colorname: string]: string`
 - `color[colorname: string].bold: string`
 #### Support colors
-- type ColorName = 'blue' `#5f5fff` | 'gray' `#808080` | 'green' `#5faf5f | 'plum' `#d787d7` | 'orangered' `#ff8700` | 'red' `#ff0000` | 'olive' `#d7af00` | 'white' `#ffffff` | 'cyan' `#87afff`
+type ColorName = 'blue' `#5f5fff` | 'gray' `#808080` | 'green' `#5faf5f | 'plum' `#d787d7` | 'orangered' `#ff8700` | 'red' `#ff0000` | 'olive' `#d7af00` | 'white' `#ffffff` | 'cyan' `#87afff`
   - 16-color & 256-color
 
 ## Message Signing and Verification
