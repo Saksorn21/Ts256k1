@@ -30,7 +30,7 @@ export interface RawPreload {
  * @param {string} p - The path to the directory.
  * @returns {stirng} - Error message.
  */
-const errorDirectory: Function = (p: string): string =>
+export const errorDirectory: Function = (p: string): string =>
   `${color.red.bold(`Error reading directory:`)}${color.white.bold(p)}`
 
 /**
@@ -224,7 +224,7 @@ export function analyzeFiles(dir: string, PREFIX?: Uint8Array): RawPreload {
  * @param {string} dir - The directory containing the cache files.
  * @param {RawPreload} result - The result object to store the processed data.
  */
-function processMultipleFiles(
+export function processMultipleFiles(
   fileCache: string[],
   dir: string,
   result: RawPreload
@@ -249,7 +249,7 @@ function processMultipleFiles(
  * @param {string} dir - The directory containing the cache file.
  * @param {RawPreload} result - The result object to store the processed data.
  */
-function processSingleFile(
+export function processSingleFile(
   file: string,
   dir: string,
   result: RawPreload
@@ -269,7 +269,7 @@ function processSingleFile(
  * @param {string} fileName - The file name to extract information from.
  * @returns {Object} An object containing the file prefix and total size.
  */
-function extractFileInfo(fileName: string): {
+export function extractFileInfo(fileName: string): {
   prefix: string
   totalSize: number
 } {
