@@ -9,4 +9,4 @@
 
 ## Details
 - [Link to JSON results](nyren-tests-results.json)
-- Additional information about the test environment and configurations.
+
