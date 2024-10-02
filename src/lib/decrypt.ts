@@ -9,7 +9,7 @@ import { PublicKey } from './PublicKey'
  * @property {Uint8Array} signBytes - The signature of the message.
  * @property {Uint8Array} encryptMessage - The encrypted message.
  */
-export declare interface DecodeSignMessage {
+export interface DecodeSignMessage {
   signBytes: Uint8Array
   encryptMessage: Uint8Array
 }
@@ -19,7 +19,7 @@ export declare interface DecodeSignMessage {
  * @property {boolean} verify - The signature of the message.
  * @property {Uint8Array} cipherText - The encrypted message.
  */
-export declare interface VerifyMessage {
+export interface VerifyMessage {
   verify: boolean
   cipherText: Uint8Array
 }
