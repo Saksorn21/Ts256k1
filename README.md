@@ -194,6 +194,7 @@ This class handles encryption, decryption, and message signing/verification.
 - `decrypt(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
 - `encryptAndCompress(msg: Uint8Array): Uint8Array` — Encrypts the provided message and signs it if signature functionality is enabled.
 - `decryptAndDecompress(msg: Uint8Array): Uint8Array` — Decrypts the provided message and verifies its signature if enabled.
+- `compressionOpts(): CompressionOptions` - Provides additional methods for managing compression cache and related settings.
 - `equals(other: PrivateKey | PublicKey): boolean` - Compares this key with another PrivateKey or PublicKey instance.
 
 ### Class: **CompressionService**
