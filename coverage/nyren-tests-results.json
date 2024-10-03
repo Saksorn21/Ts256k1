@@ -26,211 +26,9 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1727862977259,
+  "startTime": 1727922879330,
   "success": true,
   "testResults": [
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 6,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return the escape code for 256 color depth",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return the escape code for 256 color depth"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return the escape code for 16 color depth",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return the escape code for 16 color depth"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return an empty string for unsupported colors",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return an empty string for unsupported colors"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "getColor"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module getColor should return an empty string when color depth is less than 4",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return an empty string when color depth is less than 4"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "bold"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module bold should return bolded message when supported",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return bolded message when supported"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "bold"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module bold should return plain message when not supported",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return plain message when not supported"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class should apply color to the message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should apply color to the message"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class class Colorizer macth func color to the message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "class Colorizer macth func color to the message"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class should apply bold style to the message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should apply bold style to the message"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Colorizer class"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Colorizer class should not apply color if color depth is less than 4",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should not apply color if color depth is less than 4"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Color Proxy"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Color Proxy should apply bold style",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should apply bold style"
-        },
-        {
-          "ancestorTitles": [
-            "Color Depth Module",
-            "Color Proxy"
-          ],
-          "duration": 8,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Color Depth Module Color Proxy should return a function for other styles",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return a function for other styles"
-        }
-      ],
-      "endTime": 1727862981394,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/color.test.ts",
-      "startTime": 1727862977481,
-      "status": "passed",
-      "summary": ""
-    },
     {
       "assertionResults": [
         {
@@ -267,7 +65,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes base64 test",
@@ -312,7 +110,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes ucs2 test",
@@ -327,7 +125,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes normalizeToUint8Array test",
@@ -454,7 +252,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should not throw an error for Buffer",
@@ -470,7 +268,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 33,
+          "duration": 21,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should throw a TypeError for a string",
@@ -486,7 +284,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 2,
+          "duration": 11,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should throw a TypeError for null",
@@ -518,7 +316,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should treat object with constructor.name === \"Uint8Array\" as Uint8Array",
@@ -624,10 +422,212 @@
           "title": "converts hex to buffer"
         }
       ],
-      "endTime": 1727862981438,
+      "endTime": 1727922883489,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/bytes.test.ts",
-      "startTime": 1727862977444,
+      "startTime": 1727922879540,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 5,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return the escape code for 256 color depth",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return the escape code for 256 color depth"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return the escape code for 16 color depth",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return the escape code for 16 color depth"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return an empty string for unsupported colors",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return an empty string for unsupported colors"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "getColor"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module getColor should return an empty string when color depth is less than 4",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return an empty string when color depth is less than 4"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "bold"
+          ],
+          "duration": 13,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module bold should return bolded message when supported",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return bolded message when supported"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "bold"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module bold should return plain message when not supported",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return plain message when not supported"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class should apply color to the message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should apply color to the message"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class class Colorizer macth func color to the message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "class Colorizer macth func color to the message"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class should apply bold style to the message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should apply bold style to the message"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Colorizer class"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Colorizer class should not apply color if color depth is less than 4",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should not apply color if color depth is less than 4"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Color Proxy"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Color Proxy should apply bold style",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should apply bold style"
+        },
+        {
+          "ancestorTitles": [
+            "Color Depth Module",
+            "Color Proxy"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Color Depth Module Color Proxy should return a function for other styles",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return a function for other styles"
+        }
+      ],
+      "endTime": 1727922883557,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/color.test.ts",
+      "startTime": 1727922879531,
       "status": "passed",
       "summary": ""
     },
@@ -638,7 +638,7 @@
             "Service Class",
             "encrypt method"
           ],
-          "duration": 8,
+          "duration": 11,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class encrypt method should encrypt a message and return encrypted data",
@@ -702,7 +702,7 @@
             "Service Class",
             "decrypt method"
           ],
-          "duration": 22,
+          "duration": 20,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class decrypt method should throw an error if the signature is invalid and throwOnInvalid is true",
@@ -718,7 +718,7 @@
             "Service Class",
             "decrypt method"
           ],
-          "duration": 1,
+          "duration": 6,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class decrypt method should not throw an error if the signature is invalid and throwOnInvalid is false",
@@ -734,7 +734,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 9,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return true for equal PrivateKeys",
@@ -750,7 +750,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return true for equal PublicKeys",
@@ -766,7 +766,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should throw TypeError for invalid comparison type",
@@ -782,7 +782,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 11,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal keys",
@@ -798,7 +798,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 8,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal public keys",
@@ -814,7 +814,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 32,
+          "duration": 25,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal public keys uncompressed",
@@ -826,10 +826,150 @@
           "title": "should return false for unequal public keys uncompressed"
         }
       ],
-      "endTime": 1727862981646,
+      "endTime": 1727922883853,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/Service.test.ts",
-      "startTime": 1727862977458,
+      "startTime": 1727922879533,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Encryption Tests"
+          ],
+          "duration": 140,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Encryption Tests should encrypt the message with a public key",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should encrypt the message with a public key"
+        },
+        {
+          "ancestorTitles": [
+            "Encryption Tests"
+          ],
+          "duration": 63,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Encryption Tests should throw an error for invalid public key",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw an error for invalid public key"
+        },
+        {
+          "ancestorTitles": [
+            "Encryption Tests"
+          ],
+          "duration": 45,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Encryption Tests should return encrypted message with signature",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return encrypted message with signature"
+        }
+      ],
+      "endTime": 1727922884140,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/encrypt.test.ts",
+      "startTime": 1727922883566,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 238,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should encrypt and decrypt the message with compressed public key",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should encrypt and decrypt the message with compressed public key"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 112,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should encrypt and decrypt the message with uncompressed public key",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should encrypt and decrypt the message with uncompressed public key"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 50,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should correctly decode the signed message",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should correctly decode the signed message"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 45,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should verify the message signature correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should verify the message signature correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Decryption Tests"
+          ],
+          "duration": 43,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Decryption Tests should extract parts from cipher text",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should extract parts from cipher text"
+        }
+      ],
+      "endTime": 1727922884300,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/decrypt.test.ts",
+      "startTime": 1727922883503,
       "status": "passed",
       "summary": ""
     },
@@ -839,7 +979,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 14,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should throw an error if private key is invalid (not 32 bytes)",
@@ -854,7 +994,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 42,
+          "duration": 30,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should return valid key pair from static getKeyPairs method",
@@ -884,7 +1024,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 80,
+          "duration": 55,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should correctly encrypt and decrypt a message",
@@ -899,7 +1039,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return true for equal PrivateKeys",
@@ -929,7 +1069,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 3,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should throw TypeError for invalid comparison type",
@@ -944,7 +1084,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 7,
+          "duration": 13,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return false for unequal private keys",
@@ -959,7 +1099,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 8,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return false for unequal public keys",
@@ -971,150 +1111,10 @@
           "title": "should return false for unequal public keys"
         }
       ],
-      "endTime": 1727862981973,
+      "endTime": 1727922884302,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/main.test.ts",
-      "startTime": 1727862981451,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 154,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should encrypt and decrypt the message with compressed public key",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should encrypt and decrypt the message with compressed public key"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 111,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should encrypt and decrypt the message with uncompressed public key",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should encrypt and decrypt the message with uncompressed public key"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 53,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should correctly decode the signed message",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should correctly decode the signed message"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 50,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should verify the message signature correctly",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should verify the message signature correctly"
-        },
-        {
-          "ancestorTitles": [
-            "Decryption Tests"
-          ],
-          "duration": 32,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Decryption Tests should extract parts from cipher text",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 3,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should extract parts from cipher text"
-        }
-      ],
-      "endTime": 1727862982123,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/decrypt.test.ts",
-      "startTime": 1727862981410,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Encryption Tests"
-          ],
-          "duration": 124,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Encryption Tests should encrypt the message with a public key",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should encrypt the message with a public key"
-        },
-        {
-          "ancestorTitles": [
-            "Encryption Tests"
-          ],
-          "duration": 45,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Encryption Tests should throw an error for invalid public key",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should throw an error for invalid public key"
-        },
-        {
-          "ancestorTitles": [
-            "Encryption Tests"
-          ],
-          "duration": 58,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Encryption Tests should return encrypted message with signature",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return encrypted message with signature"
-        }
-      ],
-      "endTime": 1727862982137,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/encrypt.test.ts",
-      "startTime": 1727862981661,
+      "startTime": 1727922883864,
       "status": "passed",
       "summary": ""
     },
@@ -1189,7 +1189,7 @@
             "Cache Utility Functions",
             "setCacheDirectory"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions setCacheDirectory should set cache directory to temp when useTemp is true",
@@ -1253,7 +1253,7 @@
             "Cache Utility Functions",
             "writeFileBit and readFileBit"
           ],
-          "duration": 3,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions writeFileBit and readFileBit should write and read file correctly",
@@ -1285,7 +1285,7 @@
             "Cache Utility Functions",
             "listCacheFiles"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions listCacheFiles should return an array of file names",
@@ -1313,10 +1313,10 @@
           "title": "should return an empty array and log error on failure"
         }
       ],
-      "endTime": 1727862982193,
+      "endTime": 1727922884350,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/handlersFiles.test.ts",
-      "startTime": 1727862981982,
+      "startTime": 1727922884152,
       "status": "passed",
       "summary": ""
     },
@@ -1326,7 +1326,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth returns WriteStream.prototype.getColorDepth()",
@@ -1341,7 +1341,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth falls back to process.env.TERM when getColorDepth throws an error",
@@ -1356,7 +1356,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth falls back to 4 when no process.env.TERM when getColorDepth throws an error",
@@ -1383,10 +1383,10 @@
           "title": "falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error"
         }
       ],
-      "endTime": 1727862982326,
+      "endTime": 1727922884503,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/colorDepth.test.ts",
-      "startTime": 1727862982148,
+      "startTime": 1727922884313,
       "status": "passed",
       "summary": ""
     },
@@ -1396,7 +1396,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should combine keys using HKDF and SHA256",
@@ -1411,7 +1411,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should generate shared key from ephemeral and shared points",
@@ -1426,7 +1426,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 72,
+          "duration": 56,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should convert hex string to public key",
@@ -1438,10 +1438,60 @@
           "title": "should convert hex string to public key"
         }
       ],
-      "endTime": 1727862982390,
+      "endTime": 1727922884554,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/elliptic.test.ts",
-      "startTime": 1727862982134,
+      "startTime": 1727922884310,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Config Class line 31-37"
+          ],
+          "duration": 3,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should initialize with default values when loader has missing values"
+        }
+      ],
+      "endTime": 1727922884745,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
+      "startTime": 1727922884509,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "test random keys"
+          ],
+          "duration": 145,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "test random keys tests randomkey",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "tests randomkey"
+        }
+      ],
+      "endTime": 1727922884757,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/random.test.ts",
+      "startTime": 1727922884357,
       "status": "passed",
       "summary": ""
     },
@@ -1451,7 +1501,7 @@
           "ancestorTitles": [
             "config/consts test"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "config/consts test ConstType ",
@@ -1527,60 +1577,10 @@
           "title": "should expose helper functions that return config values"
         }
       ],
-      "endTime": 1727862982418,
+      "endTime": 1727922884782,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config.test.ts",
-      "startTime": 1727862982209,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Config Class line 31-37"
-          ],
-          "duration": 2,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 6,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should initialize with default values when loader has missing values"
-        }
-      ],
-      "endTime": 1727862982574,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
-      "startTime": 1727862982401,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "test random keys"
-          ],
-          "duration": 112,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "test random keys tests randomkey",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 3,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "tests randomkey"
-        }
-      ],
-      "endTime": 1727862982633,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/random.test.ts",
-      "startTime": 1727862982341,
+      "startTime": 1727922884565,
       "status": "passed",
       "summary": ""
     }
@@ -2398,11 +2398,11 @@
         "62": 1,
         "63": 1,
         "64": 1,
-        "65": 2,
+        "65": 3,
         "66": 1,
         "67": 1,
         "68": 1,
-        "69": 1,
+        "69": 2,
         "70": 1,
         "71": 1,
         "72": 1,
@@ -2777,10 +2777,10 @@
           13
         ],
         "9": [
-          2
+          3
         ],
         "10": [
-          1
+          2
         ],
         "11": [
           1
@@ -2963,8 +2963,8 @@
         "0": 3,
         "1": 13,
         "2": 13,
-        "3": 2,
-        "4": 1,
+        "3": 3,
+        "4": 2,
         "5": 1,
         "6": 4
       }
@@ -5979,9 +5979,9 @@
         "55": 1,
         "56": 1,
         "57": 1,
-        "58": 5,
-        "59": 5,
-        "60": 5,
+        "58": 2,
+        "59": 2,
+        "60": 2,
         "61": 1,
         "62": 1,
         "63": 1,
@@ -5998,8 +5998,8 @@
         "74": 1,
         "75": 1,
         "76": 1,
-        "77": 5,
-        "78": 5,
+        "77": 2,
+        "78": 2,
         "79": 1,
         "80": 1,
         "81": 1,
@@ -6143,7 +6143,7 @@
         "219": 1,
         "220": 1,
         "221": 1,
-        "222": 5,
+        "222": 2,
         "223": 0,
         "224": 0,
         "225": 0,
@@ -6152,7 +6152,7 @@
         "228": 0,
         "229": 0,
         "230": 0,
-        "231": 5,
+        "231": 2,
         "232": 1,
         "233": 1,
         "234": 1
@@ -6265,13 +6265,13 @@
       },
       "b": {
         "0": [
-          5
+          2
         ],
         "1": [
-          5
+          2
         ],
         "2": [
-          5
+          2
         ],
         "3": [
           0
@@ -6593,9 +6593,9 @@
       },
       "f": {
         "0": 0,
-        "1": 5,
+        "1": 2,
         "2": 0,
-        "3": 5,
+        "3": 2,
         "4": 0,
         "5": 0,
         "6": 0,
@@ -6604,7 +6604,7 @@
         "9": 0,
         "10": 0,
         "11": 0,
-        "12": 5
+        "12": 2
       }
     },
     "/home/runner/work/Ts256k1/Ts256k1/src/lib/PrivateKey.ts": {
@@ -7993,8 +7993,8 @@
         "17": 1,
         "18": 1,
         "19": 1,
-        "20": 3,
-        "21": 3,
+        "20": 4,
+        "21": 4,
         "22": 1,
         "23": 1,
         "24": 1,
@@ -8012,8 +8012,8 @@
         "36": 1,
         "37": 1,
         "38": 1,
-        "39": 8,
-        "40": 8,
+        "39": 3,
+        "40": 3,
         "41": 1,
         "42": 1,
         "43": 1,
@@ -8035,9 +8035,9 @@
         "59": 1,
         "60": 23,
         "61": 23,
-        "62": 22,
-        "63": 22,
-        "64": 22,
+        "62": 23,
+        "63": 23,
+        "64": 23,
         "65": 1,
         "66": 1,
         "67": 1,
@@ -8080,8 +8080,8 @@
         "104": 1,
         "105": 1,
         "106": 1,
-        "107": 31,
-        "108": 31,
+        "107": 33,
+        "108": 33,
         "109": 1,
         "110": 1,
         "111": 1,
@@ -8106,8 +8106,8 @@
         "130": 1,
         "131": 1,
         "132": 1,
-        "133": 22,
-        "134": 22,
+        "133": 23,
+        "134": 23,
         "135": 1
       },
       "branchMap": {
@@ -8295,32 +8295,6 @@
         },
         "7": {
           "type": "branch",
-          "line": 63,
-          "loc": {
-            "start": {
-              "line": 63,
-              "column": -1
-            },
-            "end": {
-              "line": 65,
-              "column": 3
-            }
-          },
-          "locations": [
-            {
-              "start": {
-                "line": 63,
-                "column": -1
-              },
-              "end": {
-                "line": 65,
-                "column": 3
-              }
-            }
-          ]
-        },
-        "8": {
-          "type": "branch",
           "line": 74,
           "loc": {
             "start": {
@@ -8345,7 +8319,7 @@
             }
           ]
         },
-        "9": {
+        "8": {
           "type": "branch",
           "line": 77,
           "loc": {
@@ -8371,7 +8345,7 @@
             }
           ]
         },
-        "10": {
+        "9": {
           "type": "branch",
           "line": 80,
           "loc": {
@@ -8397,7 +8371,7 @@
             }
           ]
         },
-        "11": {
+        "10": {
           "type": "branch",
           "line": 95,
           "loc": {
@@ -8423,7 +8397,7 @@
             }
           ]
         },
-        "12": {
+        "11": {
           "type": "branch",
           "line": 107,
           "loc": {
@@ -8449,7 +8423,7 @@
             }
           ]
         },
-        "13": {
+        "12": {
           "type": "branch",
           "line": 117,
           "loc": {
@@ -8475,7 +8449,7 @@
             }
           ]
         },
-        "14": {
+        "13": {
           "type": "branch",
           "line": 133,
           "loc": {
@@ -8504,10 +8478,10 @@
       },
       "b": {
         "0": [
-          3
+          4
         ],
         "1": [
-          8
+          3
         ],
         "2": [
           4
@@ -8516,37 +8490,34 @@
           23
         ],
         "4": [
-          15
-        ],
-        "5": [
-          8
-        ],
-        "6": [
-          1
-        ],
-        "7": [
-          22
-        ],
-        "8": [
-          10
-        ],
-        "9": [
-          2
-        ],
-        "10": [
-          8
-        ],
-        "11": [
           13
         ],
-        "12": [
-          31
+        "5": [
+          10
         ],
-        "13": [
+        "6": [
+          0
+        ],
+        "7": [
+          10
+        ],
+        "8": [
+          2
+        ],
+        "9": [
+          8
+        ],
+        "10": [
+          13
+        ],
+        "11": [
+          33
+        ],
+        "12": [
           11
         ],
-        "14": [
-          22
+        "13": [
+          23
         ]
       },
       "fnMap": {
@@ -8768,15 +8739,15 @@
         }
       },
       "f": {
-        "0": 3,
-        "1": 8,
+        "0": 4,
+        "1": 3,
         "2": 4,
         "3": 23,
         "4": 10,
         "5": 13,
-        "6": 31,
+        "6": 33,
         "7": 11,
-        "8": 22
+        "8": 23
       }
     },
     "/home/runner/work/Ts256k1/Ts256k1/src/lib/PublicKey.ts": {
@@ -9773,14 +9744,14 @@
         "25": 1,
         "26": 1,
         "27": 1,
-        "28": 24,
-        "29": 24,
-        "30": 24,
+        "28": 19,
+        "29": 19,
+        "30": 19,
         "31": 1,
         "32": 1,
-        "33": 22,
-        "34": 22,
-        "35": 22,
+        "33": 18,
+        "34": 18,
+        "35": 18,
         "36": 1,
         "37": 1,
         "38": 1,
@@ -9835,11 +9806,11 @@
         "87": 1,
         "88": 1,
         "89": 1,
-        "90": 58,
-        "91": 58,
-        "92": 58,
-        "93": 58,
-        "94": 58,
+        "90": 54,
+        "91": 54,
+        "92": 54,
+        "93": 54,
+        "94": 54,
         "95": 1
       },
       "branchMap": {
@@ -10135,10 +10106,10 @@
           10
         ],
         "1": [
-          24
+          19
         ],
         "2": [
-          22
+          18
         ],
         "3": [
           36
@@ -10162,7 +10133,7 @@
           1
         ],
         "10": [
-          58
+          54
         ]
       },
       "fnMap": {
@@ -10337,12 +10308,12 @@
       },
       "f": {
         "0": 10,
-        "1": 24,
-        "2": 22,
+        "1": 19,
+        "2": 18,
         "3": 36,
         "4": 13,
         "5": 3,
-        "6": 58
+        "6": 54
       }
     },
     "/home/runner/work/Ts256k1/Ts256k1/src/lib/Service.ts": {
@@ -12618,13 +12589,13 @@
         "64": 1,
         "65": 1,
         "66": 1,
-        "67": 5,
-        "68": 5,
-        "69": 5,
-        "70": 5,
-        "71": 5,
-        "72": 5,
-        "73": 5,
+        "67": 2,
+        "68": 2,
+        "69": 2,
+        "70": 2,
+        "71": 2,
+        "72": 2,
+        "73": 2,
         "74": 1,
         "75": 1,
         "76": 1,
@@ -12635,18 +12606,18 @@
         "81": 1,
         "82": 1,
         "83": 1,
-        "84": 3,
-        "85": 3,
-        "86": 3,
-        "87": 3,
-        "88": 3,
-        "89": 2,
-        "90": 2,
-        "91": 2,
-        "92": 2,
-        "93": 2,
-        "94": 2,
-        "95": 2,
+        "84": 2,
+        "85": 2,
+        "86": 2,
+        "87": 2,
+        "88": 2,
+        "89": 1,
+        "90": 1,
+        "91": 1,
+        "92": 1,
+        "93": 1,
+        "94": 1,
+        "95": 1,
         "96": 1,
         "97": 1,
         "98": 1,
@@ -12660,22 +12631,22 @@
         "106": 1,
         "107": 1,
         "108": 1,
-        "109": 5,
-        "110": 5,
-        "111": 5,
-        "112": 5,
-        "113": 4,
-        "114": 4,
-        "115": 4,
-        "116": 4,
-        "117": 4,
-        "118": 4,
-        "119": 4,
-        "120": 4,
-        "121": 3,
-        "122": 3,
-        "123": 3,
-        "124": 3,
+        "109": 4,
+        "110": 4,
+        "111": 4,
+        "112": 4,
+        "113": 3,
+        "114": 3,
+        "115": 3,
+        "116": 3,
+        "117": 3,
+        "118": 3,
+        "119": 3,
+        "120": 3,
+        "121": 2,
+        "122": 2,
+        "123": 2,
+        "124": 2,
         "125": 1,
         "126": 1,
         "127": 1,
@@ -12738,28 +12709,28 @@
         "184": 1,
         "185": 1,
         "186": 1,
-        "187": 11,
-        "188": 11,
-        "189": 4,
-        "190": 4,
-        "191": 4,
-        "192": 7,
-        "193": 7,
-        "194": 11,
-        "195": 5,
-        "196": 5,
-        "197": 5,
-        "198": 5,
-        "199": 5,
-        "200": 5,
-        "201": 5,
-        "202": 5,
-        "203": 2,
-        "204": 2,
-        "205": 2,
-        "206": 2,
-        "207": 2,
-        "208": 2,
+        "187": 6,
+        "188": 6,
+        "189": 2,
+        "190": 2,
+        "191": 2,
+        "192": 4,
+        "193": 4,
+        "194": 6,
+        "195": 3,
+        "196": 3,
+        "197": 3,
+        "198": 3,
+        "199": 3,
+        "200": 3,
+        "201": 3,
+        "202": 3,
+        "203": 1,
+        "204": 1,
+        "205": 1,
+        "206": 1,
+        "207": 1,
+        "208": 1,
         "209": 1,
         "210": 1,
         "211": 1,
@@ -12853,32 +12824,6 @@
         },
         "3": {
           "type": "branch",
-          "line": 97,
-          "loc": {
-            "start": {
-              "line": 97,
-              "column": -1
-            },
-            "end": {
-              "line": 100,
-              "column": 3
-            }
-          },
-          "locations": [
-            {
-              "start": {
-                "line": 97,
-                "column": -1
-              },
-              "end": {
-                "line": 100,
-                "column": 3
-              }
-            }
-          ]
-        },
-        "4": {
-          "type": "branch",
           "line": 109,
           "loc": {
             "start": {
@@ -12903,7 +12848,7 @@
             }
           ]
         },
-        "5": {
+        "4": {
           "type": "branch",
           "line": 113,
           "loc": {
@@ -12929,7 +12874,7 @@
             }
           ]
         },
-        "6": {
+        "5": {
           "type": "branch",
           "line": 121,
           "loc": {
@@ -12955,7 +12900,7 @@
             }
           ]
         },
-        "7": {
+        "6": {
           "type": "branch",
           "line": 121,
           "loc": {
@@ -12981,7 +12926,7 @@
             }
           ]
         },
-        "8": {
+        "7": {
           "type": "branch",
           "line": 121,
           "loc": {
@@ -13007,7 +12952,7 @@
             }
           ]
         },
-        "9": {
+        "8": {
           "type": "branch",
           "line": 126,
           "loc": {
@@ -13033,7 +12978,7 @@
             }
           ]
         },
-        "10": {
+        "9": {
           "type": "branch",
           "line": 187,
           "loc": {
@@ -13059,7 +13004,7 @@
             }
           ]
         },
-        "11": {
+        "10": {
           "type": "branch",
           "line": 189,
           "loc": {
@@ -13085,7 +13030,7 @@
             }
           ]
         },
-        "12": {
+        "11": {
           "type": "branch",
           "line": 193,
           "loc": {
@@ -13111,7 +13056,7 @@
             }
           ]
         },
-        "13": {
+        "12": {
           "type": "branch",
           "line": 195,
           "loc": {
@@ -13137,7 +13082,7 @@
             }
           ]
         },
-        "14": {
+        "13": {
           "type": "branch",
           "line": 200,
           "loc": {
@@ -13163,7 +13108,7 @@
             }
           ]
         },
-        "15": {
+        "14": {
           "type": "branch",
           "line": 201,
           "loc": {
@@ -13189,7 +13134,7 @@
             }
           ]
         },
-        "16": {
+        "15": {
           "type": "branch",
           "line": 204,
           "loc": {
@@ -13218,55 +13163,52 @@
       },
       "b": {
         "0": [
-          5
+          2
         ],
         "1": [
-          3
+          2
         ],
         "2": [
-          2
+          1
         ],
         "3": [
-          1
-        ],
-        "4": [
-          5
-        ],
-        "5": [
           4
         ],
-        "6": [
-          2
-        ],
-        "7": [
-          1
-        ],
-        "8": [
+        "4": [
           3
         ],
-        "9": [
+        "5": [
           1
         ],
+        "6": [
+          1
+        ],
+        "7": [
+          2
+        ],
+        "8": [
+          1
+        ],
+        "9": [
+          6
+        ],
         "10": [
-          11
+          2
         ],
         "11": [
           4
         ],
         "12": [
-          7
+          3
         ],
         "13": [
-          5
+          2
         ],
         "14": [
-          4
+          1
         ],
         "15": [
           1
-        ],
-        "16": [
-          2
         ]
       },
       "fnMap": {
@@ -13638,13 +13580,13 @@
         "3": 0,
         "4": 0,
         "5": 0,
-        "6": 5,
-        "7": 3,
-        "8": 5,
+        "6": 2,
+        "7": 2,
+        "8": 4,
         "9": 0,
         "10": 0,
         "11": 0,
-        "12": 11,
+        "12": 6,
         "13": 0,
         "14": 0
       }
@@ -19568,10 +19510,10 @@
         "45": 2,
         "46": 1,
         "47": 1,
-        "48": 15,
-        "49": 15,
-        "50": 15,
-        "51": 15,
+        "48": 10,
+        "49": 10,
+        "50": 10,
+        "51": 10,
         "52": 1,
         "53": 1,
         "54": 36,
@@ -19586,10 +19528,10 @@
         "63": 21,
         "64": 21,
         "65": 21,
-        "66": 27,
-        "67": 27,
-        "68": 27,
-        "69": 27,
+        "66": 22,
+        "67": 22,
+        "68": 22,
+        "69": 22,
         "70": 1,
         "71": 1,
         "72": 1,
@@ -20411,16 +20353,16 @@
       },
       "b": {
         "0": [
-          6
+          3
         ],
         "1": [
-          16
+          11
         ],
         "2": [
-          1
+          2
         ],
         "3": [
-          4
+          3
         ],
         "4": [
           3
@@ -20447,19 +20389,19 @@
           2
         ],
         "12": [
-          15
+          10
         ],
         "13": [
-          13
+          8
         ],
         "14": [
           4
         ],
         "15": [
-          11
+          6
         ],
         "16": [
-          11
+          6
         ],
         "17": [
           36
@@ -20483,7 +20425,7 @@
           6
         ],
         "24": [
-          27
+          22
         ],
         "25": [
           6
@@ -20961,10 +20903,10 @@
       },
       "f": {
         "0": 0,
-        "1": 6,
-        "2": 16,
-        "3": 1,
-        "4": 4,
+        "1": 3,
+        "2": 11,
+        "3": 2,
+        "4": 3,
         "5": 3,
         "6": 1,
         "7": 3,
@@ -20973,11 +20915,11 @@
         "10": 1,
         "11": 4,
         "12": 2,
-        "13": 15,
-        "14": 11,
+        "13": 10,
+        "14": 6,
         "15": 36,
         "16": 21,
-        "17": 27,
+        "17": 22,
         "18": 7
       }
     },
@@ -30155,46 +30097,46 @@
         "47": 1,
         "48": 1,
         "49": 1,
-        "50": 5,
-        "51": 5,
-        "52": 5,
-        "53": 5,
-        "54": 5,
-        "55": 0,
-        "56": 0,
-        "57": 5,
-        "58": 5,
-        "59": 5,
+        "50": 7,
+        "51": 7,
+        "52": 7,
+        "53": 7,
+        "54": 7,
+        "55": 1,
+        "56": 1,
+        "57": 7,
+        "58": 7,
+        "59": 7,
         "60": 1,
         "61": 1,
         "62": 1,
         "63": 1,
         "64": 1,
         "65": 1,
-        "66": 5,
-        "67": 5,
-        "68": 5,
-        "69": 5,
-        "70": 5,
-        "71": 5,
-        "72": 5,
-        "73": 5,
-        "74": 5,
+        "66": 4,
+        "67": 4,
+        "68": 4,
+        "69": 4,
+        "70": 4,
+        "71": 4,
+        "72": 4,
+        "73": 4,
+        "74": 4,
         "75": 1,
         "76": 1,
         "77": 1,
         "78": 1,
         "79": 1,
         "80": 1,
-        "81": 5,
-        "82": 5,
-        "83": 5,
-        "84": 5,
-        "85": 0,
-        "86": 0,
-        "87": 5,
-        "88": 5,
-        "89": 5,
+        "81": 6,
+        "82": 6,
+        "83": 6,
+        "84": 6,
+        "85": 3,
+        "86": 3,
+        "87": 6,
+        "88": 6,
+        "89": 6,
         "90": 1,
         "91": 1,
         "92": 1,
@@ -30223,14 +30165,14 @@
         "115": 1,
         "116": 1,
         "117": 1,
-        "118": 5,
-        "119": 5,
-        "120": 5,
-        "121": 5,
-        "122": 0,
-        "123": 0,
-        "124": 0,
-        "125": 5,
+        "118": 4,
+        "119": 4,
+        "120": 4,
+        "121": 4,
+        "122": 1,
+        "123": 1,
+        "124": 1,
+        "125": 4,
         "126": 1,
         "127": 1,
         "128": 1,
@@ -30305,29 +30247,29 @@
         "197": 1,
         "198": 1,
         "199": 1,
-        "200": 5,
-        "201": 5,
-        "202": 5,
-        "203": 5,
-        "204": 5,
-        "205": 5,
-        "206": 5,
-        "207": 5,
-        "208": 5,
-        "209": 5,
+        "200": 2,
+        "201": 2,
+        "202": 2,
+        "203": 2,
+        "204": 2,
+        "205": 2,
+        "206": 2,
+        "207": 2,
+        "208": 2,
+        "209": 2,
         "210": 0,
         "211": 0,
-        "212": 5,
-        "213": 5,
-        "214": 5,
-        "215": 5,
+        "212": 2,
+        "213": 2,
+        "214": 2,
+        "215": 2,
         "216": 0,
         "217": 0,
         "218": 0,
         "219": 0,
-        "220": 5,
-        "221": 5,
-        "222": 5,
+        "220": 2,
+        "221": 2,
+        "222": 2,
         "223": 1,
         "224": 1,
         "225": 1,
@@ -30336,12 +30278,12 @@
         "228": 1,
         "229": 1,
         "230": 1,
-        "231": 5,
-        "232": 5,
-        "233": 5,
-        "234": 5,
-        "235": 5,
-        "236": 5,
+        "231": 2,
+        "232": 2,
+        "233": 2,
+        "234": 2,
+        "235": 2,
+        "236": 2,
         "237": 0,
         "238": 0,
         "239": 0,
@@ -30352,7 +30294,7 @@
         "244": 0,
         "245": 0,
         "246": 0,
-        "247": 5,
+        "247": 2,
         "248": 1,
         "249": 1,
         "250": 1,
@@ -30549,6 +30491,32 @@
         },
         "6": {
           "type": "branch",
+          "line": 68,
+          "loc": {
+            "start": {
+              "line": 68,
+              "column": 38
+            },
+            "end": {
+              "line": 68,
+              "column": 75
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 68,
+                "column": 38
+              },
+              "end": {
+                "line": 68,
+                "column": 75
+              }
+            }
+          ]
+        },
+        "7": {
+          "type": "branch",
           "line": 82,
           "loc": {
             "start": {
@@ -30573,7 +30541,7 @@
             }
           ]
         },
-        "7": {
+        "8": {
           "type": "branch",
           "line": 85,
           "loc": {
@@ -30599,7 +30567,7 @@
             }
           ]
         },
-        "8": {
+        "9": {
           "type": "branch",
           "line": 119,
           "loc": {
@@ -30625,7 +30593,7 @@
             }
           ]
         },
-        "9": {
+        "10": {
           "type": "branch",
           "line": 122,
           "loc": {
@@ -30651,7 +30619,7 @@
             }
           ]
         },
-        "10": {
+        "11": {
           "type": "branch",
           "line": 137,
           "loc": {
@@ -30677,7 +30645,7 @@
             }
           ]
         },
-        "11": {
+        "12": {
           "type": "branch",
           "line": 157,
           "loc": {
@@ -30703,7 +30671,7 @@
             }
           ]
         },
-        "12": {
+        "13": {
           "type": "branch",
           "line": 201,
           "loc": {
@@ -30729,7 +30697,7 @@
             }
           ]
         },
-        "13": {
+        "14": {
           "type": "branch",
           "line": 208,
           "loc": {
@@ -30755,7 +30723,7 @@
             }
           ]
         },
-        "14": {
+        "15": {
           "type": "branch",
           "line": 210,
           "loc": {
@@ -30781,7 +30749,7 @@
             }
           ]
         },
-        "15": {
+        "16": {
           "type": "branch",
           "line": 216,
           "loc": {
@@ -30807,7 +30775,7 @@
             }
           ]
         },
-        "16": {
+        "17": {
           "type": "branch",
           "line": 232,
           "loc": {
@@ -30833,7 +30801,7 @@
             }
           ]
         },
-        "17": {
+        "18": {
           "type": "branch",
           "line": 237,
           "loc": {
@@ -30868,28 +30836,28 @@
           3
         ],
         "2": [
-          5
+          7
         ],
         "3": [
-          0
+          1
         ],
         "4": [
-          5
+          4
         ],
         "5": [
-          0
+          1
         ],
         "6": [
-          5
+          3
         ],
         "7": [
-          0
+          6
         ],
         "8": [
-          5
+          3
         ],
         "9": [
-          0
+          4
         ],
         "10": [
           1
@@ -30898,10 +30866,10 @@
           1
         ],
         "12": [
-          5
+          1
         ],
         "13": [
-          0
+          2
         ],
         "14": [
           0
@@ -30910,9 +30878,12 @@
           0
         ],
         "16": [
-          5
+          0
         ],
         "17": [
+          2
+        ],
+        "18": [
           0
         ]
       },
@@ -31281,17 +31252,17 @@
       "f": {
         "0": 2,
         "1": 3,
-        "2": 5,
-        "3": 5,
-        "4": 5,
+        "2": 7,
+        "3": 4,
+        "4": 6,
         "5": 0,
-        "6": 5,
+        "6": 4,
         "7": 1,
         "8": 1,
         "9": 0,
         "10": 0,
-        "11": 5,
-        "12": 5,
+        "11": 2,
+        "12": 2,
         "13": 0,
         "14": 0
       }
@@ -31784,25 +31755,25 @@
           38
         ],
         "1": [
-          11
-        ],
-        "2": [
-          16
-        ],
-        "3": [
-          1
-        ],
-        "4": [
           4
         ],
+        "2": [
+          11
+        ],
+        "3": [
+          2
+        ],
+        "4": [
+          3
+        ],
         "5": [
-          9
+          5
         ],
         "6": [
           13
         ],
         "7": [
-          31
+          32
         ],
         "8": [
           13
@@ -31811,7 +31782,7 @@
           17
         ],
         "10": [
-          67
+          61
         ]
       },
       "fnMap": {
@@ -32082,16 +32053,16 @@
       },
       "f": {
         "0": 38,
-        "1": 11,
-        "2": 16,
-        "3": 1,
-        "4": 4,
-        "5": 9,
+        "1": 4,
+        "2": 11,
+        "3": 2,
+        "4": 3,
+        "5": 5,
         "6": 13,
-        "7": 31,
+        "7": 32,
         "8": 13,
         "9": 17,
-        "10": 67
+        "10": 61
       }
     },
     "/home/runner/work/Ts256k1/Ts256k1/ts256k1.config.cjs": {
