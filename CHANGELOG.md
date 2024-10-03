@@ -1,13 +1,15 @@
 # Changelog
 
-## [Unreleased] - 2024-10-01
+## [1.1.3] - 2024-10-01
 
-### Added
+### Changed
+- **README.md**: Updated to fix typos and improve clarity.
 - New tests for the following utilities:
   - `./utils/color`: 100% coverage
   - `./utils/colorDepth`: 100% coverage
   - `./utils/elliptic`: 100% coverage
   - `./config/config`: 100% coverage
+  -  `./utils/handlersFiles`: 68% coverage
 
 ### Tests
 - Enhanced test coverage across utility and configuration files, achieving full coverage for the specified functions.
