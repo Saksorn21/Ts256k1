@@ -97,19 +97,17 @@ describe('Color Depth Module', () => {
 
 
       expect(result).toMatch(/\x1B\[22m/); 
-      expect(result).toContain(message); // ต้องมีข้อความต้นฉบับ
+      expect(result).toContain(message); 
     });
 
       it('should return a function for other styles', () => {
         (getColorDepth as jest.Mock).mockReturnValue(8); 
         const message = 'Hello World';
 
-        // ทดสอบชื่อสไตล์อื่น ๆ โดยการใช้การกำหนดชื่อที่ไม่ใช่ 'bold'
-        const otherStyle = 'italic' as keyof ColorMethods; // ใช้ type assertion เพื่อบอก TypeScript ว่าชื่อสไตล์นี้คือ 'keyof ColorMethods'
+        
+        const otherStyle = 'italic' as keyof ColorMethods; 
 
-        const applyFunction = color.blue[otherStyle]; // คาดว่ามันจะไม่เกิดข้อผิดพลาดเกี่ยวกับประเภท
-
-        // ตรวจสอบว่าฟังก์ชันที่คืนค่าต้องทำงานได้
+        const applyFunction = color.blue[otherStyle]; 
         const result = applyFunction(message);
 
         

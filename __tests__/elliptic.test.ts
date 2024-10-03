@@ -24,7 +24,7 @@ describe('Elliptical Functions', () => {
     expect(sharedKey.length).toBe(32) // ผลลัพธ์ควรยาว 32 ไบต์
   })
 
-  it('should convert hex string to public key', () => {
+  it('should convert hex string to public key And if key 64 length', () => {
     const hex =
       'de9edb7d7b7dc1b4d35b61c2ece435373f8343c85b78674dadfc7e146f882b48' 
     const publicKey = hexToPublicKey(hex)
