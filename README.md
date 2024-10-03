@@ -223,6 +223,9 @@ This class handles compressData, decompressData
 type ColorName = 'blue' `#5f5fff` | 'gray' `#808080` | 'green' `#5faf5f | 'plum' `#d787d7` | 'orangered' `#ff8700` | 'red' `#ff0000` | 'olive' `#d7af00` | 'white' `#ffffff` | 'cyan' `#87afff`
   - 16-color & 256-color
 
+## Types Documents
+[see](tsdoc)
+
 ## Message Signing and Verification
 
 Our encryption process includes an additional layer of security by signing the encrypted data using the sender’s private key. When decrypting, the signature is verified using the sender’s public key to ensure the data has not been tampered with. This ensures both message integrity and authenticity.
