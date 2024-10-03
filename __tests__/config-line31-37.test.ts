@@ -11,7 +11,7 @@ describe('Config Class line 31-37', () => {
 
   it('should initialize with default values when loader has missing values', () => {
     // Mock the loadConfig function to return a partial config
-    (loadConfig as jest.Mock).mockReturnValue({
+    ;(loadConfig as jest.Mock).mockReturnValue({
       hkdfKeyCompressed: true, // Only some values are provided
       signature: {
         enabled: false,
