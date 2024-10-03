@@ -33,6 +33,15 @@ jobs:
         run: |
           sudo apt-get install jq
           jq . coverage/tests-results.json > coverage/nyren-tests-results.json
+      - name: Create README coverage report
+        run: |
+          echo "# Nyren Coverage Report" > coverage/README.md
+          echo "## Summary <sub>$(date '+%Y-%m-%d %H:%M:%S')</sub>" >> coverage/README.md
+          echo "- **Total Tests:** $(jq '.numTotalTests' coverage/nyren-tests-results.json)" >> coverage/README.md
+          echo "- **Passed Tests:** $(jq '.numPassedTests' coverage/nyren-tests-results.json)" >> coverage/README.md
+          echo "- **Failed Tests:** $(jq '.numFailedTests' coverage/nyren-tests-results.json)" >> coverage/README.md
+          echo “## Details” >> coverage/README.md
+          echo “- [Link to JSON results](nyren-tests-results.json)” >> coverage/README.md
       - name: Check coverage directory
         run: ls coverage
       - name: Upload test results
@@ -42,11 +51,12 @@ jobs:
           path: coverage/nyren-tests-results.json
       - name: Commit and push changes
         run: |
-          git config --global user.name "Saksorn21"
-          git config --global user.email "boat_saksorn@icloud.com"
+          git config --global user.name "${{ secrets.GIT_USER_NAME }}"
+          git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
           git add coverage/nyren-tests-results.json
           git add coverage/clover.xml
           git add coverage/coverage-final.json
+          git add coverage/README.md
           git commit -m "Add test coverage reports $(date '+%Y-%m-%d %H:%M:%S')"
           git push
         env:
