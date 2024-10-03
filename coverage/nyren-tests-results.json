@@ -26,409 +26,9 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1727922879330,
+  "startTime": 1727923401761,
   "success": true,
   "testResults": [
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 8,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes utf8 test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "utf8 test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes hex test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "hex test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 2,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes base64 test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "base64 test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes ascii test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "ascii test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes latin1 test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "latin1 test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes ucs2 test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "ucs2 test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 2,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes normalizeToUint8Array test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "normalizeToUint8Array test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes abytes and isBytes and isString test",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "abytes and isBytes and isString test"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isBytes"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isBytes should return true for Uint8Array",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return true for Uint8Array"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isBytes"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isBytes should return true for Buffer",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return true for Buffer"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isBytes"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isBytes should return false for other types (string)",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return false for other types (string)"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isBytes"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isBytes should return false for null",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return false for null"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isBytes"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isBytes should return false for undefined",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return false for undefined"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "abytes"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes abytes should not throw an error for Uint8Array",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should not throw an error for Uint8Array"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "abytes"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes abytes should not throw an error for Buffer",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should not throw an error for Buffer"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "abytes"
-          ],
-          "duration": 21,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes abytes should throw a TypeError for a string",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should throw a TypeError for a string"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "abytes"
-          ],
-          "duration": 11,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes abytes should throw a TypeError for null",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should throw a TypeError for null"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "abytes"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes abytes should throw a TypeError for undefined",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should throw a TypeError for undefined"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "abytes"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes abytes should treat object with constructor.name === \"Uint8Array\" as Uint8Array",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should treat object with constructor.name === \"Uint8Array\" as Uint8Array"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isString"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isString should not throw an error when the second argument is a string",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should not throw an error when the second argument is a string"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isString"
-          ],
-          "duration": 2,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isString should throw a TypeError when the second argument is not a string",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should throw a TypeError when the second argument is not a string"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isString"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isString should throw a TypeError when the second argument is null",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should throw a TypeError when the second argument is null"
-        },
-        {
-          "ancestorTitles": [
-            "bytes",
-            "isString"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "bytes isString should throw a TypeError when the second argument is undefined",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should throw a TypeError when the second argument is undefined"
-        },
-        {
-          "ancestorTitles": [
-            "test hex"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "test hex removes 0x",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 4,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "removes 0x"
-        },
-        {
-          "ancestorTitles": [
-            "test hex"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "test hex converts hex to buffer",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "converts hex to buffer"
-        }
-      ],
-      "endTime": 1727922883489,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/bytes.test.ts",
-      "startTime": 1727922879540,
-      "status": "passed",
-      "summary": ""
-    },
     {
       "assertionResults": [
         {
@@ -436,7 +36,7 @@
             "Color Depth Module",
             "getColor"
           ],
-          "duration": 5,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module getColor should return the escape code for 256 color depth",
@@ -452,7 +52,7 @@
             "Color Depth Module",
             "getColor"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module getColor should return the escape code for 16 color depth",
@@ -468,7 +68,7 @@
             "Color Depth Module",
             "getColor"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module getColor should return an empty string for unsupported colors",
@@ -484,7 +84,7 @@
             "Color Depth Module",
             "getColor"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module getColor should return an empty string when color depth is less than 4",
@@ -500,7 +100,7 @@
             "Color Depth Module",
             "bold"
           ],
-          "duration": 13,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module bold should return bolded message when supported",
@@ -564,7 +164,7 @@
             "Color Depth Module",
             "Colorizer class"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module Colorizer class should apply bold style to the message",
@@ -596,7 +196,7 @@
             "Color Depth Module",
             "Color Proxy"
           ],
-          "duration": 1,
+          "duration": 18,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module Color Proxy should apply bold style",
@@ -612,7 +212,7 @@
             "Color Depth Module",
             "Color Proxy"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module Color Proxy should return a function for other styles",
@@ -624,10 +224,410 @@
           "title": "should return a function for other styles"
         }
       ],
-      "endTime": 1727922883557,
+      "endTime": 1727923405871,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/color.test.ts",
-      "startTime": 1727922879531,
+      "startTime": 1727923401957,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 8,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes utf8 test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "utf8 test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes hex test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "hex test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes base64 test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "base64 test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes ascii test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "ascii test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes latin1 test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "latin1 test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes ucs2 test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "ucs2 test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes normalizeToUint8Array test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "normalizeToUint8Array test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes abytes and isBytes and isString test",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "abytes and isBytes and isString test"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isBytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isBytes should return true for Uint8Array",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return true for Uint8Array"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isBytes"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isBytes should return true for Buffer",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return true for Buffer"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isBytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isBytes should return false for other types (string)",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return false for other types (string)"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isBytes"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isBytes should return false for null",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return false for null"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isBytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isBytes should return false for undefined",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return false for undefined"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "abytes"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes abytes should not throw an error for Uint8Array",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should not throw an error for Uint8Array"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "abytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes abytes should not throw an error for Buffer",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should not throw an error for Buffer"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "abytes"
+          ],
+          "duration": 22,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes abytes should throw a TypeError for a string",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a TypeError for a string"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "abytes"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes abytes should throw a TypeError for null",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a TypeError for null"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "abytes"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes abytes should throw a TypeError for undefined",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a TypeError for undefined"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "abytes"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes abytes should treat object with constructor.name === \"Uint8Array\" as Uint8Array",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should treat object with constructor.name === \"Uint8Array\" as Uint8Array"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isString"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isString should not throw an error when the second argument is a string",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should not throw an error when the second argument is a string"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isString"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isString should throw a TypeError when the second argument is not a string",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a TypeError when the second argument is not a string"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isString"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isString should throw a TypeError when the second argument is null",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a TypeError when the second argument is null"
+        },
+        {
+          "ancestorTitles": [
+            "bytes",
+            "isString"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "bytes isString should throw a TypeError when the second argument is undefined",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should throw a TypeError when the second argument is undefined"
+        },
+        {
+          "ancestorTitles": [
+            "test hex"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "test hex removes 0x",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 4,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "removes 0x"
+        },
+        {
+          "ancestorTitles": [
+            "test hex"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "test hex converts hex to buffer",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "converts hex to buffer"
+        }
+      ],
+      "endTime": 1727923405930,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/bytes.test.ts",
+      "startTime": 1727923401969,
       "status": "passed",
       "summary": ""
     },
@@ -638,7 +638,7 @@
             "Service Class",
             "encrypt method"
           ],
-          "duration": 11,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class encrypt method should encrypt a message and return encrypted data",
@@ -702,7 +702,7 @@
             "Service Class",
             "decrypt method"
           ],
-          "duration": 20,
+          "duration": 15,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class decrypt method should throw an error if the signature is invalid and throwOnInvalid is true",
@@ -718,7 +718,7 @@
             "Service Class",
             "decrypt method"
           ],
-          "duration": 6,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class decrypt method should not throw an error if the signature is invalid and throwOnInvalid is false",
@@ -734,7 +734,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 10,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return true for equal PrivateKeys",
@@ -766,7 +766,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should throw TypeError for invalid comparison type",
@@ -782,7 +782,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 9,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal keys",
@@ -798,7 +798,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 9,
+          "duration": 8,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal public keys",
@@ -814,7 +814,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 25,
+          "duration": 30,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal public keys uncompressed",
@@ -826,10 +826,10 @@
           "title": "should return false for unequal public keys uncompressed"
         }
       ],
-      "endTime": 1727922883853,
+      "endTime": 1727923406107,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/Service.test.ts",
-      "startTime": 1727922879533,
+      "startTime": 1727923401963,
       "status": "passed",
       "summary": ""
     },
@@ -839,7 +839,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 140,
+          "duration": 151,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should encrypt the message with a public key",
@@ -854,7 +854,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 63,
+          "duration": 41,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should throw an error for invalid public key",
@@ -869,7 +869,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 45,
+          "duration": 53,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should return encrypted message with signature",
@@ -881,10 +881,10 @@
           "title": "should return encrypted message with signature"
         }
       ],
-      "endTime": 1727922884140,
+      "endTime": 1727923406475,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/encrypt.test.ts",
-      "startTime": 1727922883566,
+      "startTime": 1727923405944,
       "status": "passed",
       "summary": ""
     },
@@ -894,7 +894,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 238,
+          "duration": 194,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should encrypt and decrypt the message with compressed public key",
@@ -909,7 +909,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 112,
+          "duration": 96,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should encrypt and decrypt the message with uncompressed public key",
@@ -924,7 +924,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 50,
+          "duration": 36,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should correctly decode the signed message",
@@ -939,7 +939,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 45,
+          "duration": 40,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should verify the message signature correctly",
@@ -954,7 +954,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 43,
+          "duration": 26,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should extract parts from cipher text",
@@ -966,10 +966,10 @@
           "title": "should extract parts from cipher text"
         }
       ],
-      "endTime": 1727922884300,
+      "endTime": 1727923406556,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/decrypt.test.ts",
-      "startTime": 1727922883503,
+      "startTime": 1727923405887,
       "status": "passed",
       "summary": ""
     },
@@ -979,7 +979,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 10,
+          "duration": 11,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should throw an error if private key is invalid (not 32 bytes)",
@@ -994,7 +994,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 30,
+          "duration": 50,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should return valid key pair from static getKeyPairs method",
@@ -1009,7 +1009,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should encrypt and decrypt correctly in Ts256k1 class",
@@ -1024,7 +1024,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 55,
+          "duration": 81,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should correctly encrypt and decrypt a message",
@@ -1039,7 +1039,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return true for equal PrivateKeys",
@@ -1069,7 +1069,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 7,
+          "duration": 3,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should throw TypeError for invalid comparison type",
@@ -1084,7 +1084,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 13,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return false for unequal private keys",
@@ -1099,7 +1099,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 9,
+          "duration": 8,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return false for unequal public keys",
@@ -1111,10 +1111,10 @@
           "title": "should return false for unequal public keys"
         }
       ],
-      "endTime": 1727922884302,
+      "endTime": 1727923406587,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/main.test.ts",
-      "startTime": 1727922883864,
+      "startTime": 1727923406122,
       "status": "passed",
       "summary": ""
     },
@@ -1125,7 +1125,7 @@
             "Cache Utility Functions",
             "UUID"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions UUID should generate a string of length 8",
@@ -1157,7 +1157,7 @@
             "Cache Utility Functions",
             "resolvePath"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions resolvePath should join path segments",
@@ -1173,7 +1173,7 @@
             "Cache Utility Functions",
             "resolvePath"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions resolvePath should replace ~ with home directory",
@@ -1189,7 +1189,7 @@
             "Cache Utility Functions",
             "setCacheDirectory"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions setCacheDirectory should set cache directory to temp when useTemp is true",
@@ -1205,7 +1205,7 @@
             "Cache Utility Functions",
             "setCacheDirectory"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions setCacheDirectory should set cache directory to project root when useTemp is false",
@@ -1269,7 +1269,7 @@
             "Cache Utility Functions",
             "errorDirectory"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Cache Utility Functions errorDirectory should format error message correctly",
@@ -1313,10 +1313,10 @@
           "title": "should return an empty array and log error on failure"
         }
       ],
-      "endTime": 1727922884350,
+      "endTime": 1727923406710,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/handlersFiles.test.ts",
-      "startTime": 1727922884152,
+      "startTime": 1727923406488,
       "status": "passed",
       "summary": ""
     },
@@ -1356,7 +1356,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth falls back to 4 when no process.env.TERM when getColorDepth throws an error",
@@ -1371,7 +1371,7 @@
           "ancestorTitles": [
             "getColorDepth"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "getColorDepth falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error",
@@ -1383,10 +1383,10 @@
           "title": "falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error"
         }
       ],
-      "endTime": 1727922884503,
+      "endTime": 1727923406782,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/colorDepth.test.ts",
-      "startTime": 1727922884313,
+      "startTime": 1727923406598,
       "status": "passed",
       "summary": ""
     },
@@ -1396,7 +1396,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 1,
+          "duration": 3,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should combine keys using HKDF and SHA256",
@@ -1411,7 +1411,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should generate shared key from ephemeral and shared points",
@@ -1426,7 +1426,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 56,
+          "duration": 52,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should convert hex string to public key",
@@ -1438,60 +1438,10 @@
           "title": "should convert hex string to public key"
         }
       ],
-      "endTime": 1727922884554,
+      "endTime": 1727923406801,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/elliptic.test.ts",
-      "startTime": 1727922884310,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Config Class line 31-37"
-          ],
-          "duration": 3,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 6,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should initialize with default values when loader has missing values"
-        }
-      ],
-      "endTime": 1727922884745,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
-      "startTime": 1727922884509,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "test random keys"
-          ],
-          "duration": 145,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "test random keys tests randomkey",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 3,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "tests randomkey"
-        }
-      ],
-      "endTime": 1727922884757,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/random.test.ts",
-      "startTime": 1727922884357,
+      "startTime": 1727923406565,
       "status": "passed",
       "summary": ""
     },
@@ -1501,7 +1451,7 @@
           "ancestorTitles": [
             "config/consts test"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "config/consts test ConstType ",
@@ -1533,7 +1483,7 @@
             "Config Class",
             "loadConfig"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Config Class loadConfig should load default configuration if file does not exist",
@@ -1577,10 +1527,60 @@
           "title": "should expose helper functions that return config values"
         }
       ],
-      "endTime": 1727922884782,
+      "endTime": 1727923406956,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config.test.ts",
-      "startTime": 1727922884565,
+      "startTime": 1727923406718,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Config Class line 31-37"
+          ],
+          "duration": 4,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should initialize with default values when loader has missing values"
+        }
+      ],
+      "endTime": 1727923407047,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
+      "startTime": 1727923406815,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "test random keys"
+          ],
+          "duration": 132,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "test random keys tests randomkey",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "tests randomkey"
+        }
+      ],
+      "endTime": 1727923407091,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/random.test.ts",
+      "startTime": 1727923406788,
       "status": "passed",
       "summary": ""
     }
@@ -7993,8 +7993,8 @@
         "17": 1,
         "18": 1,
         "19": 1,
-        "20": 4,
-        "21": 4,
+        "20": 3,
+        "21": 3,
         "22": 1,
         "23": 1,
         "24": 1,
@@ -8022,8 +8022,8 @@
         "46": 1,
         "47": 1,
         "48": 1,
-        "49": 4,
-        "50": 4,
+        "49": 3,
+        "50": 3,
         "51": 1,
         "52": 1,
         "53": 1,
@@ -8478,13 +8478,13 @@
       },
       "b": {
         "0": [
-          4
+          3
         ],
         "1": [
           3
         ],
         "2": [
-          4
+          3
         ],
         "3": [
           23
@@ -8739,9 +8739,9 @@
         }
       },
       "f": {
-        "0": 4,
+        "0": 3,
         "1": 3,
-        "2": 4,
+        "2": 3,
         "3": 23,
         "4": 10,
         "5": 13,
@@ -18279,7 +18279,7 @@
       },
       "b": {
         "0": [
-          8
+          12
         ],
         "1": [
           1
@@ -18390,7 +18390,7 @@
         }
       },
       "f": {
-        "0": 8,
+        "0": 12,
         "1": 1,
         "2": 3,
         "3": 3
@@ -19510,10 +19510,10 @@
         "45": 2,
         "46": 1,
         "47": 1,
-        "48": 10,
-        "49": 10,
-        "50": 10,
-        "51": 10,
+        "48": 15,
+        "49": 15,
+        "50": 15,
+        "51": 15,
         "52": 1,
         "53": 1,
         "54": 36,
@@ -19528,10 +19528,10 @@
         "63": 21,
         "64": 21,
         "65": 21,
-        "66": 22,
-        "67": 22,
-        "68": 22,
-        "69": 22,
+        "66": 27,
+        "67": 27,
+        "68": 27,
+        "69": 27,
         "70": 1,
         "71": 1,
         "72": 1,
@@ -20353,10 +20353,10 @@
       },
       "b": {
         "0": [
-          3
+          6
         ],
         "1": [
-          11
+          16
         ],
         "2": [
           2
@@ -20389,19 +20389,19 @@
           2
         ],
         "12": [
-          10
+          15
         ],
         "13": [
-          8
+          13
         ],
         "14": [
           4
         ],
         "15": [
-          6
+          11
         ],
         "16": [
-          6
+          11
         ],
         "17": [
           36
@@ -20425,7 +20425,7 @@
           6
         ],
         "24": [
-          22
+          27
         ],
         "25": [
           6
@@ -20903,8 +20903,8 @@
       },
       "f": {
         "0": 0,
-        "1": 3,
-        "2": 11,
+        "1": 6,
+        "2": 16,
         "3": 2,
         "4": 3,
         "5": 3,
@@ -20915,11 +20915,11 @@
         "10": 1,
         "11": 4,
         "12": 2,
-        "13": 10,
-        "14": 6,
+        "13": 15,
+        "14": 11,
         "15": 36,
         "16": 21,
-        "17": 22,
+        "17": 27,
         "18": 7
       }
     },
@@ -31755,10 +31755,10 @@
           38
         ],
         "1": [
-          4
+          11
         ],
         "2": [
-          11
+          16
         ],
         "3": [
           2
@@ -32053,8 +32053,8 @@
       },
       "f": {
         "0": 38,
-        "1": 4,
-        "2": 11,
+        "1": 11,
+        "2": 16,
         "3": 2,
         "4": 3,
         "5": 5,
