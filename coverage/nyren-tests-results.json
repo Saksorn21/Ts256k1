@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 12,
-  "numPassedTests": 92,
+  "numPassedTestSuites": 14,
+  "numPassedTests": 97,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
-  "numTotalTestSuites": 12,
-  "numTotalTests": 92,
+  "numTotalTestSuites": 14,
+  "numTotalTests": 97,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1727923401761,
+  "startTime": 1727941208502,
   "success": true,
   "testResults": [
     {
@@ -68,7 +68,7 @@
             "Color Depth Module",
             "getColor"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module getColor should return an empty string for unsupported colors",
@@ -116,7 +116,7 @@
             "Color Depth Module",
             "bold"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module bold should return plain message when not supported",
@@ -148,7 +148,7 @@
             "Color Depth Module",
             "Colorizer class"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module Colorizer class class Colorizer macth func color to the message",
@@ -180,7 +180,7 @@
             "Color Depth Module",
             "Colorizer class"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module Colorizer class should not apply color if color depth is less than 4",
@@ -196,7 +196,7 @@
             "Color Depth Module",
             "Color Proxy"
           ],
-          "duration": 18,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module Color Proxy should apply bold style",
@@ -212,7 +212,7 @@
             "Color Depth Module",
             "Color Proxy"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Color Depth Module Color Proxy should return a function for other styles",
@@ -224,10 +224,10 @@
           "title": "should return a function for other styles"
         }
       ],
-      "endTime": 1727923405871,
+      "endTime": 1727941212582,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/color.test.ts",
-      "startTime": 1727923401957,
+      "startTime": 1727941208696,
       "status": "passed",
       "summary": ""
     },
@@ -237,7 +237,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 8,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes utf8 test",
@@ -282,7 +282,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes ascii test",
@@ -342,7 +342,7 @@
           "ancestorTitles": [
             "bytes"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes and isBytes and isString test",
@@ -390,7 +390,7 @@
             "bytes",
             "isBytes"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isBytes should return false for other types (string)",
@@ -422,7 +422,7 @@
             "bytes",
             "isBytes"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isBytes should return false for undefined",
@@ -438,7 +438,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should not throw an error for Uint8Array",
@@ -454,7 +454,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should not throw an error for Buffer",
@@ -470,7 +470,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 22,
+          "duration": 36,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should throw a TypeError for a string",
@@ -486,7 +486,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 2,
+          "duration": 5,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should throw a TypeError for null",
@@ -502,7 +502,7 @@
             "bytes",
             "abytes"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes abytes should throw a TypeError for undefined",
@@ -534,7 +534,7 @@
             "bytes",
             "isString"
           ],
-          "duration": 0,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isString should not throw an error when the second argument is a string",
@@ -566,7 +566,7 @@
             "bytes",
             "isString"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isString should throw a TypeError when the second argument is null",
@@ -582,7 +582,7 @@
             "bytes",
             "isString"
           ],
-          "duration": 1,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "bytes isString should throw a TypeError when the second argument is undefined",
@@ -624,10 +624,10 @@
           "title": "converts hex to buffer"
         }
       ],
-      "endTime": 1727923405930,
+      "endTime": 1727941212673,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/bytes.test.ts",
-      "startTime": 1727923401969,
+      "startTime": 1727941208701,
       "status": "passed",
       "summary": ""
     },
@@ -638,7 +638,7 @@
             "Service Class",
             "encrypt method"
           ],
-          "duration": 9,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class encrypt method should encrypt a message and return encrypted data",
@@ -702,7 +702,7 @@
             "Service Class",
             "decrypt method"
           ],
-          "duration": 15,
+          "duration": 16,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class decrypt method should throw an error if the signature is invalid and throwOnInvalid is true",
@@ -734,7 +734,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 9,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return true for equal PrivateKeys",
@@ -782,7 +782,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 10,
+          "duration": 5,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal keys",
@@ -798,7 +798,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 8,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal public keys",
@@ -814,7 +814,7 @@
             "Service Class",
             "equals method"
           ],
-          "duration": 30,
+          "duration": 33,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Service Class equals method should return false for unequal public keys uncompressed",
@@ -826,10 +826,212 @@
           "title": "should return false for unequal public keys uncompressed"
         }
       ],
-      "endTime": 1727923406107,
+      "endTime": 1727941212905,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/Service.test.ts",
-      "startTime": 1727923401963,
+      "startTime": 1727941208709,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "UUID"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions UUID should generate a string of length 8",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should generate a string of length 8"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "UUID"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions UUID should generate unique values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should generate unique values"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "resolvePath"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions resolvePath should join path segments",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should join path segments"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "resolvePath"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions resolvePath should replace ~ with home directory",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should replace ~ with home directory"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "setCacheDirectory"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions setCacheDirectory should set cache directory to temp when useTemp is true",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should set cache directory to temp when useTemp is true"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "setCacheDirectory"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions setCacheDirectory should set cache directory to project root when useTemp is false",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should set cache directory to project root when useTemp is false"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "ensureDirectoryExists"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions ensureDirectoryExists should create directory if it does not exist",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should create directory if it does not exist"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "ensureDirectoryExists"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions ensureDirectoryExists should not create directory if it already exists",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should not create directory if it already exists"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "writeFileBit and readFileBit"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions writeFileBit and readFileBit should write and read file correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should write and read file correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "errorDirectory"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions errorDirectory should format error message correctly",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should format error message correctly"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "listCacheFiles"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions listCacheFiles should return an array of file names",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return an array of file names"
+        },
+        {
+          "ancestorTitles": [
+            "Cache Utility Functions",
+            "listCacheFiles"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Cache Utility Functions listCacheFiles should return an empty array and log error on failure",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return an empty array and log error on failure"
+        }
+      ],
+      "endTime": 1727941213139,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/handlersFiles/line0-181.test.ts",
+      "startTime": 1727941212920,
       "status": "passed",
       "summary": ""
     },
@@ -839,7 +1041,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 151,
+          "duration": 126,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should encrypt the message with a public key",
@@ -854,7 +1056,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 41,
+          "duration": 36,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should throw an error for invalid public key",
@@ -869,7 +1071,7 @@
           "ancestorTitles": [
             "Encryption Tests"
           ],
-          "duration": 53,
+          "duration": 36,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Encryption Tests should return encrypted message with signature",
@@ -881,10 +1083,10 @@
           "title": "should return encrypted message with signature"
         }
       ],
-      "endTime": 1727923406475,
+      "endTime": 1727941213182,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/encrypt.test.ts",
-      "startTime": 1727923405944,
+      "startTime": 1727941212685,
       "status": "passed",
       "summary": ""
     },
@@ -894,7 +1096,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 194,
+          "duration": 170,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should encrypt and decrypt the message with compressed public key",
@@ -909,7 +1111,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 96,
+          "duration": 117,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should encrypt and decrypt the message with uncompressed public key",
@@ -924,7 +1126,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 36,
+          "duration": 50,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should correctly decode the signed message",
@@ -939,7 +1141,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 40,
+          "duration": 34,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should verify the message signature correctly",
@@ -954,7 +1156,7 @@
           "ancestorTitles": [
             "Decryption Tests"
           ],
-          "duration": 26,
+          "duration": 39,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Decryption Tests should extract parts from cipher text",
@@ -966,10 +1168,154 @@
           "title": "should extract parts from cipher text"
         }
       ],
-      "endTime": 1727923406556,
+      "endTime": 1727941213289,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/decrypt.test.ts",
-      "startTime": 1727923405887,
+      "startTime": 1727941212599,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "getColorDepth"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "getColorDepth returns WriteStream.prototype.getColorDepth()",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "returns WriteStream.prototype.getColorDepth()"
+        },
+        {
+          "ancestorTitles": [
+            "getColorDepth"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "getColorDepth falls back to process.env.TERM when getColorDepth throws an error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "falls back to process.env.TERM when getColorDepth throws an error"
+        },
+        {
+          "ancestorTitles": [
+            "getColorDepth"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "getColorDepth falls back to 4 when no process.env.TERM when getColorDepth throws an error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "falls back to 4 when no process.env.TERM when getColorDepth throws an error"
+        },
+        {
+          "ancestorTitles": [
+            "getColorDepth"
+          ],
+          "duration": 0,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "getColorDepth falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error"
+        }
+      ],
+      "endTime": 1727941213375,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/colorDepth.test.ts",
+      "startTime": 1727941213194,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "File Service Tests",
+            "analyzeFiles"
+          ],
+          "duration": 3,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "File Service Tests analyzeFiles The prefix cache file should be analyzed and the raw preload data returned in singular format.",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "The prefix cache file should be analyzed and the raw preload data returned in singular format."
+        },
+        {
+          "ancestorTitles": [
+            "File Service Tests",
+            "analyzeFiles"
+          ],
+          "duration": 20,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "File Service Tests analyzeFiles Should analyze the non-existent prefix cache file and return a throw.",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Should analyze the non-existent prefix cache file and return a throw."
+        },
+        {
+          "ancestorTitles": [
+            "File Service Tests",
+            "analyzeFiles"
+          ],
+          "duration": 3,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "File Service Tests analyzeFiles should analyze cache files and return RawPreload data",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should analyze cache files and return RawPreload data"
+        },
+        {
+          "ancestorTitles": [
+            "File Service Tests",
+            "analyzeFiles"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "File Service Tests analyzeFiles should return an empty object and log error on failure",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should return an empty object and log error on failure"
+        }
+      ],
+      "endTime": 1727941213504,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/handlersFiles/analyzeFiles.test.ts",
+      "startTime": 1727941213305,
       "status": "passed",
       "summary": ""
     },
@@ -979,7 +1325,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 11,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should throw an error if private key is invalid (not 32 bytes)",
@@ -994,7 +1340,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 50,
+          "duration": 47,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should return valid key pair from static getKeyPairs method",
@@ -1009,7 +1355,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should encrypt and decrypt correctly in Ts256k1 class",
@@ -1024,7 +1370,7 @@
           "ancestorTitles": [
             "class main Ts256k1 implements Service"
           ],
-          "duration": 81,
+          "duration": 89,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "class main Ts256k1 implements Service should correctly encrypt and decrypt a message",
@@ -1069,7 +1415,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 3,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should throw TypeError for invalid comparison type",
@@ -1084,7 +1430,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 7,
+          "duration": 8,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return false for unequal private keys",
@@ -1099,7 +1445,7 @@
           "ancestorTitles": [
             "equals method in Ts256k1 class"
           ],
-          "duration": 8,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "equals method in Ts256k1 class should return false for unequal public keys",
@@ -1111,282 +1457,10 @@
           "title": "should return false for unequal public keys"
         }
       ],
-      "endTime": 1727923406587,
+      "endTime": 1727941213572,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/main.test.ts",
-      "startTime": 1727923406122,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "UUID"
-          ],
-          "duration": 2,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions UUID should generate a string of length 8",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should generate a string of length 8"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "UUID"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions UUID should generate unique values",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should generate unique values"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "resolvePath"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions resolvePath should join path segments",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should join path segments"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "resolvePath"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions resolvePath should replace ~ with home directory",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should replace ~ with home directory"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "setCacheDirectory"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions setCacheDirectory should set cache directory to temp when useTemp is true",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should set cache directory to temp when useTemp is true"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "setCacheDirectory"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions setCacheDirectory should set cache directory to project root when useTemp is false",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should set cache directory to project root when useTemp is false"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "ensureDirectoryExists"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions ensureDirectoryExists should create directory if it does not exist",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should create directory if it does not exist"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "ensureDirectoryExists"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions ensureDirectoryExists should not create directory if it already exists",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should not create directory if it already exists"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "writeFileBit and readFileBit"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions writeFileBit and readFileBit should write and read file correctly",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 3,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should write and read file correctly"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "errorDirectory"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions errorDirectory should format error message correctly",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should format error message correctly"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "listCacheFiles"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions listCacheFiles should return an array of file names",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return an array of file names"
-        },
-        {
-          "ancestorTitles": [
-            "Cache Utility Functions",
-            "listCacheFiles"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Cache Utility Functions listCacheFiles should return an empty array and log error on failure",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should return an empty array and log error on failure"
-        }
-      ],
-      "endTime": 1727923406710,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/handlersFiles.test.ts",
-      "startTime": 1727923406488,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "getColorDepth"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "getColorDepth returns WriteStream.prototype.getColorDepth()",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "returns WriteStream.prototype.getColorDepth()"
-        },
-        {
-          "ancestorTitles": [
-            "getColorDepth"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "getColorDepth falls back to process.env.TERM when getColorDepth throws an error",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "falls back to process.env.TERM when getColorDepth throws an error"
-        },
-        {
-          "ancestorTitles": [
-            "getColorDepth"
-          ],
-          "duration": 0,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "getColorDepth falls back to 4 when no process.env.TERM when getColorDepth throws an error",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "falls back to 4 when no process.env.TERM when getColorDepth throws an error"
-        },
-        {
-          "ancestorTitles": [
-            "getColorDepth"
-          ],
-          "duration": 1,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "getColorDepth falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "falls back to 4 when process.env.TERM neither xterm nor 256color when getColorDepth throws an error"
-        }
-      ],
-      "endTime": 1727923406782,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/colorDepth.test.ts",
-      "startTime": 1727923406598,
+      "startTime": 1727941213145,
       "status": "passed",
       "summary": ""
     },
@@ -1396,7 +1470,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 3,
+          "duration": 2,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should combine keys using HKDF and SHA256",
@@ -1411,7 +1485,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should generate shared key from ephemeral and shared points",
@@ -1426,7 +1500,7 @@
           "ancestorTitles": [
             "Elliptical Functions"
           ],
-          "duration": 52,
+          "duration": 56,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Elliptical Functions should convert hex string to public key",
@@ -1438,10 +1512,60 @@
           "title": "should convert hex string to public key"
         }
       ],
-      "endTime": 1727923406801,
+      "endTime": 1727941213674,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/elliptic.test.ts",
-      "startTime": 1727923406565,
+      "startTime": 1727941213390,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Config Class line 31-37"
+          ],
+          "duration": 10,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should initialize with default values when loader has missing values"
+        }
+      ],
+      "endTime": 1727941213789,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
+      "startTime": 1727941213512,
+      "status": "passed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "processSingleFile"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "processSingleFile should process a single file and add it to the result object",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "should process a single file and add it to the result object"
+        }
+      ],
+      "endTime": 1727941213822,
+      "message": "",
+      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/handlersFiles/processSingleFile.test.ts",
+      "startTime": 1727941213582,
       "status": "passed",
       "summary": ""
     },
@@ -1451,7 +1575,7 @@
           "ancestorTitles": [
             "config/consts test"
           ],
-          "duration": 2,
+          "duration": 1,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "config/consts test ConstType ",
@@ -1483,7 +1607,7 @@
             "Config Class",
             "loadConfig"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Config Class loadConfig should load default configuration if file does not exist",
@@ -1515,7 +1639,7 @@
             "Config Class",
             "TS256K1_CONFIG"
           ],
-          "duration": 1,
+          "duration": 0,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Config Class TS256K1_CONFIG should expose helper functions that return config values",
@@ -1527,35 +1651,10 @@
           "title": "should expose helper functions that return config values"
         }
       ],
-      "endTime": 1727923406956,
+      "endTime": 1727941213899,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config.test.ts",
-      "startTime": 1727923406718,
-      "status": "passed",
-      "summary": ""
-    },
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "Config Class line 31-37"
-          ],
-          "duration": 4,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Config Class line 31-37 should initialize with default values when loader has missing values",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 6,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "should initialize with default values when loader has missing values"
-        }
-      ],
-      "endTime": 1727923407047,
-      "message": "",
-      "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/config-line31-37.test.ts",
-      "startTime": 1727923406815,
+      "startTime": 1727941213683,
       "status": "passed",
       "summary": ""
     },
@@ -1565,7 +1664,7 @@
           "ancestorTitles": [
             "test random keys"
           ],
-          "duration": 132,
+          "duration": 69,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "test random keys tests randomkey",
@@ -1577,10 +1676,10 @@
           "title": "tests randomkey"
         }
       ],
-      "endTime": 1727923407091,
+      "endTime": 1727941214026,
       "message": "",
       "name": "/home/runner/work/Ts256k1/Ts256k1/__tests__/random.test.ts",
-      "startTime": 1727923406788,
+      "startTime": 1727941213801,
       "status": "passed",
       "summary": ""
     }
@@ -18279,7 +18378,7 @@
       },
       "b": {
         "0": [
-          12
+          8
         ],
         "1": [
           1
@@ -18390,7 +18489,7 @@
         }
       },
       "f": {
-        "0": 12,
+        "0": 8,
         "1": 1,
         "2": 3,
         "3": 3
@@ -20359,10 +20458,10 @@
           16
         ],
         "2": [
-          2
+          8
         ],
         "3": [
-          3
+          4
         ],
         "4": [
           3
@@ -20905,8 +21004,8 @@
         "0": 0,
         "1": 6,
         "2": 16,
-        "3": 2,
-        "4": 3,
+        "3": 8,
+        "4": 4,
         "5": 3,
         "6": 1,
         "7": 3,
@@ -24426,10 +24525,10 @@
         "13": 1,
         "14": 1,
         "15": 1,
-        "16": 4,
-        "17": 4,
-        "18": 4,
-        "19": 4,
+        "16": 12,
+        "17": 12,
+        "18": 12,
+        "19": 12,
         "20": 3,
         "21": 3,
         "22": 3,
@@ -24440,7 +24539,7 @@
         "27": 2,
         "28": 2,
         "29": 2,
-        "30": 4
+        "30": 12
       },
       "branchMap": {
         "0": {
@@ -24576,7 +24675,7 @@
       },
       "b": {
         "0": [
-          4
+          12
         ],
         "1": [
           3
@@ -24618,7 +24717,7 @@
         }
       },
       "f": {
-        "0": 4
+        "0": 12
       }
     },
     "/home/runner/work/Ts256k1/Ts256k1/src/utils/compression.ts": {
@@ -29262,7 +29361,7 @@
           },
           "end": {
             "line": 206,
-            "column": 5
+            "column": 0
           }
         },
         "206": {
@@ -29302,7 +29401,7 @@
           },
           "end": {
             "line": 210,
-            "column": 13
+            "column": 0
           }
         },
         "210": {
@@ -29312,7 +29411,7 @@
           },
           "end": {
             "line": 211,
-            "column": 39
+            "column": 0
           }
         },
         "211": {
@@ -29322,7 +29421,7 @@
           },
           "end": {
             "line": 212,
-            "column": 1
+            "column": 33
           }
         },
         "212": {
@@ -29332,7 +29431,7 @@
           },
           "end": {
             "line": 213,
-            "column": 0
+            "column": 48
           }
         },
         "213": {
@@ -29342,7 +29441,7 @@
           },
           "end": {
             "line": 214,
-            "column": 33
+            "column": 25
           }
         },
         "214": {
@@ -29352,7 +29451,7 @@
           },
           "end": {
             "line": 215,
-            "column": 48
+            "column": 45
           }
         },
         "215": {
@@ -29362,7 +29461,7 @@
           },
           "end": {
             "line": 216,
-            "column": 25
+            "column": 10
           }
         },
         "216": {
@@ -29372,7 +29471,7 @@
           },
           "end": {
             "line": 217,
-            "column": 45
+            "column": 37
           }
         },
         "217": {
@@ -29382,7 +29481,7 @@
           },
           "end": {
             "line": 218,
-            "column": 10
+            "column": 3
           }
         },
         "218": {
@@ -29392,7 +29491,7 @@
           },
           "end": {
             "line": 219,
-            "column": 37
+            "column": 0
           }
         },
         "219": {
@@ -29402,7 +29501,7 @@
           },
           "end": {
             "line": 220,
-            "column": 3
+            "column": 15
           }
         },
         "220": {
@@ -29412,7 +29511,7 @@
           },
           "end": {
             "line": 221,
-            "column": 0
+            "column": 1
           }
         },
         "221": {
@@ -29422,7 +29521,7 @@
           },
           "end": {
             "line": 222,
-            "column": 15
+            "column": 0
           }
         },
         "222": {
@@ -29432,7 +29531,7 @@
           },
           "end": {
             "line": 223,
-            "column": 1
+            "column": 3
           }
         },
         "223": {
@@ -29442,7 +29541,7 @@
           },
           "end": {
             "line": 224,
-            "column": 0
+            "column": 34
           }
         },
         "224": {
@@ -29452,7 +29551,7 @@
           },
           "end": {
             "line": 225,
-            "column": 3
+            "column": 2
           }
         },
         "225": {
@@ -29462,7 +29561,7 @@
           },
           "end": {
             "line": 226,
-            "column": 34
+            "column": 63
           }
         },
         "226": {
@@ -29472,7 +29571,7 @@
           },
           "end": {
             "line": 227,
-            "column": 2
+            "column": 66
           }
         },
         "227": {
@@ -29482,7 +29581,7 @@
           },
           "end": {
             "line": 228,
-            "column": 63
+            "column": 78
           }
         },
         "228": {
@@ -29492,7 +29591,7 @@
           },
           "end": {
             "line": 229,
-            "column": 66
+            "column": 3
           }
         },
         "229": {
@@ -29502,7 +29601,7 @@
           },
           "end": {
             "line": 230,
-            "column": 78
+            "column": 37
           }
         },
         "230": {
@@ -29512,7 +29611,7 @@
           },
           "end": {
             "line": 231,
-            "column": 3
+            "column": 22
           }
         },
         "231": {
@@ -29522,7 +29621,7 @@
           },
           "end": {
             "line": 232,
-            "column": 37
+            "column": 14
           }
         },
         "232": {
@@ -29532,7 +29631,7 @@
           },
           "end": {
             "line": 233,
-            "column": 22
+            "column": 20
           }
         },
         "233": {
@@ -29542,7 +29641,7 @@
           },
           "end": {
             "line": 234,
-            "column": 14
+            "column": 9
           }
         },
         "234": {
@@ -29552,7 +29651,7 @@
           },
           "end": {
             "line": 235,
-            "column": 20
+            "column": 33
           }
         },
         "235": {
@@ -29562,7 +29661,7 @@
           },
           "end": {
             "line": 236,
-            "column": 9
+            "column": 32
           }
         },
         "236": {
@@ -29572,7 +29671,7 @@
           },
           "end": {
             "line": 237,
-            "column": 33
+            "column": 41
           }
         },
         "237": {
@@ -29582,7 +29681,7 @@
           },
           "end": {
             "line": 238,
-            "column": 32
+            "column": 57
           }
         },
         "238": {
@@ -29592,7 +29691,7 @@
           },
           "end": {
             "line": 239,
-            "column": 41
+            "column": 24
           }
         },
         "239": {
@@ -29602,7 +29701,7 @@
           },
           "end": {
             "line": 240,
-            "column": 57
+            "column": 15
           }
         },
         "240": {
@@ -29612,7 +29711,7 @@
           },
           "end": {
             "line": 241,
-            "column": 24
+            "column": 18
           }
         },
         "241": {
@@ -29622,7 +29721,7 @@
           },
           "end": {
             "line": 242,
-            "column": 15
+            "column": 42
           }
         },
         "242": {
@@ -29632,7 +29731,7 @@
           },
           "end": {
             "line": 243,
-            "column": 18
+            "column": 7
           }
         },
         "243": {
@@ -29642,7 +29741,7 @@
           },
           "end": {
             "line": 244,
-            "column": 42
+            "column": 5
           }
         },
         "244": {
@@ -29652,7 +29751,7 @@
           },
           "end": {
             "line": 245,
-            "column": 7
+            "column": 3
           }
         },
         "245": {
@@ -29662,7 +29761,7 @@
           },
           "end": {
             "line": 246,
-            "column": 5
+            "column": 1
           }
         },
         "246": {
@@ -29672,7 +29771,7 @@
           },
           "end": {
             "line": 247,
-            "column": 3
+            "column": 0
           }
         },
         "247": {
@@ -29682,7 +29781,7 @@
           },
           "end": {
             "line": 248,
-            "column": 1
+            "column": 3
           }
         },
         "248": {
@@ -29692,7 +29791,7 @@
           },
           "end": {
             "line": 249,
-            "column": 0
+            "column": 33
           }
         },
         "249": {
@@ -29702,7 +29801,7 @@
           },
           "end": {
             "line": 250,
-            "column": 3
+            "column": 2
           }
         },
         "250": {
@@ -29712,7 +29811,7 @@
           },
           "end": {
             "line": 251,
-            "column": 33
+            "column": 46
           }
         },
         "251": {
@@ -29722,7 +29821,7 @@
           },
           "end": {
             "line": 252,
-            "column": 2
+            "column": 65
           }
         },
         "252": {
@@ -29732,7 +29831,7 @@
           },
           "end": {
             "line": 253,
-            "column": 46
+            "column": 78
           }
         },
         "253": {
@@ -29742,7 +29841,7 @@
           },
           "end": {
             "line": 254,
-            "column": 65
+            "column": 3
           }
         },
         "254": {
@@ -29752,7 +29851,7 @@
           },
           "end": {
             "line": 255,
-            "column": 78
+            "column": 34
           }
         },
         "255": {
@@ -29762,7 +29861,7 @@
           },
           "end": {
             "line": 256,
-            "column": 3
+            "column": 15
           }
         },
         "256": {
@@ -29772,7 +29871,7 @@
           },
           "end": {
             "line": 257,
-            "column": 34
+            "column": 14
           }
         },
         "257": {
@@ -29782,7 +29881,7 @@
           },
           "end": {
             "line": 258,
-            "column": 15
+            "column": 20
           }
         },
         "258": {
@@ -29792,7 +29891,7 @@
           },
           "end": {
             "line": 259,
-            "column": 14
+            "column": 9
           }
         },
         "259": {
@@ -29802,7 +29901,7 @@
           },
           "end": {
             "line": 260,
-            "column": 20
+            "column": 37
           }
         },
         "260": {
@@ -29812,7 +29911,7 @@
           },
           "end": {
             "line": 261,
-            "column": 9
+            "column": 53
           }
         },
         "261": {
@@ -29822,7 +29921,7 @@
           },
           "end": {
             "line": 262,
-            "column": 37
+            "column": 20
           }
         },
         "262": {
@@ -29832,7 +29931,7 @@
           },
           "end": {
             "line": 263,
-            "column": 53
+            "column": 11
           }
         },
         "263": {
@@ -29842,7 +29941,7 @@
           },
           "end": {
             "line": 264,
-            "column": 20
+            "column": 14
           }
         },
         "264": {
@@ -29852,7 +29951,7 @@
           },
           "end": {
             "line": 265,
-            "column": 11
+            "column": 38
           }
         },
         "265": {
@@ -29862,7 +29961,7 @@
           },
           "end": {
             "line": 266,
-            "column": 14
+            "column": 3
           }
         },
         "266": {
@@ -29872,7 +29971,7 @@
           },
           "end": {
             "line": 267,
-            "column": 38
+            "column": 1
           }
         },
         "267": {
@@ -29882,7 +29981,7 @@
           },
           "end": {
             "line": 268,
-            "column": 3
+            "column": 0
           }
         },
         "268": {
@@ -29892,7 +29991,7 @@
           },
           "end": {
             "line": 269,
-            "column": 1
+            "column": 3
           }
         },
         "269": {
@@ -29902,7 +30001,7 @@
           },
           "end": {
             "line": 270,
-            "column": 0
+            "column": 82
           }
         },
         "270": {
@@ -29912,7 +30011,7 @@
           },
           "end": {
             "line": 271,
-            "column": 3
+            "column": 2
           }
         },
         "271": {
@@ -29922,7 +30021,7 @@
           },
           "end": {
             "line": 272,
-            "column": 82
+            "column": 72
           }
         },
         "272": {
@@ -29932,7 +30031,7 @@
           },
           "end": {
             "line": 273,
-            "column": 2
+            "column": 73
           }
         },
         "273": {
@@ -29942,7 +30041,7 @@
           },
           "end": {
             "line": 274,
-            "column": 72
+            "column": 3
           }
         },
         "274": {
@@ -29952,7 +30051,7 @@
           },
           "end": {
             "line": 275,
-            "column": 73
+            "column": 52
           }
         },
         "275": {
@@ -29962,7 +30061,7 @@
           },
           "end": {
             "line": 276,
-            "column": 3
+            "column": 16
           }
         },
         "276": {
@@ -29972,7 +30071,7 @@
           },
           "end": {
             "line": 277,
-            "column": 52
+            "column": 19
           }
         },
         "277": {
@@ -29982,7 +30081,7 @@
           },
           "end": {
             "line": 278,
-            "column": 16
+            "column": 3
           }
         },
         "278": {
@@ -29992,7 +30091,7 @@
           },
           "end": {
             "line": 279,
-            "column": 19
+            "column": 74
           }
         },
         "279": {
@@ -30002,7 +30101,7 @@
           },
           "end": {
             "line": 280,
-            "column": 3
+            "column": 106
           }
         },
         "280": {
@@ -30012,7 +30111,7 @@
           },
           "end": {
             "line": 281,
-            "column": 74
+            "column": 30
           }
         },
         "281": {
@@ -30022,26 +30121,6 @@
           },
           "end": {
             "line": 282,
-            "column": 106
-          }
-        },
-        "282": {
-          "start": {
-            "line": 283,
-            "column": 0
-          },
-          "end": {
-            "line": 283,
-            "column": 30
-          }
-        },
-        "283": {
-          "start": {
-            "line": 284,
-            "column": 0
-          },
-          "end": {
-            "line": 284,
             "column": 1
           }
         }
@@ -30080,7 +30159,7 @@
         "30": 1,
         "31": 1,
         "32": 1,
-        "33": 2,
+        "33": 4,
         "34": 1,
         "35": 1,
         "36": 1,
@@ -30097,46 +30176,46 @@
         "47": 1,
         "48": 1,
         "49": 1,
-        "50": 7,
-        "51": 7,
-        "52": 7,
-        "53": 7,
-        "54": 7,
-        "55": 1,
-        "56": 1,
-        "57": 7,
-        "58": 7,
-        "59": 7,
+        "50": 4,
+        "51": 4,
+        "52": 4,
+        "53": 4,
+        "54": 4,
+        "55": 0,
+        "56": 0,
+        "57": 4,
+        "58": 4,
+        "59": 4,
         "60": 1,
         "61": 1,
         "62": 1,
         "63": 1,
         "64": 1,
         "65": 1,
-        "66": 4,
-        "67": 4,
-        "68": 4,
-        "69": 4,
-        "70": 4,
-        "71": 4,
-        "72": 4,
-        "73": 4,
-        "74": 4,
+        "66": 2,
+        "67": 2,
+        "68": 2,
+        "69": 2,
+        "70": 2,
+        "71": 2,
+        "72": 2,
+        "73": 2,
+        "74": 2,
         "75": 1,
         "76": 1,
         "77": 1,
         "78": 1,
         "79": 1,
         "80": 1,
-        "81": 6,
-        "82": 6,
-        "83": 6,
-        "84": 6,
-        "85": 3,
-        "86": 3,
-        "87": 6,
-        "88": 6,
-        "89": 6,
+        "81": 2,
+        "82": 2,
+        "83": 2,
+        "84": 2,
+        "85": 0,
+        "86": 0,
+        "87": 2,
+        "88": 2,
+        "89": 2,
         "90": 1,
         "91": 1,
         "92": 1,
@@ -30165,14 +30244,14 @@
         "115": 1,
         "116": 1,
         "117": 1,
-        "118": 4,
-        "119": 4,
-        "120": 4,
-        "121": 4,
+        "118": 6,
+        "119": 6,
+        "120": 6,
+        "121": 6,
         "122": 1,
         "123": 1,
         "124": 1,
-        "125": 4,
+        "125": 6,
         "126": 1,
         "127": 1,
         "128": 1,
@@ -30203,11 +30282,11 @@
         "153": 1,
         "154": 1,
         "155": 1,
-        "156": 1,
-        "157": 1,
-        "158": 1,
-        "159": 1,
-        "160": 1,
+        "156": 3,
+        "157": 3,
+        "158": 3,
+        "159": 3,
+        "160": 3,
         "161": 1,
         "162": 1,
         "163": 1,
@@ -30216,19 +30295,19 @@
         "166": 1,
         "167": 1,
         "168": 1,
-        "169": 0,
-        "170": 0,
-        "171": 0,
-        "172": 0,
-        "173": 0,
-        "174": 0,
-        "175": 0,
-        "176": 0,
-        "177": 0,
+        "169": 2,
+        "170": 2,
+        "171": 2,
+        "172": 2,
+        "173": 2,
+        "174": 2,
+        "175": 2,
+        "176": 2,
+        "177": 2,
         "178": 0,
         "179": 0,
         "180": 0,
-        "181": 0,
+        "181": 2,
         "182": 1,
         "183": 1,
         "184": 1,
@@ -30247,90 +30326,88 @@
         "197": 1,
         "198": 1,
         "199": 1,
-        "200": 2,
-        "201": 2,
-        "202": 2,
-        "203": 2,
-        "204": 2,
-        "205": 2,
-        "206": 2,
-        "207": 2,
-        "208": 2,
-        "209": 2,
-        "210": 0,
-        "211": 0,
-        "212": 2,
-        "213": 2,
-        "214": 2,
-        "215": 2,
-        "216": 0,
-        "217": 0,
-        "218": 0,
-        "219": 0,
-        "220": 2,
-        "221": 2,
-        "222": 2,
+        "200": 6,
+        "201": 6,
+        "202": 6,
+        "203": 6,
+        "204": 6,
+        "205": 6,
+        "206": 6,
+        "207": 6,
+        "208": 6,
+        "209": 6,
+        "210": 6,
+        "211": 6,
+        "212": 4,
+        "213": 4,
+        "214": 1,
+        "215": 1,
+        "216": 1,
+        "217": 1,
+        "218": 5,
+        "219": 5,
+        "220": 5,
+        "221": 1,
+        "222": 1,
         "223": 1,
         "224": 1,
         "225": 1,
         "226": 1,
         "227": 1,
         "228": 1,
-        "229": 1,
-        "230": 1,
-        "231": 2,
-        "232": 2,
-        "233": 2,
-        "234": 2,
-        "235": 2,
-        "236": 2,
-        "237": 0,
-        "238": 0,
-        "239": 0,
-        "240": 0,
-        "241": 0,
-        "242": 0,
-        "243": 0,
-        "244": 0,
-        "245": 0,
-        "246": 0,
-        "247": 2,
+        "229": 4,
+        "230": 4,
+        "231": 4,
+        "232": 4,
+        "233": 4,
+        "234": 4,
+        "235": 1,
+        "236": 1,
+        "237": 1,
+        "238": 1,
+        "239": 1,
+        "240": 1,
+        "241": 1,
+        "242": 1,
+        "243": 1,
+        "244": 1,
+        "245": 4,
+        "246": 1,
+        "247": 1,
         "248": 1,
         "249": 1,
         "250": 1,
         "251": 1,
         "252": 1,
         "253": 1,
-        "254": 1,
-        "255": 1,
-        "256": 0,
-        "257": 0,
-        "258": 0,
-        "259": 0,
-        "260": 0,
-        "261": 0,
-        "262": 0,
-        "263": 0,
-        "264": 0,
-        "265": 0,
-        "266": 0,
-        "267": 0,
-        "268": 0,
+        "254": 2,
+        "255": 2,
+        "256": 2,
+        "257": 2,
+        "258": 2,
+        "259": 2,
+        "260": 2,
+        "261": 2,
+        "262": 2,
+        "263": 2,
+        "264": 2,
+        "265": 2,
+        "266": 2,
+        "267": 1,
+        "268": 1,
         "269": 1,
         "270": 1,
         "271": 1,
         "272": 1,
         "273": 1,
-        "274": 1,
-        "275": 1,
-        "276": 0,
-        "277": 0,
-        "278": 0,
-        "279": 0,
-        "280": 0,
-        "281": 0,
-        "282": 0,
-        "283": 0
+        "274": 3,
+        "275": 3,
+        "276": 3,
+        "277": 3,
+        "278": 3,
+        "279": 3,
+        "280": 3,
+        "281": 3
       },
       "branchMap": {
         "0": {
@@ -30491,32 +30568,6 @@
         },
         "6": {
           "type": "branch",
-          "line": 68,
-          "loc": {
-            "start": {
-              "line": 68,
-              "column": 38
-            },
-            "end": {
-              "line": 68,
-              "column": 75
-            }
-          },
-          "locations": [
-            {
-              "start": {
-                "line": 68,
-                "column": 38
-              },
-              "end": {
-                "line": 68,
-                "column": 75
-              }
-            }
-          ]
-        },
-        "7": {
-          "type": "branch",
           "line": 82,
           "loc": {
             "start": {
@@ -30541,7 +30592,7 @@
             }
           ]
         },
-        "8": {
+        "7": {
           "type": "branch",
           "line": 85,
           "loc": {
@@ -30567,7 +30618,7 @@
             }
           ]
         },
-        "9": {
+        "8": {
           "type": "branch",
           "line": 119,
           "loc": {
@@ -30593,7 +30644,7 @@
             }
           ]
         },
-        "10": {
+        "9": {
           "type": "branch",
           "line": 122,
           "loc": {
@@ -30619,7 +30670,7 @@
             }
           ]
         },
-        "11": {
+        "10": {
           "type": "branch",
           "line": 137,
           "loc": {
@@ -30645,7 +30696,7 @@
             }
           ]
         },
-        "12": {
+        "11": {
           "type": "branch",
           "line": 157,
           "loc": {
@@ -30671,7 +30722,85 @@
             }
           ]
         },
+        "12": {
+          "type": "branch",
+          "line": 170,
+          "loc": {
+            "start": {
+              "line": 170,
+              "column": 0
+            },
+            "end": {
+              "line": 182,
+              "column": 1
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 170,
+                "column": 0
+              },
+              "end": {
+                "line": 182,
+                "column": 1
+              }
+            }
+          ]
+        },
         "13": {
+          "type": "branch",
+          "line": 178,
+          "loc": {
+            "start": {
+              "line": 178,
+              "column": 4
+            },
+            "end": {
+              "line": 181,
+              "column": 3
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 178,
+                "column": 4
+              },
+              "end": {
+                "line": 181,
+                "column": 3
+              }
+            }
+          ]
+        },
+        "14": {
+          "type": "branch",
+          "line": 176,
+          "loc": {
+            "start": {
+              "line": 176,
+              "column": 39
+            },
+            "end": {
+              "line": 176,
+              "column": 75
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 176,
+                "column": 39
+              },
+              "end": {
+                "line": 176,
+                "column": 75
+              }
+            }
+          ]
+        },
+        "15": {
           "type": "branch",
           "line": 201,
           "loc": {
@@ -30680,7 +30809,7 @@
               "column": 0
             },
             "end": {
-              "line": 223,
+              "line": 221,
               "column": 1
             }
           },
@@ -30691,13 +30820,13 @@
                 "column": 0
               },
               "end": {
-                "line": 223,
+                "line": 221,
                 "column": 1
               }
             }
           ]
         },
-        "14": {
+        "16": {
           "type": "branch",
           "line": 208,
           "loc": {
@@ -30723,106 +30852,236 @@
             }
           ]
         },
-        "15": {
-          "type": "branch",
-          "line": 210,
-          "loc": {
-            "start": {
-              "line": 210,
-              "column": 2
-            },
-            "end": {
-              "line": 212,
-              "column": 1
-            }
-          },
-          "locations": [
-            {
-              "start": {
-                "line": 210,
-                "column": 2
-              },
-              "end": {
-                "line": 212,
-                "column": 1
-              }
-            }
-          ]
-        },
-        "16": {
-          "type": "branch",
-          "line": 216,
-          "loc": {
-            "start": {
-              "line": 216,
-              "column": 3
-            },
-            "end": {
-              "line": 220,
-              "column": 3
-            }
-          },
-          "locations": [
-            {
-              "start": {
-                "line": 216,
-                "column": 3
-              },
-              "end": {
-                "line": 220,
-                "column": 3
-              }
-            }
-          ]
-        },
         "17": {
           "type": "branch",
-          "line": 232,
+          "line": 209,
           "loc": {
             "start": {
-              "line": 232,
-              "column": 0
+              "line": 209,
+              "column": 3
             },
             "end": {
-              "line": 248,
-              "column": 1
+              "line": 209,
+              "column": 24
             }
           },
           "locations": [
             {
               "start": {
-                "line": 232,
-                "column": 0
+                "line": 209,
+                "column": 3
               },
               "end": {
-                "line": 248,
-                "column": 1
+                "line": 209,
+                "column": 24
               }
             }
           ]
         },
         "18": {
           "type": "branch",
-          "line": 237,
+          "line": 212,
           "loc": {
             "start": {
-              "line": 237,
+              "line": 212,
               "column": 32
             },
             "end": {
-              "line": 247,
+              "line": 218,
               "column": 3
             }
           },
           "locations": [
             {
               "start": {
-                "line": 237,
+                "line": 212,
                 "column": 32
               },
               "end": {
-                "line": 247,
+                "line": 218,
                 "column": 3
+              }
+            }
+          ]
+        },
+        "19": {
+          "type": "branch",
+          "line": 214,
+          "loc": {
+            "start": {
+              "line": 214,
+              "column": 3
+            },
+            "end": {
+              "line": 218,
+              "column": 3
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 214,
+                "column": 3
+              },
+              "end": {
+                "line": 218,
+                "column": 3
+              }
+            }
+          ]
+        },
+        "20": {
+          "type": "branch",
+          "line": 214,
+          "loc": {
+            "start": {
+              "line": 214,
+              "column": 24
+            },
+            "end": {
+              "line": 218,
+              "column": 3
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 214,
+                "column": 24
+              },
+              "end": {
+                "line": 218,
+                "column": 3
+              }
+            }
+          ]
+        },
+        "21": {
+          "type": "branch",
+          "line": 219,
+          "loc": {
+            "start": {
+              "line": 219,
+              "column": -1
+            },
+            "end": {
+              "line": 221,
+              "column": 1
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 219,
+                "column": -1
+              },
+              "end": {
+                "line": 221,
+                "column": 1
+              }
+            }
+          ]
+        },
+        "22": {
+          "type": "branch",
+          "line": 230,
+          "loc": {
+            "start": {
+              "line": 230,
+              "column": 0
+            },
+            "end": {
+              "line": 246,
+              "column": 1
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 230,
+                "column": 0
+              },
+              "end": {
+                "line": 246,
+                "column": 1
+              }
+            }
+          ]
+        },
+        "23": {
+          "type": "branch",
+          "line": 235,
+          "loc": {
+            "start": {
+              "line": 235,
+              "column": 32
+            },
+            "end": {
+              "line": 245,
+              "column": 3
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 235,
+                "column": 32
+              },
+              "end": {
+                "line": 245,
+                "column": 3
+              }
+            }
+          ]
+        },
+        "24": {
+          "type": "branch",
+          "line": 255,
+          "loc": {
+            "start": {
+              "line": 255,
+              "column": 0
+            },
+            "end": {
+              "line": 267,
+              "column": 1
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 255,
+                "column": 0
+              },
+              "end": {
+                "line": 267,
+                "column": 1
+              }
+            }
+          ]
+        },
+        "25": {
+          "type": "branch",
+          "line": 275,
+          "loc": {
+            "start": {
+              "line": 275,
+              "column": 0
+            },
+            "end": {
+              "line": 282,
+              "column": 1
+            }
+          },
+          "locations": [
+            {
+              "start": {
+                "line": 275,
+                "column": 0
+              },
+              "end": {
+                "line": 282,
+                "column": 1
               }
             }
           ]
@@ -30830,61 +31089,82 @@
       },
       "b": {
         "0": [
-          2
+          4
         ],
         "1": [
           3
         ],
         "2": [
-          7
+          4
         ],
         "3": [
-          1
+          0
         ],
         "4": [
-          4
+          2
         ],
         "5": [
-          1
+          0
         ],
         "6": [
-          3
+          2
         ],
         "7": [
-          6
+          0
         ],
         "8": [
-          3
+          6
         ],
         "9": [
-          4
+          1
         ],
         "10": [
           1
         ],
         "11": [
-          1
+          3
         ],
         "12": [
-          1
+          2
         ],
         "13": [
-          2
+          0
         ],
         "14": [
-          0
+          6
         ],
         "15": [
-          0
+          6
         ],
         "16": [
-          0
-        ],
-        "17": [
           2
         ],
+        "17": [
+          4
+        ],
         "18": [
-          0
+          4
+        ],
+        "19": [
+          2
+        ],
+        "20": [
+          1
+        ],
+        "21": [
+          5
+        ],
+        "22": [
+          4
+        ],
+        "23": [
+          1
+        ],
+        "24": [
+          2
+        ],
+        "25": [
+          3
         ]
       },
       "fnMap": {
@@ -31160,7 +31440,7 @@
               "column": 0
             },
             "end": {
-              "line": 223,
+              "line": 221,
               "column": 1
             }
           },
@@ -31170,7 +31450,7 @@
               "column": 0
             },
             "end": {
-              "line": 223,
+              "line": 221,
               "column": 1
             }
           },
@@ -31180,91 +31460,91 @@
           "name": "processMultipleFiles",
           "decl": {
             "start": {
-              "line": 232,
+              "line": 230,
               "column": 0
             },
             "end": {
-              "line": 248,
+              "line": 246,
               "column": 1
             }
           },
           "loc": {
             "start": {
-              "line": 232,
+              "line": 230,
               "column": 0
             },
             "end": {
-              "line": 248,
+              "line": 246,
               "column": 1
             }
           },
-          "line": 232
+          "line": 230
         },
         "13": {
           "name": "processSingleFile",
           "decl": {
             "start": {
-              "line": 257,
+              "line": 255,
               "column": 0
             },
             "end": {
-              "line": 269,
+              "line": 267,
               "column": 1
             }
           },
           "loc": {
             "start": {
-              "line": 257,
+              "line": 255,
               "column": 0
             },
             "end": {
-              "line": 269,
+              "line": 267,
               "column": 1
             }
           },
-          "line": 257
+          "line": 255
         },
         "14": {
           "name": "extractFileInfo",
           "decl": {
             "start": {
-              "line": 277,
+              "line": 275,
               "column": 0
             },
             "end": {
-              "line": 284,
+              "line": 282,
               "column": 1
             }
           },
           "loc": {
             "start": {
-              "line": 277,
+              "line": 275,
               "column": 0
             },
             "end": {
-              "line": 284,
+              "line": 282,
               "column": 1
             }
           },
-          "line": 277
+          "line": 275
         }
       },
       "f": {
-        "0": 2,
+        "0": 4,
         "1": 3,
-        "2": 7,
-        "3": 4,
-        "4": 6,
+        "2": 4,
+        "3": 2,
+        "4": 2,
         "5": 0,
-        "6": 4,
+        "6": 6,
         "7": 1,
-        "8": 1,
-        "9": 0,
+        "8": 3,
+        "9": 2,
         "10": 0,
-        "11": 2,
-        "12": 2,
-        "13": 0,
-        "14": 0
+        "11": 6,
+        "12": 4,
+        "13": 2,
+        "14": 3
       }
     },
     "/home/runner/work/Ts256k1/Ts256k1/src/utils/index.ts": {
@@ -31761,10 +32041,10 @@
           16
         ],
         "3": [
-          2
+          8
         ],
         "4": [
-          3
+          4
         ],
         "5": [
           5
@@ -32055,8 +32335,8 @@
         "0": 38,
         "1": 11,
         "2": 16,
-        "3": 2,
-        "4": 3,
+        "3": 8,
+        "4": 4,
         "5": 5,
         "6": 13,
         "7": 32,

@@ -203,13 +203,11 @@ export function analyzeFiles(dir: string, PREFIX?: Uint8Array): RawPreload {
 
   // Find cache files by PREFIX or retrieve all files
   let fileCache 
-try {
+
   fileCache = PREFIX
    ? findFilesByPrefix(PREFIX, dir)
    : listCacheFiles(dir)
-} catch (e) {
-   throw new Error(errorDirectory(dir))
-}
+
 
   if (Array.isArray(fileCache)) {
     processMultipleFiles(fileCache, dir, result)
