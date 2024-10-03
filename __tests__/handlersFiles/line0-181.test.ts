@@ -14,11 +14,11 @@ import {
     readFileBit,
     errorDirectory,
     //findFilesByPrefix,
-} from '../src/utils/handlersFiles';  
+} from '../../src/utils/handlersFiles';  
 
 jest.mock('fs')
 jest.mock('os')
-jest.mock('../src/utils/color', () => ({
+jest.mock('../../src/utils/color', () => ({
   color: {
     red: {
       bold: jest.fn((text) => `RED_BOLD(${text})`)
@@ -32,7 +32,9 @@ describe('Cache Utility Functions', () => {
   beforeEach(() => {
     jest.clearAllMocks()
   })
-
+  afterEach(() => {
+   jest.restoreAllMocks();
+  });
   describe('UUID', () => {
     it('should generate a string of length 8', () => {
       const uuid = UUID()
