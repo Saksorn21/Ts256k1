@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.3] - 2024-10-01
+## [1.1.3] - 2024-10-03
 
 ### Changed
 - **README.md**: Updated to fix typos and improve clarity.
