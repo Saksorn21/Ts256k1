@@ -1,19 +1,12 @@
 
-import {
-  
-  readdirSync,
-} from 'fs'
-//import { homedir, tmpdir } from 'os'
+import { readdirSync } from 'fs'
+
 import { analyzeFiles, errorDirectory } from '../../src/utils/handlersFiles'
 import { findFilesByPrefix } from '../../src/utils/handlersFiles'
 import {utf8ToBytes as u8} from '../../src/utils/bytes'
 // Mock fs functions
 jest.mock('fs', () => ({
-  existsSync: jest.fn(),
-  mkdirSync: jest.fn(),
-  unlinkSync: jest.fn(),
   readdirSync: jest.fn(),
-  writeFileSync: jest.fn(),
   readFileSync: jest.fn(),
 }))
 
@@ -30,7 +23,7 @@ jest.mock('../../src/utils/handlersFiles', () => {
   };
 });
 
-describe('File Service Tests', () => {
+describe('analyzeFiles Test', () => {
   beforeEach(() => {
     jest.clearAllMocks()
     
@@ -38,8 +31,7 @@ describe('File Service Tests', () => {
   afterEach(() => {
    jest.restoreAllMocks();
   });
-  
-  describe('analyzeFiles', () => {
+
     const mockfiles = ['12345678_1.bin', 'qwertyui_2.bin', '87654321_1.bin']
     it('The prefix cache file should be analyzed and the raw preload data returned in singular format.', () => {
       
@@ -91,4 +83,3 @@ const prefix = u8('04593456')
       expect(consoleErrorSpy).toHaveBeenCalledWith(errorDirectory('/mock/cache'))
     })
   })
-})

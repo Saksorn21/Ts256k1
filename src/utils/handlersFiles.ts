@@ -171,14 +171,14 @@ export function findFilesByPrefix(
   prefix: Uint8Array,
   dir: string
 ): string | undefined {
-  try {
+  
     const files = listCacheFiles(dir)
     const matchingFiles = files.filter(file => file.startsWith(au8(prefix))) // Search for files starting with prefix
+  if (matchingFiles.length > 0) {
     return matchingFiles[0] // Return the first matching file
-  } catch (err) {
-    console.error(errorDirectory(dir))
-    return undefined
   }
+    return undefined // Return undefined if no matching file is found
+  
 }
 
 /**
